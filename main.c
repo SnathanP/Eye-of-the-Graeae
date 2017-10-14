@@ -8,30 +8,67 @@
 # include "percep.h"
 # include "neuraloutput.h"
 
+# include "property.h"
 
+///////////////////////
+//
+// On peut ajuster le réseau dans le fichier property.h !
+//
+//////////////////////
 
 int main(int argc, char const *argv[]) {
     srand ( clock()  );
-    Perceptron perceps[4];
-    for (size_t i = 0; i < 4; i++) {
-        initPerceptron(&perceps[i]);
-    }
+// INIT
     double input[2] = {1,0};
-    double midout[4] = {0};
-    for (size_t i = 0; i < 4; i++) {
-        midout[i] = guess(input, &perceps[i]);
-        printf("%lf\n", midout[i]);
+    double answer = 1;
+    double midout[NBWEIGHTOUT] = {0};
+    Perceptron perceps[NBWEIGHTOUT];
+    for (size_t i = 0; i < NBWEIGHTOUT; i++) {
+        initPerceptron(&perceps[i]);
     }
     NeuralOutput output;
     initOutput(&output);
-    printf("%lf : final\n\n", guessOutput(midout, &output));
 
-    guessOutLearn(midout, 1, &output, perceps);
+    FILE* fichier = NULL;
+    fichier = fopen(TESTFILE, "r");
 
-    for (size_t i = 0; i < 4; i++) {
-        midout[i] = guess(input, &perceps[i]);
-        printf("%lf\n", midout[i]);
+    char data[10] = "";
+    int i = 0;
+    int truecount = 0;
+    int falsecount = 0;
+    if (fichier != NULL)
+    {
+
+        while (fgets(data, 10, fichier) != NULL) { // On lit le fichier
+
+            input[0] = data[0] - '0'; // On récupère les tests dans le fichier
+            input[1] = data[1] - '0';
+            answer = data[2] - '0';
+
+            for (size_t i = 0; i < NBWEIGHTOUT; i++) {
+                midout[i] = guess(input, &perceps[i]);
+                //printf("%lf\n", midout[i]);
+            }
+            double res = guessOutput(midout, &output);
+
+            // AFFICHAGE
+            printf("Ité %d : %d,%d, target = %d\n", i,(int)input[0], (int)input[1], (int)answer);
+            printf("%lf", res);
+            if ((answer == 1 && res > 0.5) || (answer == 0 && res <= 0.5)) {
+                printf(" : TRUE\n\n");
+                truecount++;
+            } else {
+                printf(" : FALSE\n\n");
+                falsecount++;
+            }
+
+            guessOutLearn(midout, answer, &output, perceps);
+            i++;
+        }
+
+    printf("True : %d\nFalse : %d\n", truecount, falsecount);
+    fclose(fichier); // On ferme le fichier qui a été ouvert
     }
-    printf("%lf : final\n\n", guessOutput(midout, &output));
+
     return 0;
 }

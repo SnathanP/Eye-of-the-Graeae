@@ -1,3 +1,9 @@
+# include <err.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <math.h>
+# include <time.h>
+
 double sigmoid(double x) {
     return 1.0/(1.0 + exp(-x));
 }

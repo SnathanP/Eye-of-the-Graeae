@@ -1,5 +1,7 @@
 # include "percep.h"
-# define NBWEIGHTOUT 4
+# include "property.h"
+
+# define NBWEIGHTOUT 50
 
 typedef struct NeuralOutput NeuralOutput;
 struct NeuralOutput {

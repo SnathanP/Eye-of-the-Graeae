@@ -1,4 +1,4 @@
-# define NBWEIGHT 2
+# include "property.h"
 
 typedef struct Perceptron Perceptron;
 

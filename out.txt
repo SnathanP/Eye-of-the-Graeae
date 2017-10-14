@@ -1,0 +1,1555 @@
+0.822945 : weights
+0.515027 : weights
+0.073479 : weights
+0.494997 : weights
+0.945769 : weights
+0.402306 : weights
+0.037633 : weights
+0.339295 : weights
+0.131918 : weights
+0.878159 : weights
+0.473939 : weights
+0.782225 : weights
+0.745538 : weights
+0.718286 : weights
+0.413543 : weights
+0.099768 : weights
+0.759015 : weights
+0.532321 : weights
+0.967461 : weights
+0.496315 : weights
+0.513317 : weights
+0.902539 : weights
+0.542417 : weights
+0.159450 : weights
+0.541719 : weights
+0.281641 : weights
+0.714342 : weights
+0.446005 : weights
+0.062477 : weights
+0.003960 : weights
+0.793569 : weights
+0.885422 : weights
+0.518988 : weights
+0.867047 : weights
+0.380419 : weights
+0.464756 : weights
+0.269354 : weights
+0.418052 : weights
+0.804052 : weights
+0.401272 : weights
+0.296211 : weights
+0.277991 : weights
+0.183497 : weights
+0.041749 : weights
+0.996277 : weights
+0.597041 : weights
+0.141517 : weights
+0.755292 : weights
+0.129361 : weights
+0.108978 : weights
+Ité 0 : 1,0, target = 1
+0.999995 : TRUE
+
+Ité 1 : 1,1, target = 0
+0.999996 : FALSE
+
+Ité 2 : 1,0, target = 1
+0.999992 : TRUE
+
+Ité 3 : 0,1, target = 1
+0.999992 : TRUE
+
+Ité 4 : 0,1, target = 1
+0.999992 : TRUE
+
+Ité 5 : 0,1, target = 1
+0.999992 : TRUE
+
+Ité 6 : 0,1, target = 1
+0.999992 : TRUE
+
+Ité 7 : 1,1, target = 0
+0.999993 : FALSE
+
+Ité 8 : 1,1, target = 0
+0.999989 : FALSE
+
+Ité 9 : 0,1, target = 1
+0.999977 : TRUE
+
+Ité 10 : 0,0, target = 0
+0.999974 : FALSE
+
+Ité 11 : 0,1, target = 1
+0.999963 : TRUE
+
+Ité 12 : 0,0, target = 0
+0.999957 : FALSE
+
+Ité 13 : 0,0, target = 0
+0.999929 : FALSE
+
+Ité 14 : 1,0, target = 1
+0.999898 : TRUE
+
+Ité 15 : 1,1, target = 0
+0.999908 : FALSE
+
+Ité 16 : 1,0, target = 1
+0.999814 : TRUE
+
+Ité 17 : 1,1, target = 0
+0.999841 : FALSE
+
+Ité 18 : 0,1, target = 1
+0.999628 : TRUE
+
+Ité 19 : 0,1, target = 1
+0.999628 : TRUE
+
+Ité 20 : 1,1, target = 0
+0.999728 : FALSE
+
+Ité 21 : 0,1, target = 1
+0.999251 : TRUE
+
+Ité 22 : 0,0, target = 0
+0.996893 : FALSE
+
+Ité 23 : 1,1, target = 0
+0.999213 : FALSE
+
+Ité 24 : 0,1, target = 1
+0.997553 : TRUE
+
+Ité 25 : 1,0, target = 1
+0.997975 : TRUE
+
+Ité 26 : 0,1, target = 1
+0.997558 : TRUE
+
+Ité 27 : 1,0, target = 1
+0.997980 : TRUE
+
+Ité 28 : 0,0, target = 0
+0.983820 : FALSE
+
+Ité 29 : 0,0, target = 0
+0.973928 : FALSE
+
+Ité 30 : 0,1, target = 1
+0.993561 : TRUE
+
+Ité 31 : 1,1, target = 0
+0.996300 : FALSE
+
+Ité 32 : 0,1, target = 1
+0.987392 : TRUE
+
+Ité 33 : 0,1, target = 1
+0.987474 : TRUE
+
+Ité 34 : 1,1, target = 0
+0.993794 : FALSE
+
+Ité 35 : 1,0, target = 1
+0.980967 : TRUE
+
+Ité 36 : 0,1, target = 1
+0.975469 : TRUE
+
+Ité 37 : 1,1, target = 0
+0.989596 : FALSE
+
+Ité 38 : 0,1, target = 1
+0.952788 : TRUE
+
+Ité 39 : 1,0, target = 1
+0.966070 : TRUE
+
+Ité 40 : 1,0, target = 1
+0.966651 : TRUE
+
+Ité 41 : 0,1, target = 1
+0.955461 : TRUE
+
+Ité 42 : 1,0, target = 1
+0.967977 : TRUE
+
+Ité 43 : 0,1, target = 1
+0.957163 : TRUE
+
+Ité 44 : 0,1, target = 1
+0.958083 : TRUE
+
+Ité 45 : 1,1, target = 0
+0.984705 : FALSE
+
+Ité 46 : 1,1, target = 0
+0.974110 : FALSE
+
+Ité 47 : 0,1, target = 1
+0.852626 : TRUE
+
+Ité 48 : 0,1, target = 1
+0.862591 : TRUE
+
+Ité 49 : 1,1, target = 0
+0.962495 : FALSE
+
+Ité 50 : 0,0, target = 0
+0.027263 : TRUE
+
+Ité 51 : 1,1, target = 0
+0.937133 : FALSE
+
+Ité 52 : 0,1, target = 1
+0.630130 : TRUE
+
+Ité 53 : 1,0, target = 1
+0.780220 : TRUE
+
+Ité 54 : 1,0, target = 1
+0.800975 : TRUE
+
+Ité 55 : 1,0, target = 1
+0.818387 : TRUE
+
+Ité 56 : 0,0, target = 0
+0.016247 : TRUE
+
+Ité 57 : 0,0, target = 0
+0.016085 : TRUE
+
+Ité 58 : 1,0, target = 1
+0.830220 : TRUE
+
+Ité 59 : 0,1, target = 1
+0.764348 : TRUE
+
+Ité 60 : 0,0, target = 0
+0.020600 : TRUE
+
+Ité 61 : 0,1, target = 1
+0.785653 : TRUE
+
+Ité 62 : 1,1, target = 0
+0.954327 : FALSE
+
+Ité 63 : 1,0, target = 1
+0.784847 : TRUE
+
+Ité 64 : 1,0, target = 1
+0.804890 : TRUE
+
+Ité 65 : 0,0, target = 0
+0.009581 : TRUE
+
+Ité 66 : 1,0, target = 1
+0.820737 : TRUE
+
+Ité 67 : 0,1, target = 1
+0.744267 : TRUE
+
+Ité 68 : 0,1, target = 1
+0.771332 : TRUE
+
+Ité 69 : 0,1, target = 1
+0.793547 : TRUE
+
+Ité 70 : 0,1, target = 1
+0.812042 : TRUE
+
+Ité 71 : 0,1, target = 1
+0.827638 : TRUE
+
+Ité 72 : 0,0, target = 0
+0.020513 : TRUE
+
+Ité 73 : 1,1, target = 0
+0.968145 : FALSE
+
+Ité 74 : 1,1, target = 0
+0.946730 : FALSE
+
+Ité 75 : 1,1, target = 0
+0.913573 : FALSE
+
+Ité 76 : 0,0, target = 0
+0.000650 : TRUE
+
+Ité 77 : 1,0, target = 1
+0.583872 : TRUE
+
+Ité 78 : 0,0, target = 0
+0.000874 : TRUE
+
+Ité 79 : 0,1, target = 1
+0.470256 : FALSE
+
+Ité 80 : 1,1, target = 0
+0.918727 : FALSE
+
+Ité 81 : 0,0, target = 0
+0.000287 : TRUE
+
+Ité 82 : 1,0, target = 1
+0.564826 : TRUE
+
+Ité 83 : 1,0, target = 1
+0.628762 : TRUE
+
+Ité 84 : 1,0, target = 1
+0.679001 : TRUE
+
+Ité 85 : 1,0, target = 1
+0.718738 : TRUE
+
+Ité 86 : 0,1, target = 1
+0.585855 : TRUE
+
+Ité 87 : 1,0, target = 1
+0.795773 : TRUE
+
+Ité 88 : 0,0, target = 0
+0.001266 : TRUE
+
+Ité 89 : 1,1, target = 0
+0.956077 : FALSE
+
+Ité 90 : 0,1, target = 1
+0.486837 : FALSE
+
+Ité 91 : 1,0, target = 1
+0.748246 : TRUE
+
+Ité 92 : 1,0, target = 1
+0.774507 : TRUE
+
+Ité 93 : 1,1, target = 0
+0.958095 : FALSE
+
+Ité 94 : 0,1, target = 1
+0.444870 : FALSE
+
+Ité 95 : 1,1, target = 0
+0.949977 : FALSE
+
+Ité 96 : 1,1, target = 0
+0.918306 : FALSE
+
+Ité 97 : 0,1, target = 1
+0.201505 : FALSE
+
+Ité 98 : 1,1, target = 0
+0.918455 : FALSE
+
+Ité 99 : 1,1, target = 0
+0.870901 : FALSE
+
+Ité 100 : 1,1, target = 0
+0.804442 : FALSE
+
+Ité 101 : 1,1, target = 0
+0.720616 : FALSE
+
+Ité 102 : 1,0, target = 1
+0.079350 : FALSE
+
+Ité 103 : 0,1, target = 1
+0.046026 : FALSE
+
+Ité 104 : 1,0, target = 1
+0.231914 : FALSE
+
+Ité 105 : 1,0, target = 1
+0.332703 : FALSE
+
+Ité 106 : 1,0, target = 1
+0.433402 : FALSE
+
+Ité 107 : 1,0, target = 1
+0.521875 : TRUE
+
+Ité 108 : 0,0, target = 0
+0.000001 : TRUE
+
+Ité 109 : 0,1, target = 1
+0.308922 : FALSE
+
+Ité 110 : 0,1, target = 1
+0.410835 : FALSE
+
+Ité 111 : 1,1, target = 0
+0.981344 : FALSE
+
+Ité 112 : 0,1, target = 1
+0.315856 : FALSE
+
+Ité 113 : 1,0, target = 1
+0.720771 : TRUE
+
+Ité 114 : 0,1, target = 1
+0.457682 : FALSE
+
+Ité 115 : 1,0, target = 1
+0.811755 : TRUE
+
+Ité 116 : 0,1, target = 1
+0.568488 : TRUE
+
+Ité 117 : 0,0, target = 0
+0.000002 : TRUE
+
+Ité 118 : 0,1, target = 1
+0.631419 : TRUE
+
+Ité 119 : 1,0, target = 1
+0.887750 : TRUE
+
+Ité 120 : 1,0, target = 1
+0.893690 : TRUE
+
+Ité 121 : 0,0, target = 0
+0.000003 : TRUE
+
+Ité 122 : 1,0, target = 1
+0.899046 : TRUE
+
+Ité 123 : 1,0, target = 1
+0.903899 : TRUE
+
+Ité 124 : 0,1, target = 1
+0.728335 : TRUE
+
+Ité 125 : 1,1, target = 0
+0.994906 : FALSE
+
+Ité 126 : 0,0, target = 0
+0.000001 : TRUE
+
+Ité 127 : 1,1, target = 0
+0.991187 : FALSE
+
+Ité 128 : 1,0, target = 1
+0.726357 : TRUE
+
+Ité 129 : 1,0, target = 1
+0.756694 : TRUE
+
+Ité 130 : 1,1, target = 0
+0.988722 : FALSE
+
+Ité 131 : 1,0, target = 1
+0.632539 : TRUE
+
+Ité 132 : 1,0, target = 1
+0.682072 : TRUE
+
+Ité 133 : 0,1, target = 1
+0.378093 : FALSE
+
+Ité 134 : 1,0, target = 1
+0.795635 : TRUE
+
+Ité 135 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 136 : 1,1, target = 0
+0.992081 : FALSE
+
+Ité 137 : 1,0, target = 1
+0.677697 : TRUE
+
+Ité 138 : 1,0, target = 1
+0.717627 : TRUE
+
+Ité 139 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 140 : 1,0, target = 1
+0.749608 : TRUE
+
+Ité 141 : 1,0, target = 1
+0.775587 : TRUE
+
+Ité 142 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 143 : 1,1, target = 0
+0.992581 : FALSE
+
+Ité 144 : 1,1, target = 0
+0.987392 : FALSE
+
+Ité 145 : 0,1, target = 1
+0.155722 : FALSE
+
+Ité 146 : 0,1, target = 1
+0.242844 : FALSE
+
+Ité 147 : 1,1, target = 0
+0.992258 : FALSE
+
+Ité 148 : 1,0, target = 1
+0.564116 : TRUE
+
+Ité 149 : 1,1, target = 0
+0.989782 : FALSE
+
+Ité 150 : 0,1, target = 1
+0.126203 : FALSE
+
+Ité 151 : 1,1, target = 0
+0.990071 : FALSE
+
+Ité 152 : 0,1, target = 1
+0.105287 : FALSE
+
+Ité 153 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 154 : 1,0, target = 1
+0.566096 : TRUE
+
+Ité 155 : 0,1, target = 1
+0.216685 : FALSE
+
+Ité 156 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 157 : 0,1, target = 1
+0.314754 : FALSE
+
+Ité 158 : 1,0, target = 1
+0.819045 : TRUE
+
+Ité 159 : 1,0, target = 1
+0.833544 : TRUE
+
+Ité 160 : 1,1, target = 0
+0.997566 : FALSE
+
+Ité 161 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 162 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 163 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 164 : 0,1, target = 1
+0.283354 : FALSE
+
+Ité 165 : 1,1, target = 0
+0.997341 : FALSE
+
+Ité 166 : 1,1, target = 0
+0.995454 : FALSE
+
+Ité 167 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 168 : 0,1, target = 1
+0.116504 : FALSE
+
+Ité 169 : 1,0, target = 1
+0.642061 : TRUE
+
+Ité 170 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 171 : 0,1, target = 1
+0.226245 : FALSE
+
+Ité 172 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 173 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 174 : 0,1, target = 1
+0.325597 : FALSE
+
+Ité 175 : 1,0, target = 1
+0.854046 : TRUE
+
+Ité 176 : 1,1, target = 0
+0.998683 : FALSE
+
+Ité 177 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 178 : 1,1, target = 0
+0.997737 : FALSE
+
+Ité 179 : 1,0, target = 1
+0.594888 : TRUE
+
+Ité 180 : 1,0, target = 1
+0.651981 : TRUE
+
+Ité 181 : 1,0, target = 1
+0.697430 : TRUE
+
+Ité 182 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 183 : 1,1, target = 0
+0.997893 : FALSE
+
+Ité 184 : 1,0, target = 1
+0.570196 : TRUE
+
+Ité 185 : 1,0, target = 1
+0.632336 : TRUE
+
+Ité 186 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 187 : 1,1, target = 0
+0.997736 : FALSE
+
+Ité 188 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 189 : 1,1, target = 0
+0.996140 : FALSE
+
+Ité 190 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 191 : 1,1, target = 0
+0.993505 : FALSE
+
+Ité 192 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 193 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 194 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 195 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 196 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 197 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 198 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 199 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 200 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 201 : 1,1, target = 0
+0.999743 : FALSE
+
+Ité 202 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 203 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 204 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 205 : 1,1, target = 0
+0.999874 : FALSE
+
+Ité 206 : 1,1, target = 0
+0.999783 : FALSE
+
+Ité 207 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 208 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 209 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 210 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 211 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 212 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 213 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 214 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 215 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 216 : 1,1, target = 0
+0.999995 : FALSE
+
+Ité 217 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 218 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 219 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 220 : 1,1, target = 0
+0.999998 : FALSE
+
+Ité 221 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 222 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 223 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 224 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 225 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 226 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 227 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 228 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 229 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 230 : 1,1, target = 0
+0.999999 : FALSE
+
+Ité 231 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 232 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 233 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 234 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 235 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 236 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 237 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 238 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 239 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 240 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 241 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 242 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 243 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 244 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 245 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 246 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 247 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 248 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 249 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 250 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 251 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 252 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 253 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 254 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 255 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 256 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 257 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 258 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 259 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 260 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 261 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 262 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 263 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 264 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 265 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 266 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 267 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 268 : 1,1, target = 0
+0.999999 : FALSE
+
+Ité 269 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 270 : 1,1, target = 0
+0.999999 : FALSE
+
+Ité 271 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 272 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 273 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 274 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 275 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 276 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 277 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 278 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 279 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 280 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 281 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 282 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 283 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 284 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 285 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 286 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 287 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 288 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 289 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 290 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 291 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 292 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 293 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 294 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 295 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 296 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 297 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 298 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 299 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 300 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 301 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 302 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 303 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 304 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 305 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 306 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 307 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 308 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 309 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 310 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 311 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 312 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 313 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 314 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 315 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 316 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 317 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 318 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 319 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 320 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 321 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 322 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 323 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 324 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 325 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 326 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 327 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 328 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 329 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 330 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 331 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 332 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 333 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 334 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 335 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 336 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 337 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 338 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 339 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 340 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 341 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 342 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 343 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 344 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 345 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 346 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 347 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 348 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 349 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 350 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 351 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 352 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 353 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 354 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 355 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 356 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 357 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 358 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 359 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 360 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 361 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 362 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 363 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 364 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 365 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 366 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 367 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 368 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 369 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 370 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 371 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 372 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 373 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 374 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 375 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 376 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 377 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 378 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 379 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 380 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 381 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 382 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 383 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 384 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 385 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 386 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 387 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 388 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 389 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 390 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 391 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 392 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 393 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 394 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 395 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 396 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 397 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 398 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 399 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 400 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 401 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 402 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 403 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 404 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 405 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 406 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 407 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 408 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 409 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 410 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 411 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 412 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 413 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 414 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 415 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 416 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 417 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 418 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 419 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 420 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 421 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 422 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 423 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 424 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 425 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 426 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 427 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 428 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 429 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 430 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 431 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 432 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 433 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 434 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 435 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 436 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 437 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 438 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 439 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 440 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 441 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 442 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 443 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 444 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 445 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 446 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 447 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 448 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 449 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 450 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 451 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 452 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 453 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 454 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 455 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 456 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 457 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 458 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 459 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 460 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 461 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 462 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 463 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 464 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 465 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 466 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 467 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 468 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 469 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 470 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 471 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 472 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 473 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 474 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 475 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 476 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 477 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 478 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 479 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 480 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 481 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 482 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 483 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 484 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 485 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 486 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 487 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 488 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 489 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 490 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 491 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 492 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 493 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 494 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 495 : 1,1, target = 0
+1.000000 : FALSE
+
+Ité 496 : 0,0, target = 0
+0.000000 : TRUE
+
+Ité 497 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 498 : 1,0, target = 1
+0.000000 : FALSE
+
+Ité 499 : 0,1, target = 1
+0.000000 : FALSE
+
+Ité 500 : 0,1, target = 1
+0.000000 : FALSE
+
+True : 192
+False : 309
