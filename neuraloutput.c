@@ -31,6 +31,6 @@ void guessOutLearn(double input[], double target, NeuralOutput *no, Perceptron p
     double dS = (target - output) * sigmoid_prime(output);
     for (size_t i = 0; i < NBWEIGHTOUT; i++) {
         training(dS, input[i], no->weights[i], &perceps[i]);
-        no->weights[i] += (dS/input[i]) * 0.05; // LearningRate
+        no->weights[i] += (dS/input[i]) * LEARNING_RATE;
     }
 }

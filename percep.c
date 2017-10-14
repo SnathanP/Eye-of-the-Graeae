@@ -39,6 +39,6 @@ double guess(double input[], Perceptron *perc) {
 
 void training(double dS, double ownResult, double outputW, Perceptron *perc) {
     for (size_t i = 0; i < NBWEIGHT; i++) {
-        perc->weights[i] += (dS / outputW) * sigmoid_prime(ownResult) * 0.05; //LearningRate
+        perc->weights[i] += (dS / outputW) * sigmoid_prime(ownResult) * LEARNING_RATE;
     }
 }
