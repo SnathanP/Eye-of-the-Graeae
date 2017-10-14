@@ -1,497 +1,441 @@
-0.182521 : weights
-0.650542 : weights
-0.654446 : weights
-0.813957 : weights
-0.256466 : weights
-0.769282 : weights
-0.360505 : weights
-0.348046 : weights
-0.082703 : weights
-0.231991 : weights
-0.729268 : weights
-0.702642 : weights
-0.539605 : weights
-0.038992 : weights
-0.548353 : weights
-0.604489 : weights
-0.453667 : weights
-0.579911 : weights
-0.170049 : weights
-0.056809 : weights
-0.435869 : weights
-0.021462 : weights
-0.086450 : weights
-0.479178 : weights
-0.749463 : weights
-0.538934 : weights
-0.328926 : weights
-0.039451 : weights
-0.483684 : weights
-0.490449 : weights
-0.311785 : weights
-0.666204 : weights
-0.140991 : weights
-0.966231 : weights
-0.480161 : weights
-0.397457 : weights
-0.735513 : weights
-0.840666 : weights
-0.745503 : weights
-0.818216 : weights
-0.072656 : weights
-0.474770 : weights
-0.520858 : weights
-0.612261 : weights
-0.513762 : weights
-0.069211 : weights
-0.216751 : weights
-0.967429 : weights
-0.649122 : weights
-0.386800 : weights
-0.024238 : weights
-0.084991 : weights
-0.408261 : weights
-0.110688 : weights
-0.564169 : weights
-0.157724 : weights
-0.649622 : weights
-0.893095 : weights
-0.197174 : weights
-0.133305 : weights
+0.586869 : weights
+0.184937 : weights
+0.825212 : weights
+0.046090 : weights
 Ité 0 : 1,0, target = 1
-0.999997 : TRUE
+0.691327 : TRUE
 
 Ité 1 : 1,1, target = 0
-0.999998 : FALSE
+0.704875 : FALSE
 
 Ité 2 : 1,0, target = 1
-0.999995 : TRUE
+0.683518 : TRUE
 
 Ité 3 : 0,1, target = 1
-0.999997 : TRUE
+0.700405 : TRUE
 
 Ité 4 : 0,1, target = 1
-0.999997 : TRUE
+0.706303 : TRUE
 
 Ité 5 : 0,1, target = 1
-0.999997 : TRUE
+0.711999 : TRUE
 
 Ité 6 : 0,1, target = 1
-0.999997 : TRUE
+0.717505 : TRUE
 
 Ité 7 : 1,1, target = 0
-0.999996 : FALSE
+0.722204 : FALSE
 
 Ité 8 : 1,1, target = 0
-0.999992 : FALSE
+0.707959 : FALSE
 
 Ité 9 : 0,1, target = 1
-0.999988 : TRUE
+0.696617 : TRUE
 
 Ité 10 : 0,0, target = 0
-0.999987 : FALSE
+0.695721 : FALSE
 
 Ité 11 : 0,1, target = 1
-0.999978 : TRUE
+0.688891 : TRUE
 
 Ité 12 : 0,0, target = 0
-0.999976 : FALSE
+0.688605 : FALSE
 
 Ité 13 : 0,0, target = 0
-0.999957 : FALSE
+0.675311 : FALSE
 
 Ité 14 : 1,0, target = 1
-0.999891 : TRUE
+0.660106 : TRUE
 
 Ité 15 : 1,1, target = 0
-0.999895 : FALSE
+0.671774 : FALSE
 
 Ité 16 : 1,0, target = 1
-0.999788 : TRUE
+0.001030 : FALSE
 
 Ité 17 : 1,1, target = 0
-0.999796 : FALSE
+0.676375 : FALSE
 
 Ité 18 : 0,1, target = 1
-0.999712 : TRUE
+0.000001 : FALSE
 
 Ité 19 : 0,1, target = 1
-0.999712 : TRUE
+0.000001 : FALSE
 
 Ité 20 : 1,1, target = 0
-0.999610 : FALSE
+0.700864 : FALSE
 
 Ité 21 : 0,1, target = 1
-0.999436 : TRUE
+0.000000 : FALSE
 
 Ité 22 : 0,0, target = 0
-0.999402 : FALSE
+0.000000 : TRUE
 
 Ité 23 : 1,1, target = 0
-0.998588 : FALSE
+0.705618 : FALSE
 
 Ité 24 : 0,1, target = 1
-0.997991 : TRUE
+0.000000 : FALSE
 
 Ité 25 : 1,0, target = 1
-0.997215 : TRUE
+0.000000 : FALSE
 
 Ité 26 : 0,1, target = 1
-0.997997 : TRUE
+0.000000 : FALSE
 
 Ité 27 : 1,0, target = 1
-0.997223 : TRUE
+0.000000 : FALSE
 
 Ité 28 : 0,0, target = 0
-0.997913 : FALSE
+0.000000 : TRUE
 
 Ité 29 : 0,0, target = 0
-0.996244 : FALSE
+0.000000 : TRUE
 
 Ité 30 : 0,1, target = 1
-0.993308 : TRUE
+0.000000 : FALSE
 
 Ité 31 : 1,1, target = 0
-0.990889 : FALSE
+0.777784 : FALSE
 
 Ité 32 : 0,1, target = 1
-0.987107 : TRUE
+0.000000 : FALSE
 
 Ité 33 : 0,1, target = 1
-0.987210 : TRUE
+0.000000 : FALSE
 
 Ité 34 : 1,1, target = 0
-0.982964 : FALSE
+0.796137 : FALSE
 
 Ité 35 : 1,0, target = 1
-0.967690 : TRUE
+0.000000 : FALSE
 
 Ité 36 : 0,1, target = 1
-0.976290 : TRUE
+0.000000 : FALSE
 
 Ité 37 : 1,1, target = 0
-0.969352 : FALSE
+0.812771 : FALSE
 
 Ité 38 : 0,1, target = 1
-0.954067 : TRUE
+0.000000 : FALSE
 
 Ité 39 : 1,0, target = 1
-0.941359 : TRUE
+0.000000 : FALSE
 
 Ité 40 : 1,0, target = 1
-0.943397 : TRUE
+0.000000 : FALSE
 
 Ité 41 : 0,1, target = 1
-0.958491 : TRUE
+0.000000 : FALSE
 
 Ité 42 : 1,0, target = 1
-0.946651 : TRUE
+0.000000 : FALSE
 
 Ité 43 : 0,1, target = 1
-0.960880 : TRUE
+0.000000 : FALSE
 
 Ité 44 : 0,1, target = 1
-0.961802 : TRUE
+0.000000 : FALSE
 
 Ité 45 : 1,1, target = 0
-0.952303 : FALSE
+0.883601 : FALSE
 
 Ité 46 : 1,1, target = 0
-0.913849 : FALSE
+0.875230 : FALSE
 
 Ité 47 : 0,1, target = 1
-0.875019 : TRUE
+0.000000 : FALSE
 
 Ité 48 : 0,1, target = 1
-0.883745 : TRUE
+0.000000 : FALSE
 
 Ité 49 : 1,1, target = 0
-0.869903 : FALSE
+0.886330 : FALSE
 
 Ité 50 : 0,0, target = 0
-0.800732 : FALSE
+0.000000 : TRUE
 
 Ité 51 : 1,1, target = 0
-0.684324 : FALSE
+0.878112 : FALSE
 
 Ité 52 : 0,1, target = 1
-0.601750 : TRUE
+0.000000 : FALSE
 
 Ité 53 : 1,0, target = 1
-0.614747 : TRUE
+0.000000 : FALSE
 
 Ité 54 : 1,0, target = 1
-0.678919 : TRUE
+0.000000 : FALSE
 
 Ité 55 : 1,0, target = 1
-0.726325 : TRUE
+0.000000 : FALSE
 
 Ité 56 : 0,0, target = 0
-0.789883 : FALSE
+0.000000 : TRUE
 
 Ité 57 : 0,0, target = 0
-0.693257 : FALSE
+0.000000 : TRUE
 
 Ité 58 : 1,0, target = 1
-0.545135 : TRUE
+0.000000 : FALSE
 
 Ité 59 : 0,1, target = 1
-0.685235 : TRUE
+0.000000 : FALSE
 
 Ité 60 : 0,0, target = 0
-0.716601 : FALSE
+0.000000 : TRUE
 
 Ité 61 : 0,1, target = 1
-0.625263 : TRUE
+0.000000 : FALSE
 
 Ité 62 : 1,1, target = 0
-0.643275 : FALSE
+0.926332 : FALSE
 
 Ité 63 : 1,0, target = 1
-0.502867 : TRUE
+0.000000 : FALSE
 
 Ité 64 : 1,0, target = 1
-0.594540 : TRUE
+0.000000 : FALSE
 
 Ité 65 : 0,0, target = 0
-0.693921 : FALSE
+0.000000 : TRUE
 
 Ité 66 : 1,0, target = 1
-0.552096 : TRUE
+0.000000 : FALSE
 
 Ité 67 : 0,1, target = 1
-0.694760 : TRUE
+0.000000 : FALSE
 
 Ité 68 : 0,1, target = 1
-0.738338 : TRUE
+0.000000 : FALSE
 
 Ité 69 : 0,1, target = 1
-0.771832 : TRUE
+0.000000 : FALSE
 
 Ité 70 : 0,1, target = 1
-0.798155 : TRUE
+0.000000 : FALSE
 
 Ité 71 : 0,1, target = 1
-0.818980 : TRUE
+0.000000 : FALSE
 
 Ité 72 : 0,0, target = 0
-0.840064 : FALSE
+0.000000 : TRUE
 
 Ité 73 : 1,1, target = 0
-0.706855 : FALSE
+0.960295 : FALSE
 
 Ité 74 : 1,1, target = 0
-0.590150 : FALSE
+0.957010 : FALSE
 
 Ité 75 : 1,1, target = 0
-0.479934 : TRUE
+0.953474 : FALSE
 
 Ité 76 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 77 : 1,0, target = 1
-0.051006 : FALSE
+0.000000 : FALSE
 
 Ité 78 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 79 : 0,1, target = 1
-0.035959 : FALSE
+0.000000 : FALSE
 
 Ité 80 : 1,1, target = 0
-0.740009 : FALSE
+0.957754 : FALSE
 
 Ité 81 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 82 : 1,0, target = 1
-0.050918 : FALSE
+0.000000 : FALSE
 
 Ité 83 : 1,0, target = 1
-0.102334 : FALSE
+0.000000 : FALSE
 
 Ité 84 : 1,0, target = 1
-0.187979 : FALSE
+0.000000 : FALSE
 
 Ité 85 : 1,0, target = 1
-0.303995 : FALSE
+0.000000 : FALSE
 
 Ité 86 : 0,1, target = 1
-0.132914 : FALSE
+0.000000 : FALSE
 
 Ité 87 : 1,0, target = 1
-0.598824 : TRUE
+0.000000 : FALSE
 
 Ité 88 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 89 : 1,1, target = 0
-0.983612 : FALSE
+0.973002 : FALSE
 
 Ité 90 : 0,1, target = 1
-0.031515 : FALSE
+0.000000 : FALSE
 
 Ité 91 : 1,0, target = 1
-0.403763 : FALSE
+0.000000 : FALSE
 
 Ité 92 : 1,0, target = 1
-0.515448 : TRUE
+0.000000 : FALSE
 
 Ité 93 : 1,1, target = 0
-0.993395 : FALSE
+0.977607 : FALSE
 
 Ité 94 : 0,1, target = 1
-0.012484 : FALSE
+0.000000 : FALSE
 
 Ité 95 : 1,1, target = 0
-0.994133 : FALSE
+0.977823 : FALSE
 
 Ité 96 : 1,1, target = 0
-0.988849 : FALSE
+0.975934 : FALSE
 
 Ité 97 : 0,1, target = 1
-0.000170 : FALSE
+0.000000 : FALSE
 
 Ité 98 : 1,1, target = 0
-0.990260 : FALSE
+0.976167 : FALSE
 
 Ité 99 : 1,1, target = 0
-0.981617 : FALSE
+0.974142 : FALSE
 
 Ité 100 : 1,1, target = 0
-0.965706 : FALSE
+0.971953 : FALSE
 
 Ité 101 : 1,1, target = 0
-0.937290 : FALSE
+0.969587 : FALSE
 
 Ité 102 : 1,0, target = 1
-0.000020 : FALSE
+0.000000 : FALSE
 
 Ité 103 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 104 : 1,0, target = 1
-0.000096 : FALSE
+0.000000 : FALSE
 
 Ité 105 : 1,0, target = 1
-0.000211 : FALSE
+0.000000 : FALSE
 
 Ité 106 : 1,0, target = 1
-0.000463 : FALSE
+0.000000 : FALSE
 
 Ité 107 : 1,0, target = 1
-0.001021 : FALSE
+0.000000 : FALSE
 
 Ité 108 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 109 : 0,1, target = 1
-0.000002 : FALSE
+0.000000 : FALSE
 
 Ité 110 : 0,1, target = 1
-0.000005 : FALSE
+0.000000 : FALSE
 
 Ité 111 : 1,1, target = 0
-0.999763 : FALSE
+0.983925 : FALSE
 
 Ité 112 : 0,1, target = 1
-0.000001 : FALSE
+0.000000 : FALSE
 
 Ité 113 : 1,0, target = 1
-0.003570 : FALSE
+0.000000 : FALSE
 
 Ité 114 : 0,1, target = 1
-0.000004 : FALSE
+0.000000 : FALSE
 
 Ité 115 : 1,0, target = 1
-0.017071 : FALSE
+0.000000 : FALSE
 
 Ité 116 : 0,1, target = 1
-0.000019 : FALSE
+0.000000 : FALSE
 
 Ité 117 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 118 : 0,1, target = 1
-0.000042 : FALSE
+0.000000 : FALSE
 
 Ité 119 : 1,0, target = 1
-0.153670 : FALSE
+0.000000 : FALSE
 
 Ité 120 : 1,0, target = 1
-0.260848 : FALSE
+0.000000 : FALSE
 
 Ité 121 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 122 : 1,0, target = 1
-0.385090 : FALSE
+0.000000 : FALSE
 
 Ité 123 : 1,0, target = 1
-0.499735 : FALSE
+0.000000 : FALSE
 
 Ité 124 : 0,1, target = 1
-0.000786 : FALSE
+0.000000 : FALSE
 
 Ité 125 : 1,1, target = 0
-1.000000 : FALSE
+0.993622 : FALSE
 
 Ité 126 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 127 : 1,1, target = 0
-0.999999 : FALSE
+0.993065 : FALSE
 
 Ité 128 : 1,0, target = 1
-0.038027 : FALSE
+0.000000 : FALSE
 
 Ité 129 : 1,0, target = 1
-0.077650 : FALSE
+0.000000 : FALSE
 
 Ité 130 : 1,1, target = 0
-1.000000 : FALSE
+0.993713 : FALSE
 
 Ité 131 : 1,0, target = 1
-0.019233 : FALSE
+0.000000 : FALSE
 
 Ité 132 : 1,0, target = 1
-0.040704 : FALSE
+0.000000 : FALSE
 
 Ité 133 : 0,1, target = 1
-0.000007 : FALSE
+0.000000 : FALSE
 
 Ité 134 : 1,0, target = 1
-0.166302 : FALSE
+0.000000 : FALSE
 
 Ité 135 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 136 : 1,1, target = 0
-1.000000 : FALSE
+0.995264 : FALSE
 
 Ité 137 : 1,0, target = 1
-0.041699 : FALSE
+0.000000 : FALSE
 
 Ité 138 : 1,0, target = 1
-0.085215 : FALSE
+0.000000 : FALSE
 
 Ité 139 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 140 : 1,0, target = 1
-0.160636 : FALSE
+0.000000 : FALSE
 
 Ité 141 : 1,0, target = 1
-0.269626 : FALSE
+0.000000 : FALSE
 
 Ité 142 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 143 : 1,1, target = 0
-1.000000 : FALSE
+0.996426 : FALSE
 
 Ité 144 : 1,1, target = 0
-1.000000 : FALSE
+0.996112 : FALSE
 
 Ité 145 : 0,1, target = 1
 0.000000 : FALSE
@@ -500,19 +444,19 @@ Ité 146 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 147 : 1,1, target = 0
-1.000000 : FALSE
+0.996496 : FALSE
 
 Ité 148 : 1,0, target = 1
-0.004771 : FALSE
+0.000000 : FALSE
 
 Ité 149 : 1,1, target = 0
-1.000000 : FALSE
+0.996522 : FALSE
 
 Ité 150 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 151 : 1,1, target = 0
-1.000000 : FALSE
+0.996557 : FALSE
 
 Ité 152 : 0,1, target = 1
 0.000000 : FALSE
@@ -521,7 +465,7 @@ Ité 153 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 154 : 1,0, target = 1
-0.000687 : FALSE
+0.000000 : FALSE
 
 Ité 155 : 0,1, target = 1
 0.000000 : FALSE
@@ -533,13 +477,13 @@ Ité 157 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 158 : 1,0, target = 1
-0.007349 : FALSE
+0.000000 : FALSE
 
 Ité 159 : 1,0, target = 1
-0.015771 : FALSE
+0.000000 : FALSE
 
 Ité 160 : 1,1, target = 0
-1.000000 : FALSE
+0.997856 : FALSE
 
 Ité 161 : 0,0, target = 0
 0.000000 : TRUE
@@ -554,10 +498,10 @@ Ité 164 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 165 : 1,1, target = 0
-1.000000 : FALSE
+0.997877 : FALSE
 
 Ité 166 : 1,1, target = 0
-1.000000 : FALSE
+0.997691 : FALSE
 
 Ité 167 : 0,0, target = 0
 0.000000 : TRUE
@@ -566,7 +510,7 @@ Ité 168 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 169 : 1,0, target = 1
-0.000191 : FALSE
+0.000000 : FALSE
 
 Ité 170 : 0,0, target = 0
 0.000000 : TRUE
@@ -584,55 +528,55 @@ Ité 174 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 175 : 1,0, target = 1
-0.002051 : FALSE
+0.000000 : FALSE
 
 Ité 176 : 1,1, target = 0
-1.000000 : FALSE
+0.998425 : FALSE
 
 Ité 177 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 178 : 1,1, target = 0
-1.000000 : FALSE
+0.998287 : FALSE
 
 Ité 179 : 1,0, target = 1
-0.000049 : FALSE
+0.000000 : FALSE
 
 Ité 180 : 1,0, target = 1
-0.000107 : FALSE
+0.000000 : FALSE
 
 Ité 181 : 1,0, target = 1
-0.000235 : FALSE
+0.000000 : FALSE
 
 Ité 182 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 183 : 1,1, target = 0
-1.000000 : FALSE
+0.998585 : FALSE
 
 Ité 184 : 1,0, target = 1
-0.000054 : FALSE
+0.000000 : FALSE
 
 Ité 185 : 1,0, target = 1
-0.000118 : FALSE
+0.000000 : FALSE
 
 Ité 186 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 187 : 1,1, target = 0
-1.000000 : FALSE
+0.998720 : FALSE
 
 Ité 188 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 189 : 1,1, target = 0
-1.000000 : FALSE
+0.998607 : FALSE
 
 Ité 190 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 191 : 1,1, target = 0
-1.000000 : FALSE
+0.998484 : FALSE
 
 Ité 192 : 0,0, target = 0
 0.000000 : TRUE
@@ -647,7 +591,7 @@ Ité 195 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 196 : 1,0, target = 1
-0.000001 : FALSE
+0.000000 : FALSE
 
 Ité 197 : 0,0, target = 0
 0.000000 : TRUE
@@ -656,16 +600,16 @@ Ité 198 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 199 : 1,0, target = 1
-0.000007 : FALSE
+0.000000 : FALSE
 
 Ité 200 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 201 : 1,1, target = 0
-1.000000 : FALSE
+0.999058 : FALSE
 
 Ité 202 : 1,0, target = 1
-0.000004 : FALSE
+0.000000 : FALSE
 
 Ité 203 : 0,1, target = 1
 0.000000 : FALSE
@@ -674,10 +618,10 @@ Ité 204 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 205 : 1,1, target = 0
-1.000000 : FALSE
+0.999150 : FALSE
 
 Ité 206 : 1,1, target = 0
-1.000000 : FALSE
+0.999075 : FALSE
 
 Ité 207 : 0,1, target = 1
 0.000000 : FALSE
@@ -692,7 +636,7 @@ Ité 210 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 211 : 1,0, target = 1
-0.000001 : FALSE
+0.000000 : FALSE
 
 Ité 212 : 0,1, target = 1
 0.000000 : FALSE
@@ -701,13 +645,13 @@ Ité 213 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 214 : 1,0, target = 1
-0.000010 : FALSE
+0.000000 : FALSE
 
 Ité 215 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 216 : 1,1, target = 0
-1.000000 : FALSE
+0.999478 : FALSE
 
 Ité 217 : 0,0, target = 0
 0.000000 : TRUE
@@ -719,7 +663,7 @@ Ité 219 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 220 : 1,1, target = 0
-1.000000 : FALSE
+0.999530 : FALSE
 
 Ité 221 : 0,0, target = 0
 0.000000 : TRUE
@@ -731,10 +675,10 @@ Ité 223 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 224 : 1,0, target = 1
-0.000003 : FALSE
+0.000000 : FALSE
 
 Ité 225 : 1,0, target = 1
-0.000006 : FALSE
+0.000000 : FALSE
 
 Ité 226 : 0,0, target = 0
 0.000000 : TRUE
@@ -746,22 +690,22 @@ Ité 228 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 229 : 1,1, target = 0
-1.000000 : FALSE
+0.999649 : FALSE
 
 Ité 230 : 1,1, target = 0
-1.000000 : FALSE
+0.999618 : FALSE
 
 Ité 231 : 1,0, target = 1
-0.000001 : FALSE
+0.000000 : FALSE
 
 Ité 232 : 1,0, target = 1
-0.000001 : FALSE
+0.000000 : FALSE
 
 Ité 233 : 1,1, target = 0
-1.000000 : FALSE
+0.999654 : FALSE
 
 Ité 234 : 1,1, target = 0
-1.000000 : FALSE
+0.999624 : FALSE
 
 Ité 235 : 1,0, target = 1
 0.000000 : FALSE
@@ -770,7 +714,7 @@ Ité 236 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 237 : 1,1, target = 0
-1.000000 : FALSE
+0.999661 : FALSE
 
 Ité 238 : 0,0, target = 0
 0.000000 : TRUE
@@ -782,7 +726,7 @@ Ité 240 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 241 : 1,1, target = 0
-1.000000 : FALSE
+0.999695 : FALSE
 
 Ité 242 : 0,0, target = 0
 0.000000 : TRUE
@@ -791,13 +735,13 @@ Ité 243 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 244 : 1,1, target = 0
-1.000000 : FALSE
+0.999668 : FALSE
 
 Ité 245 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 246 : 1,1, target = 0
-1.000000 : FALSE
+0.999639 : FALSE
 
 Ité 247 : 1,0, target = 1
 0.000000 : FALSE
@@ -809,7 +753,7 @@ Ité 249 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 250 : 1,1, target = 0
-1.000000 : FALSE
+0.999703 : FALSE
 
 Ité 251 : 1,0, target = 1
 0.000000 : FALSE
@@ -818,40 +762,40 @@ Ité 252 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 253 : 1,1, target = 0
-1.000000 : FALSE
+0.999732 : FALSE
 
 Ité 254 : 1,1, target = 0
-1.000000 : FALSE
+0.999708 : FALSE
 
 Ité 255 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 256 : 1,1, target = 0
-1.000000 : FALSE
+0.999712 : FALSE
 
 Ité 257 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 258 : 1,1, target = 0
-1.000000 : FALSE
+0.999715 : FALSE
 
 Ité 259 : 1,1, target = 0
-1.000000 : FALSE
+0.999689 : FALSE
 
 Ité 260 : 1,1, target = 0
-1.000000 : FALSE
+0.999662 : FALSE
 
 Ité 261 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 262 : 1,1, target = 0
-1.000000 : FALSE
+0.999665 : FALSE
 
 Ité 263 : 1,1, target = 0
-1.000000 : FALSE
+0.999635 : FALSE
 
 Ité 264 : 1,1, target = 0
-1.000000 : FALSE
+0.999603 : FALSE
 
 Ité 265 : 0,1, target = 1
 0.000000 : FALSE
@@ -860,16 +804,16 @@ Ité 266 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 267 : 1,1, target = 0
-1.000000 : FALSE
+0.999608 : FALSE
 
 Ité 268 : 1,1, target = 0
-1.000000 : FALSE
+0.999573 : FALSE
 
 Ité 269 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 270 : 1,1, target = 0
-1.000000 : FALSE
+0.999578 : FALSE
 
 Ité 271 : 1,0, target = 1
 0.000000 : FALSE
@@ -878,10 +822,10 @@ Ité 272 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 273 : 1,1, target = 0
-1.000000 : FALSE
+0.999618 : FALSE
 
 Ité 274 : 1,1, target = 0
-1.000000 : FALSE
+0.999584 : FALSE
 
 Ité 275 : 0,0, target = 0
 0.000000 : TRUE
@@ -905,7 +849,7 @@ Ité 281 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 282 : 1,1, target = 0
-1.000000 : FALSE
+0.999688 : FALSE
 
 Ité 283 : 1,0, target = 1
 0.000000 : FALSE
@@ -917,13 +861,13 @@ Ité 285 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 286 : 1,1, target = 0
-1.000000 : FALSE
+0.999719 : FALSE
 
 Ité 287 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 288 : 1,1, target = 0
-1.000000 : FALSE
+0.999694 : FALSE
 
 Ité 289 : 1,0, target = 1
 0.000000 : FALSE
@@ -932,10 +876,10 @@ Ité 290 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 291 : 1,1, target = 0
-1.000000 : FALSE
+0.999724 : FALSE
 
 Ité 292 : 1,1, target = 0
-1.000000 : FALSE
+0.999700 : FALSE
 
 Ité 293 : 0,1, target = 1
 0.000000 : FALSE
@@ -947,25 +891,25 @@ Ité 295 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 296 : 1,1, target = 0
-1.000000 : FALSE
+0.999730 : FALSE
 
 Ité 297 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 298 : 1,1, target = 0
-1.000000 : FALSE
+0.999706 : FALSE
 
 Ité 299 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 300 : 1,1, target = 0
-1.000000 : FALSE
+0.999708 : FALSE
 
 Ité 301 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 302 : 1,1, target = 0
-1.000000 : FALSE
+0.999682 : FALSE
 
 Ité 303 : 1,0, target = 1
 0.000000 : FALSE
@@ -974,7 +918,7 @@ Ité 304 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 305 : 1,1, target = 0
-1.000000 : FALSE
+0.999685 : FALSE
 
 Ité 306 : 0,1, target = 1
 0.000000 : FALSE
@@ -986,10 +930,10 @@ Ité 308 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 309 : 1,1, target = 0
-1.000000 : FALSE
+0.999716 : FALSE
 
 Ité 310 : 1,1, target = 0
-1.000000 : FALSE
+0.999691 : FALSE
 
 Ité 311 : 0,1, target = 1
 0.000000 : FALSE
@@ -1004,10 +948,10 @@ Ité 314 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 315 : 1,1, target = 0
-1.000000 : FALSE
+0.999747 : FALSE
 
 Ité 316 : 1,1, target = 0
-1.000000 : FALSE
+0.999724 : FALSE
 
 Ité 317 : 0,0, target = 0
 0.000000 : TRUE
@@ -1016,7 +960,7 @@ Ité 318 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 319 : 1,1, target = 0
-1.000000 : FALSE
+0.999727 : FALSE
 
 Ité 320 : 0,0, target = 0
 0.000000 : TRUE
@@ -1025,7 +969,7 @@ Ité 321 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 322 : 1,1, target = 0
-1.000000 : FALSE
+0.999730 : FALSE
 
 Ité 323 : 0,0, target = 0
 0.000000 : TRUE
@@ -1034,10 +978,10 @@ Ité 324 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 325 : 1,1, target = 0
-1.000000 : FALSE
+0.999732 : FALSE
 
 Ité 326 : 1,1, target = 0
-1.000000 : FALSE
+0.999708 : FALSE
 
 Ité 327 : 0,0, target = 0
 0.000000 : TRUE
@@ -1082,7 +1026,7 @@ Ité 340 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 341 : 1,1, target = 0
-1.000000 : FALSE
+0.999835 : FALSE
 
 Ité 342 : 0,1, target = 1
 0.000000 : FALSE
@@ -1097,16 +1041,16 @@ Ité 345 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 346 : 1,1, target = 0
-1.000000 : FALSE
+0.999877 : FALSE
 
 Ité 347 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 348 : 1,1, target = 0
-1.000000 : FALSE
+0.999866 : FALSE
 
 Ité 349 : 1,1, target = 0
-1.000000 : FALSE
+0.999854 : FALSE
 
 Ité 350 : 1,0, target = 1
 0.000000 : FALSE
@@ -1130,7 +1074,7 @@ Ité 356 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 357 : 1,1, target = 0
-1.000000 : FALSE
+0.999900 : FALSE
 
 Ité 358 : 0,1, target = 1
 0.000000 : FALSE
@@ -1145,10 +1089,10 @@ Ité 361 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 362 : 1,1, target = 0
-1.000000 : FALSE
+0.999918 : FALSE
 
 Ité 363 : 1,1, target = 0
-1.000000 : FALSE
+0.999911 : FALSE
 
 Ité 364 : 1,0, target = 1
 0.000000 : FALSE
@@ -1169,7 +1113,7 @@ Ité 369 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 370 : 1,1, target = 0
-1.000000 : FALSE
+0.999939 : FALSE
 
 Ité 371 : 0,0, target = 0
 0.000000 : TRUE
@@ -1187,13 +1131,13 @@ Ité 375 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 376 : 1,1, target = 0
-1.000000 : FALSE
+0.999955 : FALSE
 
 Ité 377 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 378 : 1,1, target = 0
-1.000000 : FALSE
+0.999955 : FALSE
 
 Ité 379 : 0,0, target = 0
 0.000000 : TRUE
@@ -1202,13 +1146,13 @@ Ité 380 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 381 : 1,1, target = 0
-1.000000 : FALSE
+0.999956 : FALSE
 
 Ité 382 : 1,1, target = 0
-1.000000 : FALSE
+0.999952 : FALSE
 
 Ité 383 : 1,1, target = 0
-1.000000 : FALSE
+0.999948 : FALSE
 
 Ité 384 : 0,0, target = 0
 0.000000 : TRUE
@@ -1223,7 +1167,7 @@ Ité 387 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 388 : 1,1, target = 0
-1.000000 : FALSE
+0.999948 : FALSE
 
 Ité 389 : 0,0, target = 0
 0.000000 : TRUE
@@ -1238,7 +1182,7 @@ Ité 392 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 393 : 1,1, target = 0
-1.000000 : FALSE
+0.999949 : FALSE
 
 Ité 394 : 0,1, target = 1
 0.000000 : FALSE
@@ -1253,10 +1197,10 @@ Ité 397 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 398 : 1,1, target = 0
-1.000000 : FALSE
+0.999962 : FALSE
 
 Ité 399 : 1,1, target = 0
-1.000000 : FALSE
+0.999958 : FALSE
 
 Ité 400 : 0,1, target = 1
 0.000000 : FALSE
@@ -1280,7 +1224,7 @@ Ité 406 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 407 : 1,1, target = 0
-1.000000 : FALSE
+0.999974 : FALSE
 
 Ité 408 : 0,1, target = 1
 0.000000 : FALSE
@@ -1307,7 +1251,7 @@ Ité 415 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 416 : 1,1, target = 0
-1.000000 : FALSE
+0.999984 : FALSE
 
 Ité 417 : 0,1, target = 1
 0.000000 : FALSE
@@ -1337,10 +1281,10 @@ Ité 425 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 426 : 1,1, target = 0
-1.000000 : FALSE
+0.999989 : FALSE
 
 Ité 427 : 1,1, target = 0
-1.000000 : FALSE
+0.999988 : FALSE
 
 Ité 428 : 0,0, target = 0
 0.000000 : TRUE
@@ -1355,13 +1299,13 @@ Ité 431 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 432 : 1,1, target = 0
-1.000000 : FALSE
+0.999990 : FALSE
 
 Ité 433 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 434 : 1,1, target = 0
-1.000000 : FALSE
+0.999990 : FALSE
 
 Ité 435 : 1,0, target = 1
 0.000000 : FALSE
@@ -1376,25 +1320,25 @@ Ité 438 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 439 : 1,1, target = 0
-1.000000 : FALSE
+0.999992 : FALSE
 
 Ité 440 : 1,1, target = 0
-1.000000 : FALSE
+0.999991 : FALSE
 
 Ité 441 : 1,1, target = 0
-1.000000 : FALSE
+0.999991 : FALSE
 
 Ité 442 : 1,1, target = 0
-1.000000 : FALSE
+0.999990 : FALSE
 
 Ité 443 : 1,1, target = 0
-1.000000 : FALSE
+0.999989 : FALSE
 
 Ité 444 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 445 : 1,1, target = 0
-1.000000 : FALSE
+0.999989 : FALSE
 
 Ité 446 : 0,0, target = 0
 0.000000 : TRUE
@@ -1403,7 +1347,7 @@ Ité 447 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 448 : 1,1, target = 0
-1.000000 : FALSE
+0.999989 : FALSE
 
 Ité 449 : 0,1, target = 1
 0.000000 : FALSE
@@ -1421,37 +1365,37 @@ Ité 453 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 454 : 1,1, target = 0
-1.000000 : FALSE
+0.999990 : FALSE
 
 Ité 455 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 456 : 1,1, target = 0
-1.000000 : FALSE
+0.999990 : FALSE
 
 Ité 457 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 458 : 1,1, target = 0
-1.000000 : FALSE
+0.999990 : FALSE
 
 Ité 459 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 460 : 1,1, target = 0
-1.000000 : FALSE
+0.999990 : FALSE
 
 Ité 461 : 1,1, target = 0
-1.000000 : FALSE
+0.999989 : FALSE
 
 Ité 462 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 463 : 1,1, target = 0
-1.000000 : FALSE
+0.999989 : FALSE
 
 Ité 464 : 1,1, target = 0
-1.000000 : FALSE
+0.999988 : FALSE
 
 Ité 465 : 0,0, target = 0
 0.000000 : TRUE
@@ -1475,7 +1419,7 @@ Ité 471 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 472 : 1,1, target = 0
-1.000000 : FALSE
+0.999991 : FALSE
 
 Ité 473 : 0,0, target = 0
 0.000000 : TRUE
@@ -1490,7 +1434,7 @@ Ité 476 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 477 : 1,1, target = 0
-1.000000 : FALSE
+0.999992 : FALSE
 
 Ité 478 : 0,0, target = 0
 0.000000 : TRUE
@@ -1523,13 +1467,13 @@ Ité 487 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 488 : 1,1, target = 0
-1.000000 : FALSE
+0.999994 : FALSE
 
 Ité 489 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 490 : 1,1, target = 0
-1.000000 : FALSE
+0.999994 : FALSE
 
 Ité 491 : 0,1, target = 1
 0.000000 : FALSE
@@ -1538,13 +1482,13 @@ Ité 492 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 493 : 1,1, target = 0
-1.000000 : FALSE
+0.999995 : FALSE
 
 Ité 494 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 495 : 1,1, target = 0
-1.000000 : FALSE
+0.999995 : FALSE
 
 Ité 496 : 0,0, target = 0
 0.000000 : TRUE
@@ -1589,7 +1533,7 @@ Ité 509 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 510 : 1,1, target = 0
-1.000000 : FALSE
+0.999998 : FALSE
 
 Ité 511 : 1,0, target = 1
 0.000000 : FALSE
@@ -1601,7 +1545,7 @@ Ité 513 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 514 : 1,1, target = 0
-1.000000 : FALSE
+0.999998 : FALSE
 
 Ité 515 : 0,0, target = 0
 0.000000 : TRUE
@@ -1610,7 +1554,7 @@ Ité 516 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 517 : 1,1, target = 0
-1.000000 : FALSE
+0.999998 : FALSE
 
 Ité 518 : 0,1, target = 1
 0.000000 : FALSE
@@ -1625,7 +1569,7 @@ Ité 521 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 522 : 1,1, target = 0
-1.000000 : FALSE
+0.999998 : FALSE
 
 Ité 523 : 1,0, target = 1
 0.000000 : FALSE
@@ -1634,7 +1578,7 @@ Ité 524 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 525 : 1,1, target = 0
-1.000000 : FALSE
+0.999998 : FALSE
 
 Ité 526 : 0,0, target = 0
 0.000000 : TRUE
@@ -1643,7 +1587,7 @@ Ité 527 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 528 : 1,1, target = 0
-1.000000 : FALSE
+0.999998 : FALSE
 
 Ité 529 : 0,0, target = 0
 0.000000 : TRUE
@@ -1652,13 +1596,13 @@ Ité 530 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 531 : 1,1, target = 0
-1.000000 : FALSE
+0.999998 : FALSE
 
 Ité 532 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 533 : 1,1, target = 0
-1.000000 : FALSE
+0.999998 : FALSE
 
 Ité 534 : 0,1, target = 1
 0.000000 : FALSE
@@ -1673,7 +1617,7 @@ Ité 537 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 538 : 1,1, target = 0
-1.000000 : FALSE
+0.999998 : FALSE
 
 Ité 539 : 0,1, target = 1
 0.000000 : FALSE
@@ -1682,7 +1626,7 @@ Ité 540 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 541 : 1,1, target = 0
-1.000000 : FALSE
+0.999998 : FALSE
 
 Ité 542 : 1,0, target = 1
 0.000000 : FALSE
@@ -1703,10 +1647,10 @@ Ité 547 : 1,0, target = 1
 0.000000 : FALSE
 
 Ité 548 : 1,1, target = 0
-1.000000 : FALSE
+0.999999 : FALSE
 
 Ité 549 : 1,1, target = 0
-1.000000 : FALSE
+0.999999 : FALSE
 
 Ité 550 : 1,0, target = 1
 0.000000 : FALSE
@@ -1730,7 +1674,7 @@ Ité 556 : 0,0, target = 0
 0.000000 : TRUE
 
 Ité 557 : 1,1, target = 0
-1.000000 : FALSE
+0.999999 : FALSE
 
 Ité 558 : 0,1, target = 1
 0.000000 : FALSE
@@ -1742,7 +1686,7 @@ Ité 560 : 0,1, target = 1
 0.000000 : FALSE
 
 Ité 561 : 1,1, target = 0
-1.000000 : FALSE
+0.999999 : FALSE
 
 Ité 562 : 0,1, target = 1
 0.000000 : FALSE
@@ -6061,5 +6005,5 @@ Ité 1999 : 1,1, target = 0
 Ité 2000 : 0,0, target = 0
 0.000000 : TRUE
 
-True : 538
-False : 1463
+True : 507
+False : 1494

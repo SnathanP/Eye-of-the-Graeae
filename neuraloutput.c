@@ -12,7 +12,7 @@
 
 void initOutput (NeuralOutput *no) {
     for (size_t i = 0; i < NBWEIGHTOUT; i++) {
-        no->weights[i] = rand()/(double)RAND_MAX;
+        no->weights[i] = rand()/(double)RAND_MAX - 0.5f;
         printf("%lf : weights\n", no->weights[i]);
     }
 }
