@@ -1,8 +1,6 @@
 # include "percep.h"
 # include "property.h"
 
-# define NBWEIGHTOUT 50
-
 typedef struct NeuralOutput NeuralOutput;
 struct NeuralOutput {
     double weights[NBWEIGHTOUT];
