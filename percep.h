@@ -1,12 +1,14 @@
+# define NBWEIGHT 2
 
 typedef struct Perceptron Perceptron;
 
+#ifndef PERCEP
+#define PERCEP
 struct Perceptron {
-    double weights[2];
-    double learningRate;
+    double weights[NBWEIGHT];
 };
-
+#endif
 
 void initPerceptron (Perceptron *perc);
 double guess(double input[], Perceptron *perc);
-void training(double input[], double target, Perceptron *perc);
+void training(double dS, double ownResult, double outputW, Perceptron *perc);

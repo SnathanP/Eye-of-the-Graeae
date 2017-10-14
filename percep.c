@@ -9,7 +9,7 @@
 # include "percep.h"
 
 # define NBWEIGHT 2
-# define LearningRate 0.05
+
 
 
 
@@ -17,7 +17,7 @@ void initPerceptron (Perceptron *perc) {
     for (size_t i = 0; i < NBWEIGHT; i++) {
         perc->weights[i] = rand()/(double)RAND_MAX;
     }
-    perc->learningRate = LearningRate;
+
 }
 
 double guess(double input[], Perceptron *perc) {
@@ -33,13 +33,12 @@ double guess(double input[], Perceptron *perc) {
         output = 0;
     }
     */
+
     return sigmoid(sum);
 }
 
-void training(double input[], double target, Perceptron *perc) {
-    double prediction = guess(input, perc);
-    double error = target - prediction;
+void training(double dS, double ownResult, double outputW, Perceptron *perc) {
     for (size_t i = 0; i < NBWEIGHT; i++) {
-        perc->weights[i] += error * input[i] * LearningRate;
+        perc->weights[i] += (dS / outputW) * sigmoid_prime(ownResult);
     }
 }
