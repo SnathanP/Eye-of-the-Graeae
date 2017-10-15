@@ -23,12 +23,12 @@ double guessOutput(double input[], NeuralOutput *no) {
         sum += input[i] * no->weights[i];
     }
     //printf("%lf : sum\n", sum);
-    return sigmoid(sum);
+    return tanhyp(sum);
 }
 
 void guessOutLearn(double input[], double target, NeuralOutput *no, Perceptron perceps[]) {
     double output = guessOutput(input, no);
-    double dS = (target - output) * sigmoid_prime(output);
+    double dS = (target - output) * tanh_prime(output);
     for (size_t i = 0; i < NBWEIGHTOUT; i++) {
         training(dS, input[i], no->weights[i], &perceps[i]);
         no->weights[i] += (dS/input[i]) * LEARNING_RATE;

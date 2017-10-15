@@ -55,14 +55,20 @@ int main(int argc, char const *argv[]) {
             printf("Ité %d : %d,%d, target = %d\n", i,(int)input[0], (int)input[1], (int)answer);
             printf("%lf", res);
             if ((answer == 1 && res > 0.5) || (answer == 0 && res <= 0.5)) {
-                printf(" : TRUE\n\n");
+                printf(" : TRUE\n");
                 truecount++;
             } else {
-                printf(" : FALSE\n\n");
+                printf(" : FALSE\n");
                 falsecount++;
             }
-
-            guessOutLearn(midout, answer, &output, perceps);
+            if ((answer == 1 && res < 0.95) || (answer == 0 && res > 0.05))
+            {
+              guessOutLearn(midout, answer, &output, perceps);
+              printf("Auto-correction\n\n");
+            }
+            else{
+              printf("\n\n");
+            }
             i++;
         }
 
