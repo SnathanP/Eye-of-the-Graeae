@@ -1,10 +1,10 @@
-# define LEARNING_RATE 0.10
+# define LEARNING_RATE 0.3
 
-# define TESTFILE "tests/10 000.txt"
+# define TESTFILE "tests/50 000.txt"
 
-# define NBWEIGHTOUT 4 // nombre de neuronnes
+# define HIDDEN 4    // nombre de neuronnes
 
-# define NBWEIGHT 2 // nombre d'input (ne pas changer)
+# define INPUT 2 // nombre d'input (ne pas changer)
 
 // Pour executer et stocker les résultats :
 // $ make

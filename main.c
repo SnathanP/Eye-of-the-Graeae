@@ -5,7 +5,7 @@
 # include <time.h>
 
 
-//# include "percep.h"
+# include "percep.h"
 
 # include "property.h"
 # include "activation.h"
@@ -27,7 +27,7 @@ double dotProduct(double *a, double *b, int length) {
 int main(int argc, char const *argv[]) {
     srand ( clock()  );
 // INIT
-    double input[2] = {1,0};
+    double input[INPUT] = {1,0};
     double answer = 1;
 
 
@@ -35,14 +35,14 @@ int main(int argc, char const *argv[]) {
     FILE* fichier = NULL;
     fichier = fopen(TESTFILE, "r");
 
-    double weights1[NBWEIGHTOUT * 2];
-    double weights2[NBWEIGHTOUT];
-    for (size_t i = 0; i < 2 * NBWEIGHTOUT; i++)
+    double weights1[HIDDEN * INPUT];
+    double weights2[HIDDEN];
+    for (size_t i = 0; i < INPUT * HIDDEN; i++)
     {
       weights1[i] = (rand() / (double) RAND_MAX);
       printf("Weights1 :%f\n",weights1[i] );
     }
-    for (size_t i = 0; i < NBWEIGHTOUT; i++)
+    for (size_t i = 0; i < HIDDEN; i++)
     {
       weights2[i] = (rand() /(double) RAND_MAX);
       printf("Weights2 :%f\n",weights2[i] );
@@ -62,25 +62,11 @@ int main(int argc, char const *argv[]) {
             answer = data[2] - '0';
 
             // FRONT
-            // ret.hiddenSum = multiply(weights.inputHidden, examples.input);
-            double hiddenSum[1*NBWEIGHTOUT];
-            // input = 1 * nbinput
-            //  weights1 = nbinput * NBWEIGHTOUT
-            // hiddenSum = 1 * NBWEIGHTOUT
-            mul(input,weights1,1,2,NBWEIGHTOUT,hiddenSum);
-            //ret.hiddenResult = ret.hiddenSum.transform(activate);
-            double hiddenResult[1*NBWEIGHTOUT];
-            //  hiddenResult = 1 * NBWEIGHTOUT
-            vector_apply(tanh,hiddenSum,NBWEIGHTOUT,hiddenResult);
-            //ret.outputSum = multiply(weights.hiddenOutput, ret.hiddenResult);
+            double hiddenSum[1*HIDDEN];
+            double hiddenResult[1*HIDDEN];
             double outputSum[1*1];
-            // weights2 = NBWEIGHTOUT * 1
-            // outputSum =  1 * 1
-            mul(hiddenResult,weights2,1,NBWEIGHTOUT,1, outputSum);
-            //ret.outputResult = ret.outputSum.transform(activate);
             double outputResult[1*1];
-            //outputResult = 1 * 1
-            vector_apply(tanh,outputSum,1,outputResult);
+            front(input, weights1, weights2, hiddenSum, hiddenResult, outputSum, outputResult);
             //ENDFRONT
 
             double result = outputResult[0];
@@ -99,58 +85,9 @@ int main(int argc, char const *argv[]) {
             if ((answer == 1 && result < 0.95) || (answer == 0 && result > 0.05))
             {
 
-              double tanswer[1] = {answer};
+                double tanswer[1] = {answer};
                 // TRAINING
-                //var errorOutputLayer = subtract(examples.output, results.outputResult);
-                // ERROR
-                double errorOutputLayer[1*1];
-                //outputResult = 1 * 1
-                substract(tanswer,outputResult,1,1,errorOutputLayer);
-                //var deltaOutputLayer = dot(results.outputSum.transform(activatePrime), errorOutputLayer);
-                double outputSumPrime[1*1];
-                vector_apply(tanh_prime,outputSum,1,outputSumPrime);
-                // dO
-                double deltaOutputLayer[1*1];
-                dot(outputSumPrime,errorOutputLayer,1,1,deltaOutputLayer);
-                //var hiddenOutputChanges = scalar(multiply(deltaOutputLayer, results.hiddenResult.transpose()), learningRate);
-                double hiddenResultT[NBWEIGHTOUT*1];
-                transpose(hiddenResult, 1, NBWEIGHTOUT, hiddenResultT);
-                //Oc
-                double hiddenOutputChanges[NBWEIGHTOUT * 1]; // APPLY TO weights2
-                mul(hiddenResult,deltaOutputLayer,NBWEIGHTOUT,1,1,hiddenOutputChanges);
-                //var deltaHiddenLayer = dot(multiply(weights.hiddenOutput.transpose(), deltaOutputLayer), results.hiddenSum.transform(activatePrime));
-                // dH
-                double deltaHiddenLayer[NBWEIGHTOUT*1];
-                double weights2T[1*NBWEIGHTOUT];
-                transpose(weights2,NBWEIGHTOUT,1,weights2T);
-                //  deltaOutputLayer = 1*1
-                double tmp[1 * NBWEIGHTOUT];
-                // deltaHiddenLayer = NBWEIGHTOUT * 1
-                mul(deltaOutputLayer,weights2T, 1, 1, NBWEIGHTOUT, tmp);
-
-                double hiddenSumPrime[1 * NBWEIGHTOUT];
-                // hiddenSumPrime = 1 * NBWEIGHTOUT
-                vector_apply(tanh_prime,hiddenSum,NBWEIGHTOUT,hiddenSumPrime);
-
-                dot(tmp,hiddenSumPrime,1,NBWEIGHTOUT,deltaHiddenLayer);
-
-                double inputT[2*1];
-                transpose(input,1,2,inputT);
-                //var inputHiddenChanges = scalar(multiply(deltaHiddenLayer, examples.input.transpose()), learningRate);
-                double inputHiddenChanges[2*NBWEIGHTOUT];
-                mul(input,deltaHiddenLayer,2,1,NBWEIGHTOUT, inputHiddenChanges);
-
-                //printf("inputHiddenChanges\n");
-                //print_matrix(inputHiddenChanges, 2, NBWEIGHTOUT);
-
-                vector_apply(applyLearningRate, inputHiddenChanges, NBWEIGHTOUT, inputHiddenChanges);
-                add(weights1,inputHiddenChanges,2,NBWEIGHTOUT,weights1);
-                //printf("hiddenOutputChanges\n");
-                //print_matrix(hiddenOutputChanges, NBWEIGHTOUT, 1);
-
-                vector_apply(applyLearningRate, hiddenOutputChanges, NBWEIGHTOUT, hiddenOutputChanges);
-                add(weights2,hiddenOutputChanges,1,NBWEIGHTOUT,weights2);
-                // Hc
+                back(input, tanswer, weights1, weights2, hiddenSum, hiddenResult, outputSum, outputResult);
 
               printf("Auto-correction\n\n");
             }
