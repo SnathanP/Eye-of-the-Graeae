@@ -30,6 +30,7 @@ void training(double answer[], double w1[], double w2[], double guess2[], double
     add(res,w2,1,3);
 }
 
+void back()
 /*void guessOutLearn(double input[], double target, NeuralOutput *no, Perceptron perceps[]) {
     double output = guessOutput(input, no);
     double dS = (target - output) * tanh_prime(output);

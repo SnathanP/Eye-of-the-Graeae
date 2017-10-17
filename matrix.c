@@ -4,7 +4,7 @@
 #include "matrix.h"
 
 
-double[] transpose(double mat[], size_t lines, size_t cols, double res[])
+void transpose(double mat[], size_t lines, size_t cols, double res[])
 {
     //double res[lines*cols] = {0};
     for (size_t i = 0; i < lines; i++) {
@@ -12,7 +12,25 @@ double[] transpose(double mat[], size_t lines, size_t cols, double res[])
             res[i+j*lines] = mat[j+i*cols];
         }
     }
-    return res;
+}
+
+void scalar(double mat[], double scal, size_t lines, size_t cols, double res[])
+{
+    for (size_t i = 0; i < lines; i++) {
+        for (size_t j = 0; j < cols; j++) {
+            res[j+i*lines] = mat[j+i*cols] * scal;
+        }
+    }
+}
+
+void dot(double m1[], double m2[], size_t lines, size_t cols, double res[])
+{
+    //double res[lines*cols] = {0};
+    for (size_t i = 0; i < lines; i++) {
+        for (size_t j = 0; j < cols; j++) {
+            res[j+i*lines] = m1[j+i*cols] * m2[j+i*cols];
+        }
+    }
 }
 
 void add(double mat1[], double mat2[], size_t lines, size_t cols, double res[])

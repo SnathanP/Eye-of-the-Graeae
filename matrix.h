@@ -30,7 +30,7 @@ void add(double mat1[], double mat2[], size_t lines, size_t cols, double res[]);
  *        res is a n X p matrix
  */
 void mul(double m1[], double m2[], size_t n, size_t m, size_t p, double res[]);
-
+void dot(double m1[], double m2[], size_t lines, size_t cols, double res[]);
 /*
  * print_matrix(mat, lines, cols)
  * prints the lines X cols matrix mat

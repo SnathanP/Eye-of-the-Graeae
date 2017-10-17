@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra -std=c99 -O0 -g
 LDFLAGS =
 LDLIBS = -lm
 
-OBJ = main.o percep.o activation.o matrix.o algebra.o
+OBJ = main.o activation.o matrix.o algebra.o
 DEP = ${OBJ:.o=.d}
 
 all: main
