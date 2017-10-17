@@ -98,6 +98,7 @@ int main(int argc, char const *argv[]) {
             }
             if ((answer == 1 && result < 0.95) || (answer == 0 && result > 0.05))
             {
+
               double tanswer[1] = {answer};
                 // TRAINING
                 //var errorOutputLayer = subtract(examples.output, results.outputResult);
@@ -139,9 +140,18 @@ int main(int argc, char const *argv[]) {
                 double inputHiddenChanges[2*NBWEIGHTOUT];
                 mul(input,deltaHiddenLayer,2,1,NBWEIGHTOUT, inputHiddenChanges);
 
+                //printf("inputHiddenChanges\n");
+                //print_matrix(inputHiddenChanges, 2, NBWEIGHTOUT);
+
+                vector_apply(applyLearningRate, inputHiddenChanges, NBWEIGHTOUT, inputHiddenChanges);
                 add(weights1,inputHiddenChanges,2,NBWEIGHTOUT,weights1);
+                //printf("hiddenOutputChanges\n");
+                //print_matrix(hiddenOutputChanges, NBWEIGHTOUT, 1);
+
+                vector_apply(applyLearningRate, hiddenOutputChanges, NBWEIGHTOUT, hiddenOutputChanges);
                 add(weights2,hiddenOutputChanges,1,NBWEIGHTOUT,weights2);
                 // Hc
+
               printf("Auto-correction\n\n");
             }
             else{

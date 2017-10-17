@@ -1,6 +1,6 @@
 # define LEARNING_RATE 0.10
 
-# define TESTFILE "tests/500.txt"
+# define TESTFILE "tests/10 000.txt"
 
 # define NBWEIGHTOUT 4 // nombre de neuronnes
 
