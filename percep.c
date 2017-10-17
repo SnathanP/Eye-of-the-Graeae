@@ -7,38 +7,35 @@
 
 # include "activation.h"
 # include "percep.h"
+# include "matrix.h"
+# include "algebra.h"
+# include "matrix.h"
 
-# define NBWEIGHT 2
 
-
-
-
-void initPerceptron (Perceptron *perc) {
-    for (size_t i = 0; i < NBWEIGHT; i++) {
-        perc->weights[i] = rand()/(double)RAND_MAX - 0.5f;
-    }
-
+void guess(double input[],double weights[],size_t n, size_t m, size_t p, double res[])
+{
+    mul(weights, input, n , m , p, res);
+    vector_apply(sigmoid,res,p,res);
 }
 
-double guess(double input[], Perceptron *perc) {
-    double sum = 0;
-    for (size_t i = 0; i < NBWEIGHT; i++) {
-        sum += input[i] * perc->weights[i];
-    }
-    /*
-    double output;
-    if (sum > 0.5) {
-        output = 1;
-    } else  {
-        output = 0;
-    }
-    */
-
-    return tanhyp(sum);
+void training(double answer[], double w1[], double w2[], double guess2[], double guess1[])
+{
+    double dE[1];
+    substract(answer, guess2, 1,1, dE);
+    double dS[1];
+    vector_apply(tanh_prime, guess2,1,guess2);
+    mul(outputSum,errorOutput,1,1,1,dS);
+    double res[NBWEIGHTOUT];
+    mul(dS,transpose(guess1,NBWEIGHTOUT,1,res),1,1,3,res);
+    add(res,w2,1,3);
 }
 
-void training(double dS, double ownResult, double outputW, Perceptron *perc) {
-    for (size_t i = 0; i < NBWEIGHT; i++) {
-        perc->weights[i] += (dS / outputW) * tanh_prime(ownResult) * LEARNING_RATE;
+/*void guessOutLearn(double input[], double target, NeuralOutput *no, Perceptron perceps[]) {
+    double output = guessOutput(input, no);
+    double dS = (target - output) * tanh_prime(output);
+    for (size_t i = 0; i < NBWEIGHTOUT; i++) {
+        training(dS, input[i], no->weights[i], &perceps[i]);
+        no->weights[i] += (dS/input[i]) * LEARNING_RATE;
     }
 }
+*/

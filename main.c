@@ -6,7 +6,6 @@
 
 
 # include "percep.h"
-# include "neuraloutput.h"
 
 # include "property.h"
 
@@ -21,16 +20,24 @@ int main(int argc, char const *argv[]) {
 // INIT
     double input[2] = {1,0};
     double answer = 1;
-    double midout[NBWEIGHTOUT] = {0};
-    Perceptron perceps[NBWEIGHTOUT];
-    for (size_t i = 0; i < NBWEIGHTOUT; i++) {
-        initPerceptron(&perceps[i]);
-    }
-    NeuralOutput output;
-    initOutput(&output);
+
+
 
     FILE* fichier = NULL;
     fichier = fopen(TESTFILE, "r");
+
+    double weights1[NBWEIGHTOUT * 2];
+    double weights2[NBWEIGHTOUT];
+    for (size_t i = 0; i < 2 * NBWEIGHTOUT; i++)
+    {
+      weights1[i] = (rand() / (double) RAND_MAX) - 0.5f;
+      printf("Weights1 :%f\n",weights1[i] );
+    }
+    for (size_t i = 0; i < NBWEIGHTOUT; i++)
+    {
+      weights2[i] = (rand() /(double) RAND_MAX) - 0.5f;
+      printf("Weights2 :%f\n",weights2[i] );
+    }
 
     char data[10] = "";
     int i = 0;
@@ -44,26 +51,27 @@ int main(int argc, char const *argv[]) {
             input[0] = data[0] - '0'; // On récupère les tests dans le fichier
             input[1] = data[1] - '0';
             answer = data[2] - '0';
+            double guess1[NBWEIGHTOUT];
+            double guess2[1];
+            guess(weights1,input, 1, 2, NBWEIGHTOUT, guess1);
+            guess(weights2,res, 1, NBWEIGHTOUT, 1, guess2);
+            double result = guess2[0];
 
-            for (size_t i = 0; i < NBWEIGHTOUT; i++) {
-                midout[i] = guess(input, &perceps[i]);
-                //printf("%lf\n", midout[i]);
-            }
-            double res = guessOutput(midout, &output);
 
             // AFFICHAGE
             printf("Ité %d : %d,%d, target = %d\n", i,(int)input[0], (int)input[1], (int)answer);
-            printf("%lf", res);
-            if ((answer == 1 && res > 0.5) || (answer == 0 && res <= 0.5)) {
+            printf("%lf", result);
+            if ((answer == 1 && result > 0.5) || (answer == 0 && result <= 0.5)) {
                 printf(" : TRUE\n");
                 truecount++;
             } else {
                 printf(" : FALSE\n");
                 falsecount++;
             }
-            if ((answer == 1 && res < 0.95) || (answer == 0 && res > 0.05))
+            if ((answer == 1 && result < 0.95) || (answer == 0 && result > 0.05))
             {
-              guessOutLearn(midout, answer, &output, perceps);
+              double tanswer[1] = {answer};
+              training(tanswer, guess2,weights1,weights2,guess1);
               printf("Auto-correction\n\n");
             }
             else{
