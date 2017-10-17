@@ -1,2018 +1,2018 @@
-Weights1 :-0.374385
-Weights1 :0.417074
-Weights1 :0.240617
-Weights1 :-0.267884
-Weights1 :-0.282333
-Weights1 :0.295127
-Weights1 :0.466933
-Weights1 :0.278680
-Weights2 :-0.400525
-Weights2 :0.321266
-Weights2 :0.266052
-Weights2 :0.326742
+Weights1 :-0.479137
+Weights1 :-0.291826
+Weights1 :0.283722
+Weights1 :-0.270913
+Weights1 :0.349198
+Weights1 :0.032114
+Weights1 :0.357630
+Weights1 :0.000795
+Weights2 :-0.469988
+Weights2 :0.489300
+Weights2 :-0.250498
+Weights2 :0.429931
 Ité 0 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 1 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 2 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 3 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 4 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 5 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 6 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 7 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 8 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 9 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 10 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 11 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 12 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 13 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 14 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 15 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 16 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 17 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 18 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 19 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 20 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 21 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 22 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 23 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 24 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 25 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 26 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 27 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 28 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 29 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 30 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 31 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 32 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 33 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 34 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 35 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 36 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 37 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 38 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 39 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 40 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 41 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 42 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 43 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 44 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 45 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 46 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 47 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 48 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 49 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 50 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 51 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 52 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 53 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 54 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 55 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 56 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 57 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 58 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 59 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 60 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 61 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 62 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 63 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 64 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 65 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 66 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 67 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 68 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 69 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 70 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 71 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 72 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 73 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 74 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 75 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 76 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 77 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 78 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 79 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 80 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 81 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 82 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 83 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 84 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 85 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 86 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 87 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 88 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 89 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 90 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 91 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 92 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 93 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 94 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 95 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 96 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 97 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 98 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 99 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 100 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 101 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 102 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 103 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 104 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 105 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 106 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 107 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 108 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 109 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 110 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 111 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 112 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 113 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 114 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 115 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 116 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 117 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 118 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 119 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 120 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 121 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 122 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 123 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 124 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 125 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 126 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 127 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 128 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 129 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 130 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 131 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 132 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 133 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 134 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 135 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 136 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 137 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 138 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 139 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 140 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 141 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 142 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 143 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 144 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 145 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 146 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 147 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 148 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 149 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 150 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 151 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 152 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 153 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 154 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 155 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 156 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 157 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 158 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 159 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 160 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 161 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 162 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 163 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 164 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 165 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 166 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 167 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 168 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 169 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 170 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 171 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 172 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 173 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 174 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 175 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 176 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 177 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 178 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 179 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 180 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 181 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 182 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 183 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 184 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 185 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 186 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 187 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 188 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 189 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 190 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 191 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 192 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 193 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 194 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 195 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 196 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 197 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 198 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 199 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 200 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 201 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 202 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 203 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 204 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 205 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 206 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 207 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 208 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 209 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 210 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 211 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 212 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 213 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 214 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 215 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 216 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 217 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 218 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 219 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 220 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 221 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 222 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 223 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 224 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 225 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 226 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 227 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 228 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 229 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 230 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 231 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 232 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 233 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 234 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 235 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 236 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 237 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 238 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 239 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 240 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 241 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 242 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 243 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 244 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 245 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 246 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 247 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 248 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 249 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 250 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 251 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 252 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 253 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 254 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 255 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 256 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 257 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 258 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 259 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 260 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 261 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 262 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 263 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 264 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 265 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 266 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 267 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 268 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 269 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 270 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 271 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 272 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 273 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 274 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 275 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 276 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 277 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 278 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 279 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 280 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 281 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 282 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 283 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 284 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 285 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 286 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 287 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 288 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 289 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 290 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 291 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 292 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 293 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 294 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 295 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 296 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 297 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 298 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 299 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 300 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 301 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 302 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 303 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 304 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 305 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 306 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 307 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 308 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 309 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 310 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 311 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 312 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 313 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 314 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 315 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 316 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 317 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 318 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 319 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 320 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 321 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 322 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 323 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 324 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 325 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 326 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 327 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 328 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 329 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 330 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 331 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 332 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 333 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 334 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 335 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 336 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 337 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 338 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 339 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 340 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 341 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 342 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 343 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 344 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 345 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 346 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 347 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 348 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 349 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 350 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 351 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 352 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 353 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 354 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 355 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 356 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 357 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 358 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 359 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 360 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 361 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 362 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 363 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 364 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 365 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 366 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 367 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 368 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 369 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 370 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 371 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 372 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 373 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 374 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 375 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 376 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 377 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 378 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 379 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 380 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 381 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 382 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 383 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 384 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 385 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 386 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 387 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 388 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 389 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 390 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 391 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 392 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 393 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 394 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 395 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 396 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 397 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 398 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 399 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 400 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 401 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 402 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 403 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 404 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 405 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 406 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 407 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 408 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 409 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 410 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 411 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 412 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 413 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 414 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 415 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 416 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 417 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 418 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 419 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 420 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 421 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 422 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 423 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 424 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 425 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 426 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 427 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 428 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 429 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 430 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 431 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 432 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 433 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 434 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 435 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 436 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 437 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 438 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 439 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 440 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 441 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 442 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 443 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 444 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 445 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 446 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 447 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 448 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 449 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 450 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 451 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 452 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 453 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 454 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 455 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 456 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 457 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 458 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 459 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 460 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 461 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 462 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 463 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 464 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 465 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 466 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 467 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 468 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 469 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 470 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 471 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 472 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 473 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 474 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 475 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 476 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 477 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 478 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 479 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 480 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 481 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 482 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 483 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 484 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 485 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 486 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 487 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 488 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 489 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 490 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 491 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 492 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 493 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 494 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 495 : 1,1, target = 0
-0.635990 : FALSE
-Auto-correction
+-0.308323 : TRUE
+
 
 Ité 496 : 0,0, target = 0
-0.612309 : FALSE
-Auto-correction
+0.000000 : TRUE
+
 
 Ité 497 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 498 : 1,0, target = 1
-0.618745 : TRUE
+-0.111926 : FALSE
 Auto-correction
 
 Ité 499 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
 Ité 500 : 0,1, target = 1
-0.630342 : TRUE
+-0.223807 : FALSE
 Auto-correction
 
-True : 253
-False : 248
+True : 248
+False : 253
