@@ -193,7 +193,7 @@ void Sobel_horizontal(SDL_Surface *img, int l[]){
   int copy[img->w * img->h];
   surf_to_array(img, copy);
   for(int i = 0; i < img->h; i++){
-    l[i * img->w] = copy[i * img->w];
+    l[i * img->w] = 0;
     for(int j = 1; j < img->w; j++){
       int index = j + i * img->w;
       l[index] = copy[index] != copy[index -1] ? 1 : 0;
@@ -205,10 +205,10 @@ void Sobel_vertical(SDL_Surface *img, int l[]){
   int copy[img->w * img->h];
   surf_to_array(img, copy);
   for(int i = 0; i < img->w; i++){
-    l[i] = copy[i];
+    l[i] = 0;
     for(int j = 1; j < img->h; j++){
       int index = i + j * img->w;
-      l[index] = copy[index] != copy[index -1] ? 1 : 0;
+      l[index] = copy[index] != copy[i + (j-1) * img->w] ? 1 : 0;
     }
   }
 }
