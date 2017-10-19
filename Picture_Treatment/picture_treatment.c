@@ -2,6 +2,7 @@
 #include "picture_treatment.h"
 
 /*
+TMP
 print_array -> int h[]:
 print the different value of a array h in which the index 0 contain
 the nb of value.
@@ -70,13 +71,18 @@ SDL_Surface* array_to_surf(int l[], SDL_Surface *img){
   return img;
 }
 
+/*
+TMP
+color_zone -> SDL_Surface *img, intl[]:
+color specifics zones of image using coordinates stocked in l
+in which l[0] contain the number of coordinates.  
+*/
 SDL_Surface* color_zone(SDL_Surface *img, int l[]){
   int limg[img->w * img->h];
   surf_to_array(img, limg);
   int index = 1;
   for(int k = 0; k < l[0]; k++){
     int x1 = l[index], x2 = l[index+1], y1 = l[index+2], y2 = l[index+3];
-    printf("\n(%d,%d) to (%d,%d)\n", x1, y1, x2, y2);
     for(int i = x1; i < x2; i++){
       for(int j = y1; j < y2; j++){
         limg[j + i * img->w] = limg[j + i * img->w] == 255 ? 255 : 127;
@@ -87,7 +93,16 @@ SDL_Surface* color_zone(SDL_Surface *img, int l[]){
   return array_to_surf(limg, img);
 }
 
-void h_cut_array(SDL_Surface *img, int l[], int l_c[]){
+/*
+h_cut_array -> SDL_Surface *img, int l_c[]:
+*parcour* line by line the image img and stock in l_c first the line 
+where it detects a black pixel and next the lines where
+there is no more black pixel.
+At the end remove all group of coordinates whith a difference below 5. 
+*/
+void h_cut_array(SDL_Surface *img, int l_c[]){
+  int l[img->w * img->h];
+  surf_to_array(img, l);
   l_c[0] = 0;
   int index = 1, box_engaged = 0;
   for(int i = 0; i < img->h; i++){
@@ -123,13 +138,20 @@ void h_cut_array(SDL_Surface *img, int l[], int l_c[]){
   }
 }
 
-void w_cut_array(int l[], int weight, int height, int l_c[]){
+/*
+w_cut_array -> int l[], int w, int h, int l_c[]:
+*parcour* columns by columns the partitions of an image, of size wxh,
+stock in l and put in l_c first the columns where it detects a black
+pixel and next the columns where there is no more black pixel.
+At the end remove all group of coordinates whith a difference below 5x5.
+*/
+void w_cut_array(int l[], int w, int h, int l_c[]){
   l_c[0] = 0;
   int index = 1, box_engaged = 0;
-  for(int i = 0; i < weight; i++){
+  for(int i = 0; i < w; i++){
     int sum = 0;
-    for(int j = 0; j < height && !sum; j++){
-      sum = l[i + j * weight] == 255 ? 0 : 1;
+    for(int j = 0; j < h && !sum; j++){
+      sum = l[i + j * w] == 255 ? 0 : 1;
     }
     if(sum && !box_engaged){
       l_c[index] = i;
@@ -145,7 +167,7 @@ void w_cut_array(int l[], int weight, int height, int l_c[]){
     }
   }
   if(l_c[0]%2 == 1){
-    l_c[index] = weight - 1;
+    l_c[index] = w - 1;
     l_c[0] += 1;
   }
   l_c[0] = l_c[0]/2;
@@ -168,7 +190,7 @@ void cut(SDL_Surface *img,int array_coords[]){
   surf_to_array(img, copy);
   int l_c_h[img->h + 1]; 
   array_coords[0] = 0;
-  h_cut_array(img, copy, l_c_h);
+  h_cut_array(img, l_c_h);
   int index_lch = 1, index_lcw = 1;
   for(int i = 0; i < l_c_h[0]; i++){
     int x = l_c_h[index_lch], y = l_c_h[index_lch + 1];
@@ -189,6 +211,11 @@ void cut(SDL_Surface *img,int array_coords[]){
   }
 }
 
+/*
+Sobel_horizontal -> SDL_Surface *img, int l[]:
+Transform l into a map where changement of contrast are save as 1.
+Changement of contrast are detected by scaning the img from left to right.
+*/
 void Sobel_horizontal(SDL_Surface *img, int l[]){
   int copy[img->w * img->h];
   surf_to_array(img, copy);
@@ -201,6 +228,11 @@ void Sobel_horizontal(SDL_Surface *img, int l[]){
   }
 }
 
+/*
+Sobel_horizontal -> SDL_Surface *img, int l[]:
+Transform l into a map where changement of contrast are save as 1.
+Changement of contrast are detected by scaning the img from top to bottom.
+*/
 void Sobel_vertical(SDL_Surface *img, int l[]){
   int copy[img->w * img->h];
   surf_to_array(img, copy);
@@ -213,6 +245,10 @@ void Sobel_vertical(SDL_Surface *img, int l[]){
   }
 }
 
+/*
+Sobel_filter -> SDL_Surface *img:
+detect and mark in black changement of contrast the image img.
+*/
 SDL_Surface* Sobel_filter(SDL_Surface* img){
   int l_h[img->h * img->w], l_v[img->h * img->w];
   Sobel_horizontal(img, l_h);
@@ -259,7 +295,8 @@ int moy_all(int l[], int size){
 
 /*
 median -> SDL_Surface *img:
-replace all the pixel by the median value among the value of his neightbors and his. 
+replace all the pixel by the median value among
+the value of his neightbors and his. 
 */
 SDL_Surface* median(SDL_Surface *img){
   int l[img->w * img->h];

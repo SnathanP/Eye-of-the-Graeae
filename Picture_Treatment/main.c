@@ -45,7 +45,7 @@ int main(){
   init_SDL();
   screen = SDL_SetVideoMode(1200, 1200, 32, SDL_HWSURFACE);
   SDL_FillRect(screen, NULL, SDL_MapRGB(screen->format, 100, 100, 100));
-  char *path = "/home/arthur/Téléchargements/image.png";
+  char *path = "image.png";
   SDL_Surface *img = Load_Image(path);
 
   display(0, 0, img, screen);
