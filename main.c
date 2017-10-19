@@ -30,7 +30,7 @@ int main(int argc, char const *argv[]) {
     double input[INPUT] = {1,0};
     double answer = 1;
 
-
+    int lastFalse;
 
     FILE* fichier = NULL;
     fichier = fopen(TESTFILE, "r");
@@ -81,6 +81,7 @@ int main(int argc, char const *argv[]) {
             } else {
                 printf(" : FALSE\n");
                 falsecount++;
+                lastFalse = i;
             }
             if ((answer == 1 && result < 0.95) || (answer == 0 && result > 0.05))
             {
@@ -98,6 +99,7 @@ int main(int argc, char const *argv[]) {
         }
 
     printf("True : %d\nFalse : %d\n", truecount, falsecount);
+    printf("Last False : %d\n", lastFalse);
     fclose(fichier); // On ferme le fichier qui a été ouvert
     }
 
