@@ -2,17 +2,6 @@
 #include "picture_treatment.h"
 
 /*
-TMP
-print_array -> int h[]:
-print the different value of a array h in which the index 0 contain
-the nb of value.
-*/
-void print_array(int h[]){
-  for(int i = 1; i < h[0]; i++)
-    printf(" h[%d] = %d /", i, h[i]);
-}
-
-/*
 sort_array_Uint8_spe -> Uint8 l[],
 sort a array l of type Uint8 in which the index 0 contain the nb of value.
 */
@@ -39,7 +28,7 @@ void neighbors(SDL_Surface *img, int  x, int  y, Uint8 l[], int dneight){
     for(int j = y - dneight; j <= y + dneight; j++){
       if(i >= 0 && j >= 0 && i < img->h && j < img->w){
         l[index] = get_light(img, j, i);
-        l[0] += 1;        
+        l[0] += 1;
         index += 1;
       }
     }
@@ -59,7 +48,7 @@ void surf_to_array(SDL_Surface *img, int l[]){
 
 /*
 array_to_surf -> int l[], SDL_Surface *img:
-apply a matrix representing an image to an surface img with the same format. 
+apply a matrix representing an image to an surface img with the same format.
 */
 SDL_Surface* array_to_surf(int l[], SDL_Surface *img){
   for(int i = 0; i < img->h; i++){
@@ -72,33 +61,11 @@ SDL_Surface* array_to_surf(int l[], SDL_Surface *img){
 }
 
 /*
-TMP
-color_zone -> SDL_Surface *img, intl[]:
-color specifics zones of image using coordinates stocked in l
-in which l[0] contain the number of coordinates.  
-*/
-SDL_Surface* color_zone(SDL_Surface *img, int l[]){
-  int limg[img->w * img->h];
-  surf_to_array(img, limg);
-  int index = 1;
-  for(int k = 0; k < l[0]; k++){
-    int x1 = l[index], x2 = l[index+1], y1 = l[index+2], y2 = l[index+3];
-    for(int i = x1; i < x2; i++){
-      for(int j = y1; j < y2; j++){
-        limg[j + i * img->w] = limg[j + i * img->w] == 255 ? 255 : 127;
-      }
-    }
-    index += 4;
-  }
-  return array_to_surf(limg, img);
-}
-
-/*
 h_cut_array -> SDL_Surface *img, int l_c[]:
-*parcour* line by line the image img and stock in l_c first the line 
+*parcour* line by line the image img and stock in l_c first the line
 where it detects a black pixel and next the lines where
 there is no more black pixel.
-At the end remove all group of coordinates whith a difference below 5. 
+At the end remove all group of coordinates whith a difference below 5.
 */
 void h_cut_array(SDL_Surface *img, int l_c[]){
   int l[img->w * img->h];
@@ -114,7 +81,7 @@ void h_cut_array(SDL_Surface *img, int l_c[]){
       l_c[index] = i;
       index += 1;
       box_engaged = 1;
-      l_c[0] += 1; 
+      l_c[0] += 1;
     }
     else if(!sum && box_engaged){
       l_c[index] = i;
@@ -180,7 +147,7 @@ void w_cut_array(int l[], int w, int h, int l_c[]){
     i++;
   }
 }
-  
+
 /*
 cut -> SDL_Surface *img, int array_coords[]:
 put in array_coords the section of the image where it detect letters.
@@ -188,7 +155,7 @@ put in array_coords the section of the image where it detect letters.
 void cut(SDL_Surface *img,int array_coords[]){
   int copy[img->w * img->h];
   surf_to_array(img, copy);
-  int l_c_h[img->h + 1]; 
+  int l_c_h[img->h + 1];
   array_coords[0] = 0;
   h_cut_array(img, l_c_h);
   int index_lch = 1, index_lcw = 1;
@@ -288,15 +255,15 @@ SDL_Surface* clean_img(SDL_Surface *img){
 int moy_all(int l[], int size){
   long sum = 0;
   for(int i = 0; i < size; i++){
-    sum += l[i]; 
+    sum += l[i];
   }
-  return (int)((double)sum / size);    
+  return (int)((double)sum / size);
 }
 
 /*
 median -> SDL_Surface *img:
 replace all the pixel by the median value among
-the value of his neightbors and his. 
+the value of his neightbors and his.
 */
 SDL_Surface* median(SDL_Surface *img){
   int l[img->w * img->h];
@@ -311,7 +278,7 @@ SDL_Surface* median(SDL_Surface *img){
       l[j + i * img->w] = rgb;
     }
   }
-  return array_to_surf(l, img);   
+  return array_to_surf(l, img);
 }
 
 /*
@@ -360,7 +327,7 @@ SDL_Surface* Contrast(SDL_Surface *img){
 /*
 threshold -> SDL_Surface *img:
 calculate the average of the brightness of each pixel. Every pixel below average
-become black, others become white. 
+become black, others become white.
 */
 SDL_Surface* threshold(SDL_Surface *img){
   int copy[img->w * img->h];
@@ -369,4 +336,84 @@ SDL_Surface* threshold(SDL_Surface *img){
   for(int i = 0; i < img->w * img->h; i++)
     copy[i] = copy[i] < n ? 0 : 255;
   return array_to_surf(copy, img);
+}
+
+/*
+img_resizing -> SDL_Surface *img, int w, int h:
+compress an image of size wxh to a size < 26x26.
+*/
+SDL_Surface* img_resizing(SDL_Surface *img, int w, int h){
+  int copy[img->h * img->w];
+  surf_to_array(img, copy);
+  int w_copy = img->w;
+  int tmp[h*w];
+  while(w > 26 || h > 26){
+    w = w/2;
+    h = h/2;
+    for(int i = 0; i < h; i++){
+      for(int j = 0; j < w; j++){
+        int sum = copy[2*i*w_copy+2*j] + copy[(2*i+1)*w_copy+2*j];
+        sum += copy[2*i*w_copy+(2*j+1)] + copy[(2*i+1)*w_copy+(2*j+1)];
+        tmp[j + i * w] = (sum < 510) ? 0 :255;
+      }
+    }
+    for(int i = 0; i < h*w; i++)
+      copy[i] = tmp[i];
+    w_copy = w;
+  }
+  int n_img[h*w];
+  for(int i = 0; i < h*w; i++)
+    n_img[i] = tmp[i];
+  SDL_Surface *resized_img;
+  resized_img = SDL_CreateRGBSurface(0, w, h, 32, 0, 0, 0, 0);
+  resized_img = array_to_surf(n_img, resized_img);
+  return resized_img;
+}
+
+/*
+array_of_img -> SDL_Surface *img, SDL_Surface*imgs[], int l[]:
+Stock in imgs all the parts cut in img which have their coordonates stock in l.
+*/
+void array_of_img(SDL_Surface *img, SDL_Surface *imgs[], int l[]){
+  int index = 1, index_imgs = 0, cmpt = 0;
+  for(int k = 0; k < l[0]; k++){
+    int y1 = l[index], y2 = l[index+1], x1 = l[index+2], x2 = l[index+3];
+    SDL_Surface *new_img;
+    new_img = SDL_CreateRGBSurface(0, 26, 26, 32, 0, 0, 0, 0);
+    SDL_FillRect(new_img, NULL, SDL_MapRGB(new_img->format, 255, 255, 255));
+    if(x2-x1 <= 26 && y2-y1 <= 26){
+      SDL_Rect src, center;
+      src.x = x1;
+      src.y = y1;
+      src.w = x2 - x1;
+      src.h = y2 - y1;
+
+      center.x = (26 -(y2-y1))/2;
+      center.y = (26 -(x2-x1))/2;
+
+      SDL_BlitSurface(img, &src, new_img, &center);
+    }
+    else{
+      SDL_Rect src, center;
+      SDL_Surface *unresized_img;
+      unresized_img = SDL_CreateRGBSurface(0, x2-x1, y2-y1, 32, 0, 0, 0, 0);
+
+      src.x = x1;
+      src.y = y1;
+      src.w = x2 - x1;
+      src.h = y2 - y1;
+
+      SDL_BlitSurface(img, &src, unresized_img, NULL);
+      SDL_Surface *resized_img = img_resizing(unresized_img, x2 - x1, y2 - y1);
+
+      center.x = (26 -(resized_img->h))/2;
+      center.y = (26 -(resized_img->w))/2;
+
+      SDL_BlitSurface(resized_img, NULL, new_img, &center);
+    }
+    imgs[index_imgs] = new_img;
+    index_imgs += 1;
+    cmpt += 1;
+    index += 4;
+  }
 }

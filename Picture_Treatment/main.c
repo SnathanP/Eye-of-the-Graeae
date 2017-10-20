@@ -40,10 +40,14 @@ SDL_Surface* Load_Image(char *path){
   return img;
 }
 
+/*
+main:
+treatment and segmentation of chararcters in an image img.
+*/
 int main(){
   SDL_Surface *screen = NULL;
   init_SDL();
-  screen = SDL_SetVideoMode(1200, 1200, 32, SDL_HWSURFACE);
+  screen = SDL_SetVideoMode(1000, 1200, 32, SDL_HWSURFACE);
   SDL_FillRect(screen, NULL, SDL_MapRGB(screen->format, 100, 100, 100));
   char *path = "image.png";
   SDL_Surface *img = Load_Image(path);
@@ -51,24 +55,32 @@ int main(){
   display(0, 0, img, screen);
   img = Gray_scale(img);
   img = median(img);
-  display(0, 225, img, screen);
+  display(310, 0, img, screen);
   img = Contrast(img);
-  display(0, 450, img, screen);
+  display(620, 0, img, screen);
   img = threshold(img);
-  display(225, 0, img, screen);
+  display(0, 310, img, screen);
   img = clean_img(img);
-  display(225, 225, img, screen);
+  display(310, 310, img, screen);
+  SDL_Surface *copy = SDL_CreateRGBSurface(0, img->w, img->h, 32, 0, 0, 0, 0);
+  int copy_l[img->h * img->w];
+  surf_to_array(img,copy_l);
+  copy = array_to_surf(copy_l, copy);
   img = Sobel_filter(img);
-  display(225, 450, img, screen);
+  display(620, 310, img, screen);
   int l[img->w * img->h];
   surf_to_array(img, l);
-  int l_c[img->w * img->h];
-  cut(img, l_c);
-  img = color_zone(img, l_c);
-  display(450, 0, img, screen); 
+  int img_cut[img->w * img->h];
+  cut(img, img_cut);
+  SDL_Surface *imgs[img_cut[0]];
+  array_of_img(copy, imgs, img_cut);
+  for(int i = 0; i < img_cut[0]; i++)
+    display(i * 110, 620, imgs[i], screen);
 
   Wait_for_exit();
   SDL_FreeSurface(img);
+  for(int i = 0; i < img_cut[0]; i++)
+    SDL_FreeSurface(imgs[i]);
   SDL_Quit();
   return EXIT_SUCCESS;
 }
