@@ -1,11 +1,8 @@
-# define LEARNING_RATE 0.3
+# define LEARNING_RATE 0.5
 
-# define TESTFILE "tests/50 000.txt"
 
-# define HIDDEN 4    // nombre de neuronnes
+//# define TESTFILE "tests/100 000.txt"
+//# define HIDDEN 2  // nombre de neuronnes
+//# define HIDDEN2 2  // nombre de neuronnes
 
-# define INPUT 2 // nombre d'input (ne pas changer)
-
-// Pour executer et stocker les résultats :
-// $ make
-// $ ./main > out.txt
+//# define INPUT 2 // nombre d'input
