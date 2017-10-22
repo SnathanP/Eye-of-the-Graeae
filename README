@@ -1,0 +1,12 @@
+Eye of the Graeae:
+
+XOR Neural Network: 
+$ make
+$ ./main 4 tests/10\ 000.txt
+($ ./main NbNeurones LearningFile)
+
+OCR :
+Picture_Treatment :
+$ cd Picture_Treatment
+$ make
+$ ./main
