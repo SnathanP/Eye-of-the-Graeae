@@ -1,12 +1,14 @@
 Eye of the Graeae:
 
-XOR Neural Network: 
+XOR Neural Network:
 $ make
-$ ./main 4 tests/10\ 000.txt
+$ ./main 4 tests/10\ 000.txt (Optimal for XOR)
 ($ ./main NbNeurones LearningFile)
 
 OCR :
 Picture_Treatment :
 $ cd Picture_Treatment
 $ make
-$ ./main
+$ ./main image_0.png
+$ ./main image_1.png
+$ ./main image_2.png
