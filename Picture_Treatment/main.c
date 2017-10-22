@@ -44,12 +44,16 @@ SDL_Surface* Load_Image(char *path){
 main:
 treatment and segmentation of chararcters in an image img.
 */
-int main(){
+int main(int argc, char* argv[]){
   SDL_Surface *screen = NULL;
   init_SDL();
   screen = SDL_SetVideoMode(1000, 1200, 32, SDL_HWSURFACE);
   SDL_FillRect(screen, NULL, SDL_MapRGB(screen->format, 100, 100, 100));
-  char *path = "image.png";
+  if(argc < 2){
+    printf("Error: Need a path to the image\n");
+    return 1;
+  }
+  char *path = argv[1];
   SDL_Surface *img = Load_Image(path);
 
   display(0, 0, img, screen);
