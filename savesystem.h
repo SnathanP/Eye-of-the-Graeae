@@ -1,1 +1,4 @@
-void SaveData(double weights1[], double nbpoids1, double weights2[], double nbneuronecaches,double nbinput);
+#include "LayerStruct.h"
+
+void SaveData(Layer *l1, Layer *l2, double learning);
+double LoadData(Layer *l1, Layer *l2);

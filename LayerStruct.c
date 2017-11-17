@@ -10,9 +10,14 @@
 # include "matrix.h"
 # include "LayerStruct.h"
 
-void applyChanges(Layer *current)
+void applyChanges(Layer *current, double learning)
 {
-  vector_apply(applyLearningRate, current->changes, current->nbinput*current->nbneurone, current->changes);
+  //vector_apply(applyLearningRate, current->changes, current->nbinput*current->nbneurone, current->changes);
+
+  for (int i = 0; i < current->nbinput*current->nbneurone; i++) {
+    current->changes[i] *= learning;
+  }
+
   add(current->weights,current->changes,current->nbinput,current->nbneurone,current->weights);
 }
 

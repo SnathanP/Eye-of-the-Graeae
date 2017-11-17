@@ -6,6 +6,7 @@
 
 # include "property.h"
 # include "LayerStruct.h"
+# include "savesystem.h"
 
 int main(int argc, char const *argv[]) {
     srand ( clock()  );
@@ -14,20 +15,41 @@ int main(int argc, char const *argv[]) {
     // Min arg = in, mid, out, test file (futur) + LEARNING_RATE
     // Max arg = in mid, ..., mid, out, test file (futur) + LEARNING_RATE
 
-    if (argc < 2) {
+    // INIT
+    Layer layerHidden;
+    //Layer layerHidden2; (futur)
+    Layer layerOutput;
+    int nbinput = 2;
+
+    int nbout = 1;
+    double learning = LEARNING_RATE;
+
+    if (argc == 3)
+    {
+      int nbmid = atoi(argv[1]);
+      if (nbmid > 40)
+        {
+          printf("I don't think more than 40 is necessary for a XOR...\n");
+          return 1;
+        }
+      initLayer(nbinput,nbmid,&layerHidden);
+      initLayer(nbmid,nbout,&layerOutput);
+    }
+    else if (argc == 2)
+    {
+      learning = LoadData(&layerHidden,&layerOutput);
+    }
+    else{
       printf("To use this network :\n");
       printf("./main NombreDeNeuronnes FichierDeTest\n");
       printf("Recommandé pour XOR : \"./main 4 tests/10\\ 000.txt > out.txt\"\n");
       return 0;
     }
 
-    int nbinput = 2;
-    int nbmid = atoi(argv[1]);
-    if (nbmid > 40) {
-      printf("I don't think more than 40 is necessary for a XOR...\n");
-      return 1;
-    }
-    int nbout = 1;
+
+
+
+
     double *input = malloc(nbinput * sizeof(double));
 
     double answer;
@@ -35,14 +57,11 @@ int main(int argc, char const *argv[]) {
     FILE* fichier = NULL;
     fichier = fopen(argv[argc-1], "r");
 
-    // INIT
-    Layer layerHidden;
-    //Layer layerHidden2; (futur)
-    Layer layerOutput;
-    initLayer(nbinput,nbmid,&layerHidden);
+
     //initLayer(HIDDEN,HIDDEN2,&layerHidden2); (futur)
-    initLayer(nbmid,nbout,&layerOutput);
+
     //////
+
 
     char data[10] = "";
     int i = 0;
@@ -87,9 +106,9 @@ int main(int argc, char const *argv[]) {
                 outToHidden(tanswer, &layerOutput, &layerHidden);
                 //hiddenToHidden(&layerOutput, &layerHidden2, &layerHidden); (futur)
                 hiddenToInput(&layerOutput, &layerHidden, input);
-                applyChanges(&layerHidden);
+                applyChanges(&layerHidden, learning);
                 //applyChanges(&layerHidden2); (futur)
-                applyChanges(&layerOutput);
+                applyChanges(&layerOutput, learning);
                 printf("Auto-correction\n\n");
             }
             else{
@@ -105,6 +124,7 @@ int main(int argc, char const *argv[]) {
     printf("File not found !\n");
     printf("Type just ./main for explainations.\n");
   }
+    SaveData(&layerHidden,&layerOutput,learning);
     destroyLayer(&layerHidden);
     //destroyLayer(&layerHidden2);
     destroyLayer(&layerOutput);

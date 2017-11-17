@@ -16,7 +16,7 @@ struct Layer {
 
 #endif
 
-void applyChanges(Layer *current);
+void applyChanges(Layer *current, double learning);
 void front2(double input[], Layer *layer);
 void outToHidden(double answer[], Layer *last, Layer *previous);
 void hiddenToHidden(Layer *next, Layer *current, Layer *previous);
