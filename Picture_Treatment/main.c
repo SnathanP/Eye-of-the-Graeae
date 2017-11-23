@@ -67,19 +67,19 @@ int main(int argc, char* argv[]){
   img = clean_img(img);
   display(310, 310, img, screen);
   SDL_Surface *copy = SDL_CreateRGBSurface(0, img->w, img->h, 32, 0, 0, 0, 0);
-  int copy_l[img->h * img->w];
+  int *copy_l = malloc(sizeof(int) * img->h * img->w);
   surf_to_array(img,copy_l);
   copy = array_to_surf(copy_l, copy);
+  free(copy_l);
   img = Sobel_filter(img);
   display(620, 310, img, screen);
-  int l[img->w * img->h];
-  surf_to_array(img, l);
-  int img_cut[img->w * img->h];
+  int *img_cut = malloc(sizeof(int) * img->w * img->h);
   cut(img, img_cut);
   SDL_Surface *imgs[img_cut[0]];
   array_of_img(copy, imgs, img_cut);
   for(int i = 0; i < img_cut[0]; i++)
     display(i * 110, 620, imgs[i], screen);
+  free(img_cut);
 
   Wait_for_exit();
   SDL_FreeSurface(img);
