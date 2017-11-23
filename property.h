@@ -1,4 +1,4 @@
-# define LEARNING_RATE 0.5
+# define LEARNING_RATE 0.1
 
 
 //# define TESTFILE "tests/100 000.txt"

@@ -75,8 +75,8 @@ void fillRandom(Layer *layer)
 {
   for (int i = 0; i < layer->nbinput * layer->nbneurone; i++)
   {
-    layer->weights[i] = (rand() / (double) RAND_MAX);
-    //printf("Weights :%f\n",layer->weights[i]);
+    layer->weights[i] = (rand() / ((double) RAND_MAX*10));
+    //-printf("Weights :%f\n",layer->weights[i]);
   }
 }
 
@@ -86,13 +86,34 @@ void initLayer(double nbinput, double nbneurone, Layer *layer)
   layer->nbneurone = nbneurone;
   layer->weights = malloc(nbinput*nbneurone * sizeof(double));
   if (layer->weights == NULL) {
+    warn("malloc weights fail");
     exit(0);
   }
   layer->sum = malloc(1*nbneurone * sizeof(double));
+  if (layer->sum == NULL) {
+    warn("malloc sum fail");
+    exit(0);
+  }
   layer->result = malloc(1*nbneurone * sizeof(double));
+  if (layer->result == NULL) {
+    warn("malloc result fail");
+    exit(0);
+  }
   layer->sumPrime = malloc(1*nbneurone * sizeof(double));
+  if (layer->sumPrime == NULL) {
+    warn("malloc sumPrime fail");
+    exit(0);
+  }
   layer->delta = malloc(1*nbneurone * sizeof(double));
+  if (layer->delta == NULL) {
+    warn("malloc delta fail");
+    exit(0);
+  }
   layer->changes = malloc(nbinput*nbneurone * sizeof(double));
+  if (layer->changes == NULL) {
+    warn("malloc changes fail");
+    exit(0);
+  }
   fillRandom(layer);
 }
 

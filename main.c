@@ -7,6 +7,7 @@
 # include "property.h"
 # include "LayerStruct.h"
 # include "savesystem.h"
+# include "matrix.h"
 
 int main(int argc, char const *argv[]) {
     srand ( clock()  );
@@ -19,15 +20,15 @@ int main(int argc, char const *argv[]) {
     Layer layerHidden;
     //Layer layerHidden2; (futur)
     Layer layerOutput;
-    int nbinput = 2;
+    int nbinput = 26*26;
 
-    int nbout = 1;
+    int nbout = 26;
     double learning = LEARNING_RATE;
 
     if (argc == 3)
     {
       int nbmid = atoi(argv[1]);
-      if (nbmid > 40)
+      if (nbmid > 99999)
         {
           printf("I don't think more than 40 is necessary for a XOR...\n");
           return 1;
@@ -50,37 +51,33 @@ int main(int argc, char const *argv[]) {
 
 
 
-    double *input = malloc(nbinput * sizeof(double));
+    //double *input = malloc(nbinput * sizeof(double));
 
-    double answer;
 
-    FILE* fichier = NULL;
-    fichier = fopen(argv[argc-1], "r");
-
+    //FILE* fichier = NULL;
+    //fichier = fopen(argv[argc-1], "r");
+    int ite = atoi(argv[argc-1]);
 
     //initLayer(HIDDEN,HIDDEN2,&layerHidden2); (futur)
 
     //////
 
 
-    char data[10] = "";
-    int i = 0;
     int truecount2 = 0;
     int falsecount2 = 0;
     int lastFalse2 = 0;
 
-    if (fichier != NULL)
-    {
 
-        while (fgets(data, 10, fichier) != NULL) { // On lit le fichier
+        for(int i = 0; i < ite; i++) { // On lit le fichier
 
             //input[0] = data[0] - '0'; // On récupère les tests dans le fichier
             //input[1] = data[1] - '0';
             //answer = data[2] - '0';
-
-            char path = 'A'; //Faire un random 26 pour trouver une lettre, la mettre dans path, importer en matrice la lettre .bmp
-            //input = loadMatrix(path+".bmp");
-            answer = malloc(26*sizeof(int));
+            int r = rand() % 26;
+            char path = r+'A'; //Faire un random 26 pour trouver une lettre, la mettre dans path, importer en matrice la lettre .bmp
+            double *input = loadMatrix(path);
+            print_matrix(input,26,26);
+            double *answer = malloc(26*sizeof(double));
             for(int i = 0; i < 26; i++)
               answer[i] = 0;
             answer[path-'A'] = 1;
@@ -90,14 +87,22 @@ int main(int argc, char const *argv[]) {
             //front2(layerHidden.result,&layerHidden2); (futur)
             front2(layerHidden.result,&layerOutput);
             //ENDFRONT
+            double result2 = -1;
+            int resultpos;
 
-            double result2 = layerOutput.result[0];
+            for(int it=0; it < 26; it++) {
+                //printf("%lf:%c\n", layerOutput.result[it], 'A'+it);
+                if(layerOutput.result[it]>result2) {
+                  result2 = layerOutput.result[it];
+                  resultpos = it;
+                }
+            }
 
             // AFFICHAGE
-            printf("Ité %d : %d,%d, target = %d\n", i,(int)input[0], (int)input[1], (int)answer);
-            printf("%lf (Struct)",result2);
+            printf("Ité %d : target = %c\n", i,path);
+            printf("%lf (Struct) = %c",result2, 'A'+resultpos);
 
-            if ((answer == 1 && result2 > 0.5) || (answer == 0 && result2 <= 0.5)) {
+            if (answer[resultpos] == 1) {
                 printf(" : TRUE (Struct)\n");
                 truecount2++;
             } else {
@@ -105,13 +110,13 @@ int main(int argc, char const *argv[]) {
                 falsecount2++;
                 lastFalse2 = i;
             }
-            if ((answer == 1 && result2 < 0.95) || (answer == 0 && result2 > 0.05))
+            if (answer[resultpos] == 0 || result2 < 0.95)
             {
 
-                double tanswer[1] = {answer};
+                //double tanswer[1] = {answer};
                 // back - propagation : Il faut commencer par l'output et
                 //                      remonter vers l'input.
-                outToHidden(tanswer, &layerOutput, &layerHidden);
+                outToHidden(answer, &layerOutput, &layerHidden);
                 //hiddenToHidden(&layerOutput, &layerHidden2, &layerHidden); (futur)
                 hiddenToInput(&layerOutput, &layerHidden, input);
                 applyChanges(&layerHidden, learning);
@@ -122,20 +127,20 @@ int main(int argc, char const *argv[]) {
             else{
               printf("\n\n");
             }
-            i++;
-        }
+            free(input);
+            free(answer);
+          }
+
 
     printf("True2 : %d\nFalse2 : %d\n", truecount2, falsecount2);
     printf("Last False2 : %d\n", lastFalse2);
-    fclose(fichier); // On ferme le fichier qui a été ouvert
-  } else  {
-    printf("File not found !\n");
-    printf("Type just ./main for explainations.\n");
-  }
+    //fclose(fichier); // On ferme le fichier qui a été ouvert
+
     SaveData(&layerHidden,&layerOutput,learning);
     destroyLayer(&layerHidden);
     //destroyLayer(&layerHidden2);
     destroyLayer(&layerOutput);
-    free(input);
+
+
     return 0;
 }

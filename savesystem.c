@@ -4,8 +4,38 @@
 # include <sys/dir.h>
 # include <sys/types.h>
 # include <sys/stat.h>
+# include <SDL.h>
+#include <SDL/SDL_image.h>
 
 # include "LayerStruct.h"
+# include "Picture_Treatment/picture_treatment.h"
+
+////////////////// COPY PASTE IS BAD
+
+SDL_Surface* Load_Image(char *letter){
+  SDL_Surface *img;
+  char path[2] = {*letter,'\0'};
+  img = IMG_Load(path);
+  if(!img)
+    errx(1, "Can't load %s: %s", path, IMG_GetError());
+  return img;
+}
+
+/////////////////////
+
+double *loadMatrix(char path) {
+  SDL_Surface *surf = Load_Image(&path);
+  int *arr = malloc(26*26*sizeof(int));
+  surf_to_array(surf, arr);
+  double *arr2 = malloc(26*26*sizeof(double));
+
+  for (int i = 0; i < 26*26; i++)
+    *(arr2+i) = ((double)*(arr+i))/255;
+
+  free(arr);
+  SDL_FreeSurface(surf);
+  return arr2;
+}
 
 void SaveData(Layer *l1, Layer *l2, double learning){
   mkdir("./DATA",0775);
@@ -39,9 +69,9 @@ void SaveData(Layer *l1, Layer *l2, double learning){
     double learning;
     fscanf(fichier3, "%d",&nbneurone);
     fscanf(fichier3,"%lf",&learning);
-    initLayer(2, nbneurone, l1);
-    fread(l1->weights,sizeof(double),2* (nbneurone),fichier1);
-    initLayer(nbneurone,1,l2);
-    fread(l2->weights,sizeof(double),1* nbneurone,fichier2);
+    initLayer(26*26, nbneurone, l1);
+    fread(l1->weights,sizeof(double),26*26 * (nbneurone),fichier1);
+    initLayer(nbneurone,26,l2);
+    fread(l2->weights,sizeof(double),26 * nbneurone,fichier2);
     return learning;
   }

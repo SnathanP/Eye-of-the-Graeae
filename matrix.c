@@ -67,8 +67,16 @@ void print_matrix(double mat[], size_t lines, size_t cols)
 {
     for (size_t i = 0; i < lines; i++) {
         for (size_t j = 0; j < cols; j++) {
-            printf("%4g ", mat[j+i*cols]);
+          if (mat[j+i*cols] > 0.5) {
+            mat[j+i*cols] = 0;
+            //printf("1");
+          }
+          else {
+            mat[j+i*cols] = 1;
+            //printf("0");
+          //printf("%4g ", mat[j+i*cols]);
+          }
         }
-        printf("\n");
+        //printf("\n");
     }
 }
