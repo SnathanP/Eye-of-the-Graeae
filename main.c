@@ -68,14 +68,22 @@ int main(int argc, char const *argv[]) {
     int truecount2 = 0;
     int falsecount2 = 0;
     int lastFalse2 = 0;
+
     if (fichier != NULL)
     {
 
         while (fgets(data, 10, fichier) != NULL) { // On lit le fichier
 
-            input[0] = data[0] - '0'; // On récupère les tests dans le fichier
-            input[1] = data[1] - '0';
-            answer = data[2] - '0';
+            //input[0] = data[0] - '0'; // On récupère les tests dans le fichier
+            //input[1] = data[1] - '0';
+            //answer = data[2] - '0';
+
+            char path = 'A'; //Faire un random 26 pour trouver une lettre, la mettre dans path, importer en matrice la lettre .bmp
+            //input = loadMatrix(path+".bmp");
+            answer = malloc(26*sizeof(int));
+            for(int i = 0; i < 26; i++)
+              answer[i] = 0;
+            answer[path-'A'] = 1;
 
             // FRONT 2
             front2(input,&layerHidden);
