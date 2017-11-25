@@ -22,7 +22,7 @@ int main(int argc, char const *argv[]) {
     Layer layerOutput;
     int nbinput = 26*26;
 
-    int nbout = 26;
+    int nbout = 52;
     double learning = LEARNING_RATE;
 
     if (argc == 3)
@@ -74,13 +74,30 @@ int main(int argc, char const *argv[]) {
             //input[1] = data[1] - '0';
             //answer = data[2] - '0';
             int r = rand() % 26;
-            char path = r+'A'; //Faire un random 26 pour trouver une lettre, la mettre dans path, importer en matrice la lettre .bmp
+            int mini = rand() % 2;
+            char path = r;
+            if (mini)
+            {
+              path += 'a';
+            }
+            else
+            {
+              path += 'A';
+            }
+            //Faire un random 26 pour trouver une lettre, la mettre dans path, importer en matrice la lettre .bmp
             double *input = loadMatrix(path);
             print_matrix(input,26,26);
-            double *answer = malloc(26*sizeof(double));
-            for(int i = 0; i < 26; i++)
+            double *answer = malloc(52*sizeof(double));
+            for(int i = 0; i < 52; i++)
               answer[i] = 0;
-            answer[path-'A'] = 1;
+            if (mini)
+            {
+              answer[path - 'a'] = 1;
+            }
+            else
+            {
+              answer[path - 'A'] = 1;
+            }
 
             // FRONT 2
             front2(input,&layerHidden);
@@ -90,7 +107,7 @@ int main(int argc, char const *argv[]) {
             double result2 = -1;
             int resultpos;
 
-            for(int it=0; it < 26; it++) {
+            for(int it=0; it < 52; it++) {
                 //printf("%lf:%c\n", layerOutput.result[it], 'A'+it);
                 if(layerOutput.result[it]>result2) {
                   result2 = layerOutput.result[it];
@@ -100,7 +117,12 @@ int main(int argc, char const *argv[]) {
 
             // AFFICHAGE
             printf("Ité %d : target = %c\n", i,path);
-            printf("%lf (Struct) = %c",result2, 'A'+resultpos);
+            char reponse;
+            if (mini)
+              reponse = 'a'+resultpos;
+            else
+              reponse = 'A'+resultpos;
+            printf("%lf (Struct) = %c",result2, reponse);
 
             if (answer[resultpos] == 1) {
                 printf(" : TRUE (Struct)\n");

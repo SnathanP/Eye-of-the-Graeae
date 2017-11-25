@@ -71,7 +71,7 @@ void SaveData(Layer *l1, Layer *l2, double learning){
     fscanf(fichier3,"%lf",&learning);
     initLayer(26*26, nbneurone, l1);
     fread(l1->weights,sizeof(double),26*26 * (nbneurone),fichier1);
-    initLayer(nbneurone,26,l2);
-    fread(l2->weights,sizeof(double),26 * nbneurone,fichier2);
+    initLayer(nbneurone,52,l2);
+    fread(l2->weights,sizeof(double),52 * nbneurone,fichier2);
     return learning;
   }
