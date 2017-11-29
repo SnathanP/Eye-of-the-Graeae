@@ -63,13 +63,14 @@ void surf_to_array(SDL_Surface *img, int *l){
 array_to_surf -> int l[], SDL_Surface *img:
 apply a matrix representing an image to an surface img with the same format.
 */
-void array_to_surf(int *l, SDL_Surface *img){
+SDL_Surface* array_to_surf(int *l, SDL_Surface *img){
   for(int i = 0; i < img->h; i++){
     for(int j = 0; j < img->w; j++){
       Uint8 rgb = l[j + i * img->w];
       putpixel(img, j, i, SDL_MapRGB(img->format, rgb, rgb, rgb));
     }
   }
+  return img;
 }
 
 /*
@@ -257,20 +258,20 @@ int Sobel_vertical(SDL_Surface *img, int *l){
 Sobel_filter -> SDL_Surface *img:
 detect and mark in black changement of contrast the image img.
 */
-void Sobel_filter(SDL_Surface* img){
+SDL_Surface* Sobel_filter(SDL_Surface* img){
   int *l_h = malloc(sizeof(int) * img->h * img->w);
   if(is_malloc_error(l_h, NULL, 0))
-    return;
+    return NULL;
   int *pointers[] = {l_h, NULL};
   int *l_v = malloc(sizeof(int) * img->h * img->w);
   if(is_malloc_error(l_v, pointers, 1))
-    return;
+    return NULL;
   pointers[1] = l_v;
   if(!Sobel_horizontal(img, l_h) || !Sobel_vertical(img, l_v))
-    return;
+    return NULL;
   int *new_img = malloc(sizeof(int) * img->h * img->w);
   if(is_malloc_error(new_img, pointers, 2))
-    return;
+    return NULL;
   for(int i = 0; i < img->h; i++){
     for(int j = 0; j < img->w; j++){
       int index = j + i * img->w;
@@ -279,18 +280,19 @@ void Sobel_filter(SDL_Surface* img){
   }
   free(l_h);
   free(l_v);
-  array_to_surf(new_img, img);
+  SDL_Surface *n_img = array_to_surf(new_img, img);
   free(new_img);
+  return n_img;
 }
 
-void new_detec(SDL_Surface *img){
+SDL_Surface *new_detec(SDL_Surface *img){
   int *l = malloc(sizeof(int) * img->w * img->h);
   if(is_malloc_error(l, NULL, 0))
-    return;
+    return NULL;
   int *save = malloc(sizeof(int) * img->w * img->h);
   if(is_malloc_error(save, NULL, 0)){
     free(l);
-    return;
+    return NULL;
   }
   surf_to_array(img, save);
   for(int i = 0; i < img->h; i++){
@@ -309,8 +311,9 @@ void new_detec(SDL_Surface *img){
     }
   }
   free(save);
-  array_to_surf(l, img);
+  SDL_Surface *new_img = array_to_surf(l, img);
   free(l);
+  return new_img;
 }
 
 /*
@@ -318,10 +321,10 @@ clean_img -> SDL_Surface *img:
 reset to 0 all the pixel wich do not have at least 3 black pixels
 in his neighborhood
 */
-void clean_img(SDL_Surface *img){
+SDL_Surface* clean_img(SDL_Surface *img){
   int *l = malloc(sizeof(int) * img->w * img->h);
   if(is_malloc_error(l, NULL, 0))
-    return;
+    return NULL;
   surf_to_array(img, l);
   for(int i = 0; i < img->h; i++){
     for(int j = 0; j < img->w; j++){
@@ -329,7 +332,7 @@ void clean_img(SDL_Surface *img){
       if(neight == NULL){
         free(l);
         warn("ERROR: fails memory allocation");
-        return;
+        return NULL;
       }
       neighbors(img, i, j, neight, 1);
       int sum = 0;
@@ -340,8 +343,9 @@ void clean_img(SDL_Surface *img){
       free(neight);
     }
   }
-  array_to_surf(l, img);
+  SDL_Surface *n_img = array_to_surf(l, img);
   free(l);
+  return n_img;
 }
 
 int moy_all(int *l, int size){
@@ -357,10 +361,10 @@ median -> SDL_Surface *img:
 replace all the pixel by the median value among
 the value of his neightbors and his.
 */
-void median(SDL_Surface *img){
+SDL_Surface* median(SDL_Surface *img){
   int *l = malloc(sizeof(int) * img->w * img->h);
   if(is_malloc_error(l, NULL, 0))
-    return;
+    return NULL;
   surf_to_array(img, l);
   for(int i = 0; i < img->h; i++){
     for(int j = 0; j < img->w; j++){
@@ -368,7 +372,7 @@ void median(SDL_Surface *img){
       if(neight == NULL){
         free(l);
         warn("ERROR: fails memory allocation");
-        return;
+        return NULL;
       }
       for(int k = 0; k < 10; k++)
         neight[k] = 0;
@@ -378,15 +382,16 @@ void median(SDL_Surface *img){
       free(neight);
     }
   }
-  array_to_surf(l,img);
+  SDL_Surface *n_img = array_to_surf(l,img);
   free(l);
+  return n_img;
 }
 
 /*
 Grey_scale -> SDL_Surface *img:
 return img after applying a greyscale on each pixel of img.
  */
-void Gray_scale(SDL_Surface *img){
+SDL_Surface* Gray_scale(SDL_Surface *img){
   for(int i = 0;i < img->w;i++){
     for(int j = 0;j < img->h;j++){
       Uint32 p = getpixel(img, i, j);
@@ -396,13 +401,14 @@ void Gray_scale(SDL_Surface *img){
       putpixel(img, i, j, SDL_MapRGB(img->format, moy, moy, moy));
     }
   }
+  return img;
 }
 
 /*
 Contrast -> SDL_Surface *img:
 upgrade the contrast of img and return img.
  */
-void Contrast(SDL_Surface *img){
+SDL_Surface* Contrast(SDL_Surface *img){
   int min = 255, max = 0;
   for(int i = 0;i < img->w;i++){
     for(int j = 0;j < img->h;j++){
@@ -421,6 +427,7 @@ void Contrast(SDL_Surface *img){
       putpixel(img, i, j, SDL_MapRGB(img->format, rgb, rgb, rgb));
     }
   }
+  return img;
 }
 
 /*
@@ -428,33 +435,34 @@ threshold -> SDL_Surface *img:
 calculate the average of the brightness of each pixel. Every pixel below average
 become black, others become white.
 */
-void threshold(SDL_Surface *img){
+SDL_Surface* threshold(SDL_Surface *img){
   int *copy = malloc(sizeof(int) * img->w * img->h);
   if(is_malloc_error(copy, NULL, 0))
-    return;
+    return NULL;
   surf_to_array(img, copy);
   int n = 100;
   printf("%d\n", n);
   for(int i = 0; i < img->w * img->h; i++)
     copy[i] = copy[i] < n ? 0 : 255;
-  array_to_surf(copy, img);
+  SDL_Surface *n_img = array_to_surf(copy, img);
   free(copy);
+  return n_img;
 }
 
 /*
 img_resizing -> SDL_Surface *img, int w, int h:
 compress an image of size wxh to a size < 26x26.
 */
-void img_resizing(SDL_Surface *img, int w, int h){
+SDL_Surface* img_resizing(SDL_Surface *img, int w, int h){
   int *copy = malloc(sizeof(int) * img->h * img->w);
   if(is_malloc_error(copy, NULL, 0))
-    return;
+    return NULL;
   int *pointers[] = {copy};
   surf_to_array(img, copy);
   int w_copy = img->w;
   int *tmp = malloc(sizeof(int) * h * w);
   if(is_malloc_error(tmp, pointers, 1))
-    return;
+    return NULL;
   pointers[0] = tmp;
   while(w > 26 || h > 26){
     w = w/2;
@@ -473,16 +481,15 @@ void img_resizing(SDL_Surface *img, int w, int h){
   free(copy);
   int *n_img = malloc(sizeof(int) * h * w);
   if(is_malloc_error(n_img, pointers, 1))
-    return;
+    return NULL;
   for(int i = 0; i < h*w; i++)
     n_img[i] = tmp[i];
   free(tmp);
   SDL_Surface *resized_img;
   resized_img = SDL_CreateRGBSurface(0, w, h, 32, 0, 0, 0, 0);
-  array_to_surf(n_img, resized_img);
+  resized_img = array_to_surf(n_img, resized_img);
   free(n_img);
-  free(img);
-  img = resized_img;
+  return resized_img;
 }
 
 /*
@@ -494,7 +501,7 @@ void array_of_img(SDL_Surface *img, SDL_Surface *imgs[], int *l){
   for(int k = 0; k < l[0]; k++){
     int y1 = l[index], y2 = l[index+1], x1 = l[index+2], x2 = l[index+3];
     SDL_Surface *new_img;
-    new_img = SDL_CreateRGBSurface(0, x2-x1, y2-y1, 32, 0, 0, 0, 0);
+    new_img = SDL_CreateRGBSurface(0, 26, 26, 32, 0, 0, 0, 0);
     SDL_FillRect(new_img, NULL, SDL_MapRGB(new_img->format, 255, 255, 255));
     //if(x2-x1 <= 26 && y2-y1 <= 26){
       SDL_Rect src;//, center;

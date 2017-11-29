@@ -57,11 +57,11 @@ int main(int argc, char* argv[]){
   SDL_Surface *img = Load_Image(path);
 
   display(0, 0, img, screen);
-  Gray_scale(img);
+  img = Gray_scale(img);
   SDL_Surface *copy = SDL_CreateRGBSurface(0, img->w, img->h, 32, 0, 0, 0, 0);
   int *copy_l = malloc(sizeof(int) * img->h * img->w);
   surf_to_array(img,copy_l);
-  array_to_surf(copy_l, copy);
+  copy = array_to_surf(copy_l, copy);
   free(copy_l);
   //img = new_detec(img);
   /*img = median(img);
@@ -79,7 +79,7 @@ int main(int argc, char* argv[]){
   SDL_Surface *imgs[img_cut[0]];
   array_of_img(copy, imgs, img_cut);
   for(int i = 0; i < img_cut[0]; i++)
-    display(i * 52, 620, imgs[i], screen);
+    display(i * 27, 620, imgs[i], screen);
 
   Wait_for_exit();
   SDL_FreeSurface(img);
