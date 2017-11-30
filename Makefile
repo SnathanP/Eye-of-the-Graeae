@@ -1,12 +1,12 @@
 # Makefile
 
 CC = gcc -fsanitize=address
-CPPFLAGS = -MMD
-CFLAGS = -Wall -Wextra -std=c99 -O0 -g
+CPPFLAGS = `pkg-config --cflags sdl` -MMD
+CFLAGS = -Wall -Werror -Wextra -std=c99 -O0 -g
 LDFLAGS =
-LDLIBS = -lm
+LDLIBS= -lm `pkg-config --libs sdl` -lSDL_image
 
-OBJ = main.o activation.o matrix.o algebra.o LayerStruct.o savesystem.o
+OBJ = main.o activation.o matrix.o algebra.o LayerStruct.o savesystem.o Picture_Treatment/picture_treatment.o Picture_Treatment/pixel_operations.o
 DEP = ${OBJ:.o=.d}
 
 all: main
