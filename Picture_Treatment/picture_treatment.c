@@ -163,6 +163,38 @@ void w_cut_array(int *l, int w, int h, int *l_c){
   }*/
 }
 
+void h_cut_2(SDL_Surface *img, int *l_c, int i){
+  int *l = malloc(sizeof(int) * img->w * img->h);
+  if(is_malloc_error(l, NULL, 0))
+    return;
+  surf_to_array(img, l);
+  int y1 = l_c[i], y2 = l_c[i+1], x1 = l_c[i+2], x2 = l_c[i+3];
+  int begin = y1, end = y2;
+  for(int i = y1; i < y2; i++){
+    int sum = 0;
+    for(int j = x1; j < x2 && !sum; j++){
+      sum = l[j + i * img->w] == 255 ? 0 : 1;
+    }
+    if(sum) {
+      begin = i;
+      break;
+    }
+  }
+  for(int i = y2; i > y1; i--) {
+    int sum = 0;
+    for(int j = x1; j < x2 && !sum; j++){
+      sum = l[j + i * img->w] == 255 ? 0 : 1;
+    }
+    if(sum) {
+      end = i;
+      break;
+    }
+  }
+  l_c[i + 1] = end; 
+  l_c[i + 0] = begin;
+  free(l);
+}
+
 /*
 cut -> SDL_Surface *img, int array_coords[]:
 put in array_coords the section of the image where it detect letters.
@@ -204,6 +236,9 @@ int cut(SDL_Surface *img,int *array_coords){
     }
     free(l_tmp);
     free(l_c_w);
+  }
+  for(int i = 1; i < 1+array_coords[0]*4; i += 4){
+    h_cut_2(img,array_coords,i);
   }
   free(copy);
   free(l_c_h);
@@ -347,7 +382,6 @@ int moy_all(int *l, int size){
   long sum = 0;
   for(int i = 0; i < size; i++)
     sum += l[i];
-  printf("%ld / %d\n", sum, size);
   return (int)((double)sum / size);
 }
 
@@ -565,3 +599,4 @@ void resize(SDL_Surface *src, SDL_Surface *dest) {
   final_size.y = 0;
   SDL_BlitScaled(src, NULL, dest, &final_size);
 }
+

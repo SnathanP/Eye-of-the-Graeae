@@ -78,7 +78,7 @@ int main(int argc, char* argv[]){
 	win = SDL_CreateWindow("Eye of the Graeae", 100, 100, WIDTH, HEIGHT, 0);
   //renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED);
   SDL_Surface* screen = SDL_GetWindowSurface(win);
-  //SDL_FillRect(screen, NULL, SDL_MapRGB(screen->format, 100, 100, 100));
+  SDL_FillRect(screen, NULL, SDL_MapRGB(screen->format, 100, 100, 100));
 
   if(argc < 2){
     printf("Error: Need a path to the image\n");
