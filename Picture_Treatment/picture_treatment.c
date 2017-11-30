@@ -13,6 +13,48 @@ int is_malloc_error(int *l, int *p[], size_t size){
   return 0;
 }
 
+SDL_Surface* Load_Image(char *path){
+  SDL_Surface *img;
+  IMG_Init(IMG_INIT_PNG);
+  img = IMG_Load(path);
+  if(!img)
+    errx(1, "Can't load %s: %s", path, IMG_GetError());
+  return img;
+}
+
+double **getFinal(char* path, int* taille) {
+
+  SDL_Surface *img = Load_Image(path);
+  Gray_scale(img);
+
+  SDL_Surface *copy = SDL_CreateRGBSurface(0, img->w, img->h, 32, 0, 0, 0, 0);
+  int *copy_l = malloc(sizeof(int) * img->h * img->w);
+  surf_to_array(img,copy_l);
+  array_to_surf(copy_l, copy);
+  free(copy_l);
+
+  threshold(img);
+
+  int *img_cut = malloc(sizeof(int) * img->w * img->h);
+  cut(img, img_cut); // CORE DUMPED ///
+  SDL_Surface *imgs[img_cut[0]];
+  array_of_img(img, imgs, img_cut);
+
+  double **res = malloc(sizeof(double*)*img_cut[0]);
+  for (Uint16 i = 0; i < img_cut[0]; i++) {
+    *(res+i) = malloc(26*26*sizeof(double));
+    surf_to_double(imgs[i], *(res+i));
+  }
+  SDL_FreeSurface(img);
+  SDL_FreeSurface(copy);
+  for(int i = 0; i < img_cut[0]; i++)
+    SDL_FreeSurface(imgs[i]);
+  *taille = img_cut[0];
+  free(img_cut);
+  return res;
+}
+
+
 /*
 sort_array_Uint8_spe -> Uint8 l[],
 sort a array l of type Uint8 in which the index 0 contain the nb of value.
@@ -56,6 +98,12 @@ void surf_to_array(SDL_Surface *img, int *l){
   for(int i = 0; i < img->h; i++)
     for(int j = 0; j < img->w; j++)
       l[j + i * img->w] = get_light(img, j, i);
+}
+
+void surf_to_double(SDL_Surface *img, double *l) {
+  for(int i = 0; i < img->h; i++)
+    for(int j = 0; j < img->w; j++)
+      l[j + i * img->w] = ((double)get_light(img, j, i)) / 255;
 }
 
 /*
@@ -190,7 +238,7 @@ void h_cut_2(SDL_Surface *img, int *l_c, int i){
       break;
     }
   }
-  l_c[i + 1] = end; 
+  l_c[i + 1] = end;
   l_c[i + 0] = begin;
   free(l);
 }
@@ -535,12 +583,12 @@ void array_of_img(SDL_Surface *img, SDL_Surface *imgs[], int *l){
       src.y = y1;
       src.w = x2 - x1;
       src.h = y2 - y1;
-      
+
       //center.x = (26 -(y2-y1))/2;
       //center.y = (26 -(x2-x1))/2;
 
       SDL_BlitSurface(img, &src, new_img,NULL);// &center);
-      
+
       resized_img = SDL_CreateRGBSurface(0, 26, 26, 32, 0, 0, 0, 0);
 
 
@@ -562,7 +610,7 @@ void array_of_img(SDL_Surface *img, SDL_Surface *imgs[], int *l){
       SDL_BlitSurface(new_img,NULL,center_img,&square);
 
       resize(center_img, resized_img); // fonction pour scale en 26 26
-      
+
       SDL_FreeSurface(new_img);
       SDL_FreeSurface(center_img);
     /*}
@@ -599,4 +647,3 @@ void resize(SDL_Surface *src, SDL_Surface *dest) {
   final_size.y = 0;
   SDL_BlitScaled(src, NULL, dest, &final_size);
 }
-

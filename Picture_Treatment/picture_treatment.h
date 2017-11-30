@@ -3,14 +3,18 @@
 
 #include <stdlib.h>
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 #include <math.h>
 
+double** getFinal(char* path, int *taille);
+SDL_Surface* Load_Image(char *path);
 SDL_Surface *ScaleSurface(SDL_Surface *Surface, Uint16 Width, Uint16 Height);
 void new_detec(SDL_Surface *img);
 void Sobel_filter(SDL_Surface *img);
 void color_zone(SDL_Surface *img, int *l);
 int cut(SDL_Surface *img,int *l_c_w);
 void surf_to_array(SDL_Surface *img, int *l);
+void surf_to_double(SDL_Surface *img, double *l);
 void array_to_surf(int *l, SDL_Surface *img);
 void print_array(int *h);
 void clean_img(SDL_Surface *img);

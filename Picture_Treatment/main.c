@@ -44,35 +44,31 @@ void display(int i, int j, SDL_Surface *img, SDL_Surface *screen){
 	pos.x = i;
 	pos.y = j;
 	SDL_BlitSurface(img, NULL, screen, &pos);
-	
+
 
 	//return screen;
 }
 
-SDL_Surface* Load_Image(char *path){
-  SDL_Surface *img;
-  IMG_Init(IMG_INIT_PNG);
-  img = IMG_Load(path);
-  if(!img)
-    errx(1, "Can't load %s: %s", path, IMG_GetError());
-  return img;
-}
+
 
 /*
 main:
 treatment and segmentation of chararcters in an image img.
 */
+
+
+
 int main(int argc, char* argv[]){
 
 	// variable declarations
 	SDL_Window *win = NULL;
 	//SDL_Renderer *renderer = NULL;
 	//int w, h; // texture width & height
-	
+
 	// Initialize SDL.
 	if (SDL_Init(SDL_INIT_VIDEO) < 0)
 			return 1;
-	
+
 	// create the window and renderer
 	// note that the renderer is accelerated
 	win = SDL_CreateWindow("Eye of the Graeae", 100, 100, WIDTH, HEIGHT, 0);
@@ -109,11 +105,11 @@ int main(int argc, char* argv[]){
   */int *img_cut = malloc(sizeof(int) * img->w * img->h);
   cut(img, img_cut);
   SDL_Surface *imgs[img_cut[0]];
-  array_of_img(copy, imgs, img_cut);
+  array_of_img(img, imgs, img_cut);
   for(int i = 0; i < img_cut[0]; i++)
     display(i * 52, 620, imgs[i], screen);
 
-  
+
   SDL_UpdateWindowSurface(win); // POUR ACTUALISER LA FENETRE
   Wait_for_exit();
   SDL_FreeSurface(img);

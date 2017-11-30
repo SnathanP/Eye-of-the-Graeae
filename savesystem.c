@@ -4,27 +4,35 @@
 # include <sys/dir.h>
 # include <sys/types.h>
 # include <sys/stat.h>
-# include <SDL.h>
-#include <SDL/SDL_image.h>
+# include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 
 # include "LayerStruct.h"
 # include "Picture_Treatment/picture_treatment.h"
 
 ////////////////// COPY PASTE IS BAD
 
-SDL_Surface* Load_Image(char *letter){
-  SDL_Surface *img;
-  char path[2] = {*letter,'\0'};
-  img = IMG_Load(path);
-  if(!img)
-    errx(1, "Can't load %s: %s", path, IMG_GetError());
-  return img;
+
+static char *itoa(int num, char *str)
+{
+        if(str == NULL)
+        {
+                return NULL;
+        }
+        sprintf(str, "%d", num);
+        return str;
 }
 
 /////////////////////
 
-double *loadMatrix(char path) {
-  SDL_Surface *surf = Load_Image(&path);
+double *loadMatrix(int path) {
+  char str[80];
+  strcpy(str,"Picture_Treatment/tmp/");
+  char snum[5];
+  itoa(path, snum);
+  strcat(str, snum);
+  strcat(str, ".bmp");
+  SDL_Surface *surf = Load_Image(str);
   int *arr = malloc(26*26*sizeof(int));
   surf_to_array(surf, arr);
   double *arr2 = malloc(26*26*sizeof(double));

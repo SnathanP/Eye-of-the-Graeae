@@ -75,7 +75,7 @@ void fillRandom(Layer *layer)
 {
   for (int i = 0; i < layer->nbinput * layer->nbneurone; i++)
   {
-    layer->weights[i] = (rand() / ((double) RAND_MAX*10));
+    layer->weights[i] = (rand() / ((double) RAND_MAX*15));
     //-printf("Weights :%f\n",layer->weights[i]);
   }
 }
