@@ -492,7 +492,7 @@ void array_of_img(SDL_Surface *img, SDL_Surface *imgs[], int *l){
   int index = 1, index_imgs = 0, cmpt = 0;
   for(int k = 0; k < l[0]; k++){
     int y1 = l[index], y2 = l[index+1], x1 = l[index+2], x2 = l[index+3];
-    SDL_Surface *new_img,*resized_img;
+    SDL_Surface *new_img,*resized_img, *center_img;
     new_img = SDL_CreateRGBSurface(0, x2-x1, y2-y1, 32, 0, 0, 0, 0);
     SDL_FillRect(new_img, NULL, SDL_MapRGB(new_img->format, 255, 255, 255));
     //if(x2-x1 <= 26 && y2-y1 <= 26){
@@ -508,7 +508,29 @@ void array_of_img(SDL_Surface *img, SDL_Surface *imgs[], int *l){
       SDL_BlitSurface(img, &src, new_img,NULL);// &center);
       
       resized_img = SDL_CreateRGBSurface(0, 26, 26, 32, 0, 0, 0, 0);
-      resize(new_img, resized_img); // fonction pour scale en 26 26
+
+
+      //Decoupe horizontale => Faire la découpe pour garder juste le caractère
+      // + Plein de trucs a free
+
+      SDL_Rect square;
+
+      int max = (((src.w)>(src.h))?(src.w):(src.h));
+      square.w = max;
+      square.h = max;
+      square.x = max/2-src.w/2; // On centre bien l'image.
+      square.y = max/2-src.h/2;
+
+      center_img = SDL_CreateRGBSurface(0, max, max, 32, 0, 0, 0, 0);
+      // On remplit les contours en blanc
+      SDL_FillRect(center_img, NULL, SDL_MapRGB(center_img->format, 255, 255, 255));
+
+      SDL_BlitSurface(new_img,NULL,center_img,&square);
+
+      resize(center_img, resized_img); // fonction pour scale en 26 26
+      
+      SDL_FreeSurface(new_img);
+      SDL_FreeSurface(center_img);
     /*}
     else{
       SDL_Rect src, center;

@@ -1,6 +1,9 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <err.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #include "pixel_operations.h"
 #include "picture_treatment.h"
@@ -11,6 +14,16 @@
 void init_SDL(){
   if(SDL_Init(SDL_INIT_VIDEO)==-1)
     errx(1,"Could not initialize SDL: %s.\n", SDL_GetError());
+}
+
+char *itoa(int num, char *str)
+{
+        if(str == NULL)
+        {
+                return NULL;
+        }
+        sprintf(str, "%d", num);
+        return str;
 }
 
 void Wait_for_exit(){
@@ -105,10 +118,20 @@ int main(int argc, char* argv[]){
   Wait_for_exit();
   SDL_FreeSurface(img);
   SDL_FreeSurface(copy);
+
+  for(int i = 0; i < img_cut[0]; i++) {
+    char str[80];
+    strcpy(str, "tmp/");
+    char snum[5];
+    itoa(i, snum);
+    strcat(str, snum);
+    strcat(str, ".bmp");
+    SDL_SaveBMP(imgs[i], str);
+  }
   for(int i = 0; i < img_cut[0]; i++)
     SDL_FreeSurface(imgs[i]);
   free(img_cut);
-  free(screen);
+  SDL_FreeSurface(screen);
   SDL_Quit();
   return EXIT_SUCCESS;
 }
