@@ -1,6 +1,5 @@
 # include <err.h>
 # include <math.h>
-
 # include "pixel_operations.h"
 # include "picture_treatment.h"
 
@@ -493,7 +492,7 @@ void array_of_img(SDL_Surface *img, SDL_Surface *imgs[], int *l){
   int index = 1, index_imgs = 0, cmpt = 0;
   for(int k = 0; k < l[0]; k++){
     int y1 = l[index], y2 = l[index+1], x1 = l[index+2], x2 = l[index+3];
-    SDL_Surface *new_img;
+    SDL_Surface *new_img,*resized_img;
     new_img = SDL_CreateRGBSurface(0, x2-x1, y2-y1, 32, 0, 0, 0, 0);
     SDL_FillRect(new_img, NULL, SDL_MapRGB(new_img->format, 255, 255, 255));
     //if(x2-x1 <= 26 && y2-y1 <= 26){
@@ -502,11 +501,14 @@ void array_of_img(SDL_Surface *img, SDL_Surface *imgs[], int *l){
       src.y = y1;
       src.w = x2 - x1;
       src.h = y2 - y1;
-
+      
       //center.x = (26 -(y2-y1))/2;
       //center.y = (26 -(x2-x1))/2;
 
       SDL_BlitSurface(img, &src, new_img,NULL);// &center);
+      
+      resized_img = SDL_CreateRGBSurface(0, 26, 26, 32, 0, 0, 0, 0);
+      resize(new_img, resized_img); // fonction pour scale en 26 26
     /*}
     else{
       SDL_Rect src, center;
@@ -526,9 +528,18 @@ void array_of_img(SDL_Surface *img, SDL_Surface *imgs[], int *l){
 
       SDL_BlitSurface(resized_img, NULL, new_img, &center);
     }*/
-    imgs[index_imgs] = new_img;
+    imgs[index_imgs] = resized_img;
     index_imgs += 1;
     cmpt += 1;
     index += 4;
   }
+}
+
+void resize(SDL_Surface *src, SDL_Surface *dest) {
+  SDL_Rect final_size;
+  final_size.w = 26;
+  final_size.h = 26;
+  final_size.x = 0;
+  final_size.y = 0;
+  SDL_BlitScaled(src, NULL, dest, &final_size);
 }

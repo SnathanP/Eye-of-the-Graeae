@@ -1,9 +1,12 @@
-#include <SDL/SDL.h>
-#include <SDL/SDL_image.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 #include <err.h>
 
 #include "pixel_operations.h"
 #include "picture_treatment.h"
+
+#define WIDTH 1200
+#define HEIGHT 900
 
 void init_SDL(){
   if(SDL_Init(SDL_INIT_VIDEO)==-1)
@@ -23,17 +26,19 @@ void Wait_for_exit(){
   }
 }
 
-SDL_Surface* display(int i, int j, SDL_Surface *img, SDL_Surface *screen){
+void display(int i, int j, SDL_Surface *img, SDL_Surface *screen){
 	SDL_Rect pos;
 	pos.x = i;
 	pos.y = j;
 	SDL_BlitSurface(img, NULL, screen, &pos);
-	SDL_UpdateRect(screen, i, j, img->w, img->h);
-	return screen;
+	
+
+	//return screen;
 }
 
 SDL_Surface* Load_Image(char *path){
   SDL_Surface *img;
+  IMG_Init(IMG_INIT_PNG);
   img = IMG_Load(path);
   if(!img)
     errx(1, "Can't load %s: %s", path, IMG_GetError());
@@ -45,10 +50,23 @@ main:
 treatment and segmentation of chararcters in an image img.
 */
 int main(int argc, char* argv[]){
-  SDL_Surface *screen = NULL;
-  init_SDL();
-  screen = SDL_SetVideoMode(1500, 1200, 32, SDL_HWSURFACE);
-  SDL_FillRect(screen, NULL, SDL_MapRGB(screen->format, 100, 100, 100));
+
+	// variable declarations
+	SDL_Window *win = NULL;
+	//SDL_Renderer *renderer = NULL;
+	//int w, h; // texture width & height
+	
+	// Initialize SDL.
+	if (SDL_Init(SDL_INIT_VIDEO) < 0)
+			return 1;
+	
+	// create the window and renderer
+	// note that the renderer is accelerated
+	win = SDL_CreateWindow("Eye of the Graeae", 100, 100, WIDTH, HEIGHT, 0);
+  //renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED);
+  SDL_Surface* screen = SDL_GetWindowSurface(win);
+  //SDL_FillRect(screen, NULL, SDL_MapRGB(screen->format, 100, 100, 100));
+
   if(argc < 2){
     printf("Error: Need a path to the image\n");
     return 1;
@@ -57,6 +75,7 @@ int main(int argc, char* argv[]){
   SDL_Surface *img = Load_Image(path);
 
   display(0, 0, img, screen);
+  SDL_UpdateWindowSurface(win); // POUR ACTUALISER LA FENETRE
   Gray_scale(img);
   SDL_Surface *copy = SDL_CreateRGBSurface(0, img->w, img->h, 32, 0, 0, 0, 0);
   int *copy_l = malloc(sizeof(int) * img->h * img->w);
@@ -69,7 +88,7 @@ int main(int argc, char* argv[]){
   img = Contrast(img);
   display(620, 0, img, screen);
   img = */threshold(img);
-  display(0, 310, img, screen);
+  //display(0, 310, img, screen);
   /*img = clean_img(img);
   display(310, 310, img, screen);
   img = Sobel_filter(img);
@@ -81,6 +100,8 @@ int main(int argc, char* argv[]){
   for(int i = 0; i < img_cut[0]; i++)
     display(i * 52, 620, imgs[i], screen);
 
+  
+  SDL_UpdateWindowSurface(win); // POUR ACTUALISER LA FENETRE
   Wait_for_exit();
   SDL_FreeSurface(img);
   SDL_FreeSurface(copy);
