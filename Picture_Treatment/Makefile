@@ -2,10 +2,10 @@
 
 CC=gcc
 
-CPPFLAGS= `pkg-config --cflags sdl` -MMD
-CFLAGS= -Wall -Wextra -Werror -std=c99 -O3
+CPPFLAGS= `pkg-config --cflags sdl2` -MMD
+CFLAGS= -Wall -Wextra -std=c99 -O3 -g
 LDFLAGS=
-LDLIBS= `pkg-config --libs sdl` -lSDL_image
+LDLIBS=  `pkg-config --libs sdl2` -lSDL2_image -lm
 
 OBJ= pixel_operations.o picture_treatment.o main.o
 DEP= ${SRC:.o=.d}

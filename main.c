@@ -8,8 +8,61 @@
 # include "LayerStruct.h"
 # include "savesystem.h"
 # include "matrix.h"
+# include "Picture_Treatment/picture_treatment.h"
 
-int main(int argc, char const *argv[]) {
+char *justforward(double **input, int lenlist);
+int apprentissage(int nbmid, int ite, int load);
+
+
+int main(/*int argc, char const *argv[]*/)
+{
+  int *len = malloc(sizeof(int));
+  double **array = getFinal("Picture_Treatment/image_5.jpg",len);
+  char* string = justforward(array,*len);
+  printf("%s\n",string );
+  //free(array);
+ // free(len);
+  //apprentissage(200,10000,atoi(argv[argc-1]));
+}
+
+char *justforward(double **input, int lenlist)
+{
+  Layer layerHidden;
+  Layer layerOutput;
+
+  char *result = malloc (lenlist * sizeof(char));
+  //Ne pas oublier de free en dehors de la fonction
+
+
+  LoadData(&layerHidden,&layerOutput);
+
+  for (int i = 0; lenlist > i; i++)
+  {
+    front2(*(input + i),&layerHidden);
+    front2(layerHidden.result,&layerOutput);
+
+    double result2 = layerOutput.result[0];
+    int resultpos = 0;
+
+    for(int it = 1; it < 94; it++)
+    {
+        //printf("%lf:%c\n", layerOutput.result[it], 'A'+it);
+        if(layerOutput.result[it] > result2)
+        {
+          result2 = layerOutput.result[it];
+          resultpos = it;
+        }
+    }
+    char reponse = 33 + resultpos;
+    *(result + i) = reponse;
+    free(*(input + i));
+  }
+  return result;
+}
+
+
+int apprentissage(int nbmid, int ite, int load)
+{
     srand ( clock()  );
 
     // one arg = load savefile (futur)
@@ -22,12 +75,11 @@ int main(int argc, char const *argv[]) {
     Layer layerOutput;
     int nbinput = 26*26;
 
-    int nbout = 52;
+    int nbout = 94;
     double learning = LEARNING_RATE;
 
-    if (argc == 3)
+    if (load == 0)
     {
-      int nbmid = atoi(argv[1]);
       if (nbmid > 99999)
         {
           printf("I don't think more than 40 is necessary for a XOR...\n");
@@ -36,27 +88,15 @@ int main(int argc, char const *argv[]) {
       initLayer(nbinput,nbmid,&layerHidden);
       initLayer(nbmid,nbout,&layerOutput);
     }
-    else if (argc == 2)
+    else
     {
       learning = LoadData(&layerHidden,&layerOutput);
     }
-    else{
-      printf("To use this network :\n");
-      printf("./main NombreDeNeuronnes FichierDeTest\n");
-      printf("Recommandé pour XOR : \"./main 4 tests/10\\ 000.txt > out.txt\"\n");
-      return 0;
-    }
-
-
-
-
 
     //double *input = malloc(nbinput * sizeof(double));
 
-
     //FILE* fichier = NULL;
     //fichier = fopen(argv[argc-1], "r");
-    int ite = atoi(argv[argc-1]);
 
     //initLayer(HIDDEN,HIDDEN2,&layerHidden2); (futur)
 
@@ -73,41 +113,25 @@ int main(int argc, char const *argv[]) {
             //input[0] = data[0] - '0'; // On récupère les tests dans le fichier
             //input[1] = data[1] - '0';
             //answer = data[2] - '0';
-            int r = rand() % 26;
-            int mini = rand() % 2;
+            int r = rand() % 94;
             char path = r;
-            if (mini)
-            {
-              path += 'a';
-            }
-            else
-            {
-              path += 'A';
-            }
             //Faire un random 26 pour trouver une lettre, la mettre dans path, importer en matrice la lettre .bmp
             double *input = loadMatrix(path);
-            print_matrix(input,26,26);
-            double *answer = malloc(52*sizeof(double));
-            for(int i = 0; i < 52; i++)
+            //print_matrix(input,26,26);
+            double *answer = malloc(94*sizeof(double));
+            for(int i = 0; i < 94; i++)
               answer[i] = 0;
-            if (mini)
-            {
-              answer[path - 'a'] = 1;
-            }
-            else
-            {
-              answer[path - 'A'] = 1;
-            }
+            answer[r] = 1;
 
             // FRONT 2
             front2(input,&layerHidden);
             //front2(layerHidden.result,&layerHidden2); (futur)
             front2(layerHidden.result,&layerOutput);
             //ENDFRONT
-            double result2 = -1;
-            int resultpos;
+            double result2 = layerOutput.result[0];
+            int resultpos = 0;
 
-            for(int it=0; it < 52; it++) {
+            for(int it = 1; it < 94; it++) {
                 //printf("%lf:%c\n", layerOutput.result[it], 'A'+it);
                 if(layerOutput.result[it]>result2) {
                   result2 = layerOutput.result[it];
@@ -116,12 +140,8 @@ int main(int argc, char const *argv[]) {
             }
 
             // AFFICHAGE
-            printf("Ité %d : target = %c\n", i,path);
-            char reponse;
-            if (mini)
-              reponse = 'a'+resultpos;
-            else
-              reponse = 'A'+resultpos;
+            printf("Ité %d : target = %c\n", i,path+33);
+            char reponse = 33 + resultpos;
             printf("%lf (Struct) = %c",result2, reponse);
 
             if (answer[resultpos] == 1) {
