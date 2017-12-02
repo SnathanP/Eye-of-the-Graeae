@@ -11,43 +11,6 @@
 #define WIDTH 1200
 #define HEIGHT 900
 
-void init_SDL(){
-  if(SDL_Init(SDL_INIT_VIDEO)==-1)
-    errx(1,"Could not initialize SDL: %s.\n", SDL_GetError());
-}
-
-char *itoa(int num, char *str)
-{
-        if(str == NULL)
-        {
-                return NULL;
-        }
-        sprintf(str, "%d", num);
-        return str;
-}
-
-void Wait_for_exit(){
-  int continu = 1;
-  SDL_Event event;
-
-  while(continu){
-    SDL_WaitEvent(&event);
-    switch(event.type){
-      case SDL_MOUSEBUTTONDOWN:
-      continu = 0;
-    }
-  }
-}
-
-void display(int i, int j, SDL_Surface *img, SDL_Surface *screen){
-	SDL_Rect pos;
-	pos.x = i;
-	pos.y = j;
-	SDL_BlitSurface(img, NULL, screen, &pos);
-
-
-	//return screen;
-}
 
 
 

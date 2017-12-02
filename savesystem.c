@@ -13,16 +13,6 @@
 ////////////////// COPY PASTE IS BAD
 
 
-static char *itoa(int num, char *str)
-{
-        if(str == NULL)
-        {
-                return NULL;
-        }
-        sprintf(str, "%d", num);
-        return str;
-}
-
 /////////////////////
 
 double *loadMatrix(int path) {

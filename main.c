@@ -14,15 +14,15 @@ char *justforward(double **input, int lenlist);
 int apprentissage(int nbmid, int ite, int load);
 
 
-int main(int argc, char const *argv[])
+int main(/*int argc, char const *argv[]*/)
 {
-  /*int *len = malloc(sizeof(int));
-  double **array = getFinal("Picture_Treatment/image_6.png",len);
+  int *len = malloc(sizeof(int));
+  double **array = getFinal("Picture_Treatment/image_5.jpg",len);
   char* string = justforward(array,*len);
   printf("%s\n",string );
-  free(array);
-  free(len);
-  */apprentissage(200,10000,atoi(argv[argc-1]));
+  //free(array);
+ // free(len);
+  //apprentissage(200,10000,atoi(argv[argc-1]));
 }
 
 char *justforward(double **input, int lenlist)
@@ -55,7 +55,7 @@ char *justforward(double **input, int lenlist)
     }
     char reponse = 33 + resultpos;
     *(result + i) = reponse;
-    free((input + i));
+    free(*(input + i));
   }
   return result;
 }

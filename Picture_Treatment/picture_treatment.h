@@ -6,6 +6,11 @@
 #include <SDL2/SDL_image.h>
 #include <math.h>
 
+
+void init_SDL();
+char *itoa(int num, char *str);
+void Wait_for_exit();
+void display(int i, int j, SDL_Surface *img, SDL_Surface *screen);
 double** getFinal(char* path, int *taille);
 SDL_Surface* Load_Image(char *path);
 SDL_Surface *ScaleSurface(SDL_Surface *Surface, Uint16 Width, Uint16 Height);
