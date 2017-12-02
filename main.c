@@ -17,11 +17,11 @@ int apprentissage(int nbmid, int ite, int load);
 int main(/*int argc, char const *argv[]*/)
 {
   int *len = malloc(sizeof(int));
-  double **array = getFinal("Picture_Treatment/image_5.jpg",len);
+  double **array = getFinal("Picture_Treatment/thetoto.png",len);
   char* string = justforward(array,*len);
   printf("%s\n",string );
-  //free(array);
- // free(len);
+  free(array);
+  free(len);
   //apprentissage(200,10000,atoi(argv[argc-1]));
 }
 
