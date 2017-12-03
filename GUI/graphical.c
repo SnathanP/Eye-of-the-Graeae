@@ -1,10 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <gtk/gtk.h>
-#include "graphical.h"
 
+# include "graphical.h"
 
-/*void ShowImage(gchar *filename, GtkWidget *widget) {
+void ShowImage(gchar *filename, GtkWidget *widget) {
   GtkWidget *image;
   image = gtk_image_new_from_file (filename);
   gtk_container_add(GTK_CONTAINER(widget),image);
@@ -23,7 +23,7 @@ void ShowDialog(GtkWidget *widget, gpointer data) {
             "_Annuler", GTK_RESPONSE_CANCEL,
             "_Ouvrir", GTK_RESPONSE_ACCEPT,
             NULL);
-
+  (void) data;//histoire qu'il y ait pas de warning #Nat
   res = gtk_dialog_run (GTK_DIALOG (dialog));
 
   if (res == GTK_RESPONSE_ACCEPT) {
@@ -41,22 +41,24 @@ void ShowDialog(GtkWidget *widget, gpointer data) {
 
 void quit(GtkWidget *widget, gpointer data) {
   printf("Bye !\n");
+  (void) data;
+  (void)widget;
   gtk_main_quit();
-}*/
+}
 
-int main(int argc, char **argv)
+/*int main(int argc, char **argv)
 {
-  /* Variables */
+  // Variables
   GtkWidget *Main = NULL;
 
-  /* Initialisation de GTK+ */
+  // Initialisation de GTK+
   gtk_init(&argc, &argv);
 
-  /* Création de la fenêtre */
+  // Création de la fenêtre
   Main = gtk_window_new(GTK_WINDOW_TOPLEVEL);
   g_signal_connect(G_OBJECT(Main), "delete-event", G_CALLBACK(gtk_main_quit), NULL);
 
-  /* Paramètres */
+  // Paramètres
   gtk_window_set_title(GTK_WINDOW(Main), "Eye of the Graeae");
   gtk_window_set_default_size(GTK_WINDOW(Main),100,100);
   //gtk_resize(GTK_WINDOW(Main),100,00));
@@ -81,15 +83,15 @@ int main(int argc, char **argv)
   g_signal_connect(G_OBJECT(hbox), "button-press-event", G_CALLBACK( ShowDialog ), NULL);
   g_signal_connect(G_OBJECT(hbox), "delete-event", G_CALLBACK( quit ), NULL);
 
-  /* Affichage et boucle évènementielle */
+  // Affichage et boucle évènementielle
   gtk_widget_show(Main);
   gtk_widget_show_all(Main);
   gtk_main();
 
-  /* On quitte.. */
+  // On quitte..
 
 //  gtk_widget_destroy(label);
 //  gtk_widget_destroy(Main);
 
   return EXIT_SUCCESS;
-}
+}*/

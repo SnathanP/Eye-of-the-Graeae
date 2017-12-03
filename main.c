@@ -3,6 +3,7 @@
 # include <stdio.h>
 # include <math.h>
 # include <time.h>
+# include <gtk/gtk.h>
 
 # include "property.h"
 # include "LayerStruct.h"
@@ -10,20 +11,68 @@
 # include "matrix.h"
 # include "Picture_Treatment/picture_treatment.h"
 
+# include "GUI/graphical.h"
+
 char *justforward(double **input, int lenlist);
 int apprentissage(int nbmid, int ite, int load);
 
 
-int main(/*int argc, char const *argv[]*/)
+int main(int argc, char *argv[])
 {
-  int *len = malloc(sizeof(int));
+  /*int *len = malloc(sizeof(int));
   double **array = getFinal("Picture_Treatment/testubuntu.png",len);
   char* string = justforward(array,*len);
   printf("%s\n",string );
   free(array);
   free(string);
-  free(len);
+  free(len);*/
   //apprentissage(200,10000,atoi(argv[argc-1]));
+  // Variables
+  GtkWidget *Main = NULL;
+
+  // Initialisation de GTK+
+  gtk_init(&argc, &argv);
+
+  // Création de la fenêtre
+  Main = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+  g_signal_connect(G_OBJECT(Main), "delete-event", G_CALLBACK(gtk_main_quit), NULL);
+
+  // Paramètres
+  gtk_window_set_title(GTK_WINDOW(Main), "Eye of the Graeae");
+  gtk_window_set_default_size(GTK_WINDOW(Main),100,100);
+  //gtk_resize(GTK_WINDOW(Main),100,00));
+
+
+  GtkWidget *hbox = gtk_box_new (FALSE, 0);
+  //GtkWidget *drawingArea = gtk_drawing_area_new ();
+  GtkWidget *button = gtk_button_new_with_label ("Run !");
+
+  gtk_container_add (GTK_CONTAINER (Main), hbox);
+
+  //gtk_box_pack_start (GTK_BOX (hbox), drawingArea, TRUE, TRUE, 0);
+  //gtk_box_pack_start (GTK_BOX (hbox), button, TRUE, TRUE, 0);
+  gtk_container_add(GTK_CONTAINER(hbox),button);
+
+  GtkWidget *label = NULL;
+  label = gtk_label_new("Bonjour !");
+
+  gtk_container_add(GTK_CONTAINER(hbox),label);
+
+
+  g_signal_connect(G_OBJECT(hbox), "button-press-event", G_CALLBACK( ShowDialog ), NULL);
+  g_signal_connect(G_OBJECT(hbox), "delete-event", G_CALLBACK( quit ), NULL);
+
+  // Affichage et boucle évènementielle
+  gtk_widget_show(Main);
+  gtk_widget_show_all(Main);
+  gtk_main();
+
+  // On quitte..
+
+  //  gtk_widget_destroy(label);
+  //  gtk_widget_destroy(Main);
+
+  return EXIT_SUCCESS;
 }
 
 char *justforward(double **input, int lenlist)

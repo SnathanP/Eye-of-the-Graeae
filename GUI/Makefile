@@ -7,7 +7,7 @@ LDFLAGS =
 LDLIBS= -lm `pkg-config --cflags --libs gtk+-3.0`
 
 
-OBJ = main.o
+OBJ = graphical.o main.o
 DEP = ${OBJ:.o=.d}
 
 all: main
