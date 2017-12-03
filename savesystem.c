@@ -15,14 +15,20 @@
 
 /////////////////////
 
-double *loadMatrix(int path) {
+double *loadMatrix(int path, int alpha) {
   char str[80];
-  strcpy(str,"Picture_Treatment/tmp/");
+  strcpy(str,"Picture_Treatment/tmp");
+  char alphac[2];
+  alphac[0] = '0'+alpha;
+  alphac[1] = '\0';
+  strcat(str, alphac);
+  strcat(str, "/");
   char snum[5];
   itoa(path, snum);
   strcat(str, snum);
   strcat(str, ".bmp");
   SDL_Surface *surf = Load_Image(str);
+  printf("Location : %s \n", str);
   int *arr = malloc(26*26*sizeof(int));
   surf_to_array(surf, arr);
   double *arr2 = malloc(26*26*sizeof(double));

@@ -2,4 +2,4 @@
 
 void SaveData(Layer *l1, Layer *l2, double learning);
 double LoadData(Layer *l1, Layer *l2);
-double *loadMatrix(char path);
+double *loadMatrix(int path, int alpha);

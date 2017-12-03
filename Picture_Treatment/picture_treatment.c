@@ -594,7 +594,7 @@ void threshold(SDL_Surface *img){
   if(is_malloc_error(copy, NULL, 0))
     return;
   surf_to_array(img, copy);
-  int n = 100;
+  int n = 110;
   printf("%d\n", n);
   for(int i = 0; i < img->w * img->h; i++)
     copy[i] = copy[i] < n ? 0 : 255;

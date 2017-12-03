@@ -17,7 +17,7 @@ int apprentissage(int nbmid, int ite, int load);
 int main(/*int argc, char const *argv[]*/)
 {
   int *len = malloc(sizeof(int));
-  double **array = getFinal("Picture_Treatment/thetoto.png",len);
+  double **array = getFinal("Picture_Treatment/testubuntu.png",len);
   char* string = justforward(array,*len);
   printf("%s\n",string );
   free(array);
@@ -114,9 +114,10 @@ int apprentissage(int nbmid, int ite, int load)
             //input[1] = data[1] - '0';
             //answer = data[2] - '0';
             int r = rand() % 94;
+            int alpha = rand() % 2;
             char path = r;
             //Faire un random 26 pour trouver une lettre, la mettre dans path, importer en matrice la lettre .bmp
-            double *input = loadMatrix(path);
+            double *input = loadMatrix(path, alpha);
             //print_matrix(input,26,26);
             double *answer = malloc(94*sizeof(double));
             for(int i = 0; i < 94; i++)
