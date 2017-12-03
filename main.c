@@ -21,6 +21,7 @@ int main(/*int argc, char const *argv[]*/)
   char* string = justforward(array,*len);
   printf("%s\n",string );
   free(array);
+  free(string);
   free(len);
   //apprentissage(200,10000,atoi(argv[argc-1]));
 }
@@ -57,6 +58,8 @@ char *justforward(double **input, int lenlist)
     *(result + i) = reponse;
     free(*(input + i));
   }
+  destroyLayer(&layerHidden);
+  destroyLayer(&layerOutput);
   return result;
 }
 
