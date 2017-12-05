@@ -11,231 +11,129 @@
 # include "matrix.h"
 # include "Picture_Treatment/picture_treatment.h"
 
-# include "GUI/graphical.h"
-
-char *justforward(double **input, int lenlist);
-int apprentissage(int nbmid, int ite, int load);
+# include "ocr.h"
 
 
-int main(int argc, char *argv[])
+static void cb_quit (GtkWidget * p_wid, gpointer p_data)
 {
-  /*int *len = malloc(sizeof(int));
-  double **array = getFinal("Picture_Treatment/testubuntu.png",len);
-  char* string = justforward(array,*len);
-  printf("%s\n",string );
-  free(array);
-  free(string);
-  free(len);*/
-  //apprentissage(200,10000,atoi(argv[argc-1]));
-  // Variables
-  GtkWidget *Main = NULL;
+  (void)p_wid;
+  (void)p_data;
+   gtk_main_quit ();
+}
 
-  // Initialisation de GTK+
+static void cb_save (GtkWidget * p_wid, gpointer p_data)
+{  
+   (void)p_wid;
+   GtkTextView *tmp = GTK_TEXT_VIEW(gtk_builder_get_object(GTK_BUILDER(p_data), "txt"));
+   GtkTextIter start, end;
+   GtkTextBuffer *buffer = gtk_text_view_get_buffer (tmp);
+   gchar *text;
+   gtk_text_buffer_get_bounds (buffer, &start, &end);
+   text = gtk_text_buffer_get_text (buffer, &start, &end, FALSE);
+   // SAVE ME - text
+   printf("%s\n",text);
+   g_free(text);
+}
+
+static void cb_main (GtkWidget * p_wid, gpointer p_data)
+{
+  (void)p_wid;
+  GtkTextView *text = GTK_TEXT_VIEW(gtk_builder_get_object(GTK_BUILDER(p_data), "txt"));
+  // CALL OCR
+  char *final = execOcr("tmp");
+  // Delete text and insert result.
+  GtkTextBuffer *buffer;
+  buffer = gtk_text_view_get_buffer (text);
+
+  GtkTextIter start, end;
+  gtk_text_buffer_get_bounds(buffer, &start, &end);
+  gtk_text_buffer_delete(buffer, &start, &end);
+
+  GtkTextMark *mark;
+  GtkTextIter iter;
+  mark = gtk_text_buffer_get_insert (buffer);
+  gtk_text_buffer_get_iter_at_mark (buffer, &iter, mark);
+  gtk_text_buffer_insert (buffer, &iter, final, -1);
+
+}
+
+static void cb_load (GtkWidget * p_wid, gpointer p_data)
+{
+  GtkImage *img = GTK_IMAGE(gtk_builder_get_object(GTK_BUILDER(p_data), "img"));
+
+  GtkWidget *dialog;
+  gint res;
+
+  dialog = gtk_file_chooser_dialog_new("Ouvrir une image",
+            GTK_WINDOW(gtk_widget_get_toplevel(p_wid)), GTK_FILE_CHOOSER_ACTION_OPEN,
+            "_Annuler", GTK_RESPONSE_CANCEL,
+            "_Ouvrir", GTK_RESPONSE_ACCEPT,
+            NULL);
+
+  res = gtk_dialog_run (GTK_DIALOG (dialog));
+
+  if (res == GTK_RESPONSE_ACCEPT) {
+    gchar *filename;
+    GtkFileChooser *chooser = GTK_FILE_CHOOSER (dialog);
+    filename = gtk_file_chooser_get_filename (chooser);
+    printf("File : %s\n",filename);
+
+    SDL_Surface *sdl = IMG_Load(filename);
+    SDL_SaveBMP(sdl, "tmp");
+    SDL_FreeSurface(sdl);
+
+    gtk_image_set_from_file(img, "tmp");
+  }
+  gtk_widget_destroy (dialog);
+
+}
+
+int main(int argc, char **argv)
+{
+
+  /* Variables */
+   GtkBuilder  *  p_builder   = NULL;
+   GError      *  p_err       = NULL;
+
+  /* Initialisation de GTK+ */
   gtk_init(&argc, &argv);
 
-  // Création de la fenêtre
-  Main = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-  g_signal_connect(G_OBJECT(Main), "delete-event", G_CALLBACK(gtk_main_quit), NULL);
-
-  // Paramètres
-  gtk_window_set_title(GTK_WINDOW(Main), "Eye of the Graeae");
-  gtk_window_set_default_size(GTK_WINDOW(Main),100,100);
-  //gtk_resize(GTK_WINDOW(Main),100,00));
+  /* Création de la fenêtre */
+  p_builder = gtk_builder_new ();
+  gtk_builder_add_from_file (p_builder, "gtkbuild.glade", & p_err);
+  GtkWidget * win = (GtkWidget *) gtk_builder_get_object (
+    p_builder, "win"
+  );
 
 
-  GtkWidget *hbox = gtk_box_new (FALSE, 0);
-  //GtkWidget *drawingArea = gtk_drawing_area_new ();
-  GtkWidget *button = gtk_button_new_with_label ("Run !");
+g_signal_connect (
+   gtk_builder_get_object (p_builder, "load"),
+   "clicked", G_CALLBACK (cb_load), p_builder
+);
 
-  gtk_container_add (GTK_CONTAINER (Main), hbox);
+g_signal_connect (
+   gtk_builder_get_object (p_builder, "launch"),
+   "clicked", G_CALLBACK (cb_main), p_builder
+);
+ 
+/* Signal du bouton Annuler */
+g_signal_connect (
+   gtk_builder_get_object (p_builder, "save"),
+   "clicked", G_CALLBACK (cb_save), p_builder
+);
 
-  //gtk_box_pack_start (GTK_BOX (hbox), drawingArea, TRUE, TRUE, 0);
-  //gtk_box_pack_start (GTK_BOX (hbox), button, TRUE, TRUE, 0);
-  gtk_container_add(GTK_CONTAINER(hbox),button);
-
-  GtkWidget *label = NULL;
-  label = gtk_label_new("Bonjour !");
-
-  gtk_container_add(GTK_CONTAINER(hbox),label);
+g_signal_connect (
+   gtk_builder_get_object (p_builder, "quit"),
+   "activate", G_CALLBACK (cb_quit), NULL
+);
 
 
-  g_signal_connect(G_OBJECT(hbox), "button-press-event", G_CALLBACK( ShowDialog ), NULL);
-  g_signal_connect(G_OBJECT(hbox), "delete-event", G_CALLBACK( quit ), NULL);
+  /* Paramètres */
+  gtk_window_set_title(GTK_WINDOW(win), "Eye of the Graeae");
+  gtk_window_set_default_size(GTK_WINDOW(win),100,100);
 
-  // Affichage et boucle évènementielle
-  gtk_widget_show(Main);
-  gtk_widget_show_all(Main);
+  gtk_widget_show_all(win);
   gtk_main();
 
-  // On quitte..
-
-  //  gtk_widget_destroy(label);
-  //  gtk_widget_destroy(Main);
-
   return EXIT_SUCCESS;
-}
-
-char *justforward(double **input, int lenlist)
-{
-  Layer layerHidden;
-  Layer layerOutput;
-
-  char *result = malloc (lenlist * sizeof(char));
-  //Ne pas oublier de free en dehors de la fonction
-
-
-  LoadData(&layerHidden,&layerOutput);
-
-  for (int i = 0; lenlist > i; i++)
-  {
-    front2(*(input + i),&layerHidden);
-    front2(layerHidden.result,&layerOutput);
-
-    double result2 = layerOutput.result[0];
-    int resultpos = 0;
-
-    for(int it = 1; it < 94; it++)
-    {
-        //printf("%lf:%c\n", layerOutput.result[it], 'A'+it);
-        if(layerOutput.result[it] > result2)
-        {
-          result2 = layerOutput.result[it];
-          resultpos = it;
-        }
-    }
-    char reponse = 33 + resultpos;
-    *(result + i) = reponse;
-    free(*(input + i));
-  }
-  destroyLayer(&layerHidden);
-  destroyLayer(&layerOutput);
-  return result;
-}
-
-
-int apprentissage(int nbmid, int ite, int load)
-{
-    srand ( clock()  );
-
-    // one arg = load savefile (futur)
-    // Min arg = in, mid, out, test file (futur) + LEARNING_RATE
-    // Max arg = in mid, ..., mid, out, test file (futur) + LEARNING_RATE
-
-    // INIT
-    Layer layerHidden;
-    //Layer layerHidden2; (futur)
-    Layer layerOutput;
-    int nbinput = 26*26;
-
-    int nbout = 94;
-    double learning = LEARNING_RATE;
-
-    if (load == 0)
-    {
-      if (nbmid > 99999)
-        {
-          printf("I don't think more than 40 is necessary for a XOR...\n");
-          return 1;
-        }
-      initLayer(nbinput,nbmid,&layerHidden);
-      initLayer(nbmid,nbout,&layerOutput);
-    }
-    else
-    {
-      learning = LoadData(&layerHidden,&layerOutput);
-    }
-
-    //double *input = malloc(nbinput * sizeof(double));
-
-    //FILE* fichier = NULL;
-    //fichier = fopen(argv[argc-1], "r");
-
-    //initLayer(HIDDEN,HIDDEN2,&layerHidden2); (futur)
-
-    //////
-
-
-    int truecount2 = 0;
-    int falsecount2 = 0;
-    int lastFalse2 = 0;
-
-
-        for(int i = 0; i < ite; i++) { // On lit le fichier
-
-            //input[0] = data[0] - '0'; // On récupère les tests dans le fichier
-            //input[1] = data[1] - '0';
-            //answer = data[2] - '0';
-            int r = rand() % 94;
-            int alpha = rand() % 2;
-            char path = r;
-            //Faire un random 26 pour trouver une lettre, la mettre dans path, importer en matrice la lettre .bmp
-            double *input = loadMatrix(path, alpha);
-            //print_matrix(input,26,26);
-            double *answer = malloc(94*sizeof(double));
-            for(int i = 0; i < 94; i++)
-              answer[i] = 0;
-            answer[r] = 1;
-
-            // FRONT 2
-            front2(input,&layerHidden);
-            //front2(layerHidden.result,&layerHidden2); (futur)
-            front2(layerHidden.result,&layerOutput);
-            //ENDFRONT
-            double result2 = layerOutput.result[0];
-            int resultpos = 0;
-
-            for(int it = 1; it < 94; it++) {
-                //printf("%lf:%c\n", layerOutput.result[it], 'A'+it);
-                if(layerOutput.result[it]>result2) {
-                  result2 = layerOutput.result[it];
-                  resultpos = it;
-                }
-            }
-
-            // AFFICHAGE
-            printf("Ité %d : target = %c\n", i,path+33);
-            char reponse = 33 + resultpos;
-            printf("%lf (Struct) = %c",result2, reponse);
-
-            if (answer[resultpos] == 1) {
-                printf(" : TRUE (Struct)\n");
-                truecount2++;
-            } else {
-                printf(" : FALSE (Struct)\n");
-                falsecount2++;
-                lastFalse2 = i;
-            }
-            if (answer[resultpos] == 0 || result2 < 0.95)
-            {
-
-                //double tanswer[1] = {answer};
-                // back - propagation : Il faut commencer par l'output et
-                //                      remonter vers l'input.
-                outToHidden(answer, &layerOutput, &layerHidden);
-                //hiddenToHidden(&layerOutput, &layerHidden2, &layerHidden); (futur)
-                hiddenToInput(&layerOutput, &layerHidden, input);
-                applyChanges(&layerHidden, learning);
-                //applyChanges(&layerHidden2); (futur)
-                applyChanges(&layerOutput, learning);
-                printf("Auto-correction\n\n");
-            }
-            else{
-              printf("\n\n");
-            }
-            free(input);
-            free(answer);
-          }
-
-
-    printf("True2 : %d\nFalse2 : %d\n", truecount2, falsecount2);
-    printf("Last False2 : %d\n", lastFalse2);
-    //fclose(fichier); // On ferme le fichier qui a été ouvert
-
-    SaveData(&layerHidden,&layerOutput,learning);
-    destroyLayer(&layerHidden);
-    //destroyLayer(&layerHidden2);
-    destroyLayer(&layerOutput);
-
-
-    return 0;
 }
