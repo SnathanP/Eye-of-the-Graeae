@@ -103,7 +103,7 @@
           <object class="GtkImage" id="img">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="stock">gtk-missing-image</property>
+            <property name="pixbuf">icon.png</property>
           </object>
           <packing>
             <property name="expand">False</property>
