@@ -107,8 +107,12 @@ double **getFinal(char* path, int* taille) {
   display(310, 310, img, screen);
   img = Sobel_filter(img);
   display(620, 310, img, screen);
-  */int *img_cut = malloc(sizeof(int) * img->w * img->h);
-  cut(img, img_cut);
+  */
+  int *img_cut = malloc(sizeof(int) * img->w * img->h);
+  //int *l_space = malloc(sizeof(int) * img->w * img->h);
+  int *l_back = malloc(sizeof(int) * img->h * img->w);
+  printf("%p / %p\n\n", img_cut, l_back);
+  //cut(img, img_cut, l_back/*, l_space*/);
   SDL_Surface *imgs[img_cut[0]];
   array_of_img(img, imgs, img_cut);
   //for(int i = 0; i < img_cut[0]; i++)
@@ -323,51 +327,98 @@ void h_cut_2(SDL_Surface *img, int *l_c, int i){
   free(l);
 }
 
+void get_spaces(int *l_c, int *l_s, int begin_line){
+  int sum = -0, nb = 0;
+  for(int i = begin_line; i < l_c[0] - 1; i++){
+    int delta = l_c[i*4 + 3] - l_c[(i-1)*4 + 4];
+    sum += delta;
+    nb += 1;
+    if(delta > sum/nb){
+      sum += 2*delta;
+      nb += 2;
+    }
+  }
+  int moy = sum/nb;
+  int next_space = 1;
+  for(int i = begin_line; i < l_c[0] - 1; i++){
+    int space_bitw = l_c[i*4 + 3] - l_c[(i-1)*4 + 4];
+    if(space_bitw > moy){
+      l_s[next_space] += i;
+      l_s[0] += 1;
+      next_space += 1;
+    }
+  }
+}
+
 /*
 cut -> SDL_Surface *img, int array_coords[]:
 put in array_coords the section of the image where it detect letters.
 */
-int cut(SDL_Surface *img,int *array_coords){
+int cut(SDL_Surface *img,int *array_coords, int *l_back, int *l_space){
   int *copy = malloc(sizeof(int) * img->w * img->h);
   if(is_malloc_error(copy, NULL, 0))
     return 0;
+  
   int *pointers[] = {copy, NULL, NULL};
   surf_to_array(img, copy);
   int *l_c_h = malloc(sizeof(int) * (img->h + 1));
   if(is_malloc_error(l_c_h, pointers, 1))
     return 0;
+  
   pointers[1] = l_c_h;
   array_coords[0] = 0;
   if(!h_cut_array(img, l_c_h))
     return 0;
-  int index_lch = 1, index_lcw = 1;
+  
+  int index_lch = 1, index_lcw = 1, next_back = 1;
+  l_back[0] = -1;
+  l_space[0] = 0;
   for(int i = 0; i < l_c_h[0]; i++){
     int x = l_c_h[index_lch], y = l_c_h[index_lch + 1];
     index_lch += 2;
-    int *l_tmp = malloc(sizeof(int) * (y-x) * img->w);
-    if(is_malloc_error(l_tmp, pointers, 2))
-      return 0;
-    pointers[2] = l_tmp;
-    for(int j = x * img->w; j <= y * img->w; j++)
-      l_tmp[j - x * img->w] = copy[j];
-    int *l_c_w = malloc(sizeof(int) * (img->w + 1));
-    if(is_malloc_error(l_c_w, pointers, 3))
-      return 0;
-    w_cut_array(l_tmp, img->w, y-x, l_c_w);
-    for(int j = 1; j <= l_c_w[0]; j++){
-      array_coords[index_lcw] = x;
-      array_coords[index_lcw+1] = y;
-      array_coords[index_lcw+2] = l_c_w[j*2-1];
-      array_coords[index_lcw+3] = l_c_w[j*2];
-      array_coords[0] += 1;
-      index_lcw += 4;
+    if(y - x > 3){
+      int *l_tmp = malloc(sizeof(int) * (y-x) * img->w);
+    
+      if(is_malloc_error(l_tmp, pointers, 2))
+        return 0;
+    
+      pointers[2] = l_tmp;
+    
+      for(int j = x * img->w; j <= y * img->w; j++)
+        l_tmp[j - x * img->w] = copy[j];
+    
+      int *l_c_w = malloc(sizeof(int) * (img->w + 1));
+    
+      if(is_malloc_error(l_c_w, pointers, 3))
+        return 0;
+    
+      w_cut_array(l_tmp, img->w, y-x, l_c_w);
+      int beg_space_det = array_coords[0] + 1;
+    
+      for(int j = 1; j <= l_c_w[0]; j++){
+        array_coords[index_lcw] = x;
+        array_coords[index_lcw+1] = y;
+        array_coords[index_lcw+2] = l_c_w[j*2-1];
+        array_coords[index_lcw+3] = l_c_w[j*2];
+        array_coords[0] += 1;
+        index_lcw += 4;
+      }
+      get_spaces(array_coords, l_space, beg_space_det);
+            l_back[next_back] = array_coords[0];
+      l_back[0] += 1;
+      next_back += 1;
+      
+      free(l_tmp);
+      free(l_c_w);
     }
-    free(l_tmp);
-    free(l_c_w);
   }
-  for(int i = 1; i < 1+array_coords[0]*4; i += 4){
+  printf("nb_char = %d\n", *array_coords);
+  printf("nb_back = %d\n", *l_back);
+  printf("nb_space = %d\n", *l_space);
+
+  for(int i = 1; i < 1+array_coords[0]*4; i += 4)
     h_cut_2(img,array_coords,i);
-  }
+
   free(copy);
   free(l_c_h);
   return 1;
@@ -595,7 +646,6 @@ void threshold(SDL_Surface *img){
     return;
   surf_to_array(img, copy);
   int n = 110;
-  printf("%d\n", n);
   for(int i = 0; i < img->w * img->h; i++)
     copy[i] = copy[i] < n ? 0 : 255;
   array_to_surf(copy, img);
