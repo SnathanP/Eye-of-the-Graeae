@@ -36,16 +36,27 @@ char* execOcr(char* filename) {
   char* newstr = malloc(*len * sizeof(char));
   strcpy(newstr, string);
   int decalage = 0;
-  for (int i = 1; i < *l_back +1; i++) {
-    printf("%d\n", *(l_back+i));
-    insertChar(newstr, '\n', *(l_back+i)+decalage);
-    decalage++;
+  //for (int i = 1; i < *l_back +1; i++) {
+    //printf("%d\n", *(l_back+i));
+    //insertChar(newstr, '\n', *(l_back+i)+decalage);
+    //decalage++;
+  //}
+  int currentline = *(l_back);
+  int currentspace = *(l_space);
+  for (int i = *len; i > 0; i--) {
+    if (i == *(l_back+currentline) && currentline != 0) {
+      //decalage++;
+      printf("%d\n", *(l_back+currentline
+      ));
+      insertChar(newstr, '\n', *(l_back+currentline)+decalage);
+      currentline--;
+    }
+    if (i == *(l_space+currentspace) && currentspace != 0) {
+      printf("%d\n", *(l_space+currentspace));
+      insertChar(newstr, ' ', *(l_space+currentspace)+decalage);
+      currentspace--;
+    }
   }
-  /*for (int i = 1; i < *l_space +1; i++) {
-    printf("%d\n", *(l_space+i));
-    insertChar(newstr, ' ', *(l_space+i)+decalage);
-    decalage++;
-  }*/
 
   free(l_back);
   free(len);
