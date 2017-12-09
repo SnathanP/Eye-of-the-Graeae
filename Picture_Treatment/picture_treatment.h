@@ -11,7 +11,7 @@ void init_SDL();
 char *itoa(int num, char *str);
 void Wait_for_exit();
 void display(int i, int j, SDL_Surface *img, SDL_Surface *screen);
-double** getFinal(char* path, int *taille);
+double **getFinal(char* path, int* taille, int** l_back, int** l_space);
 SDL_Surface* Load_Image(char *path);
 SDL_Surface *ScaleSurface(SDL_Surface *Surface, Uint16 Width, Uint16 Height);
 void new_detec(SDL_Surface *img);

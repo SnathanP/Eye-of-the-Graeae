@@ -4,6 +4,7 @@
 # include <math.h>
 # include <time.h>
 # include <gtk/gtk.h>
+# include <string.h>
 
 # include "property.h"
 # include "LayerStruct.h"
@@ -13,14 +14,44 @@
 
 # include "ocr.h"
 
+void insertChar (char* str, char c, int pos) {
+  char *ptr = str + pos;
+  memmove(ptr + 1, ptr, strlen(ptr) + 1); 
+  *ptr = c;
+}
 
 char* execOcr(char* filename) {
   int *len = malloc(sizeof(int));
-  double **array = getFinal(filename,len);
+  int *l_back = malloc(sizeof(int)); 
+  int *l_space = malloc(sizeof(int));
+  double **array = getFinal(filename,len, &l_back, &l_space);
+  //printf("%d\n", *(l_back));
   char* string = justforward(array,*len);
+  //printf("%d\n", *(l_back));
+  
   free(array);
+  
+  *len += *(l_back) + *(l_space);
+
+  char* newstr = malloc(*len * sizeof(char));
+  strcpy(newstr, string);
+  int decalage = 0;
+  for (int i = 1; i < *l_back +1; i++) {
+    printf("%d\n", *(l_back+i));
+    insertChar(newstr, '\n', *(l_back+i)+decalage);
+    decalage++;
+  }
+  /*for (int i = 1; i < *l_space +1; i++) {
+    printf("%d\n", *(l_space+i));
+    insertChar(newstr, ' ', *(l_space+i)+decalage);
+    decalage++;
+  }*/
+
+  free(l_back);
   free(len);
-  return string;
+  free(string);
+  free(l_space);
+  return newstr;
 }
 
 char *justforward(double **input, int lenlist)

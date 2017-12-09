@@ -100,7 +100,8 @@ static void cb_main (GtkWidget * p_wid, gpointer p_data)
   mark = gtk_text_buffer_get_insert (buffer);
   gtk_text_buffer_get_iter_at_mark (buffer, &iter, mark);
   gtk_text_buffer_insert (buffer, &iter, final, -1);
-
+  
+  free(final);
 }
 
 static void cb_load (GtkWidget * p_wid, gpointer p_data)

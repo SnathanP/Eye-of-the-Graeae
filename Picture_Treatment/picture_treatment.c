@@ -69,7 +69,7 @@ void display(int i, int j, SDL_Surface *img, SDL_Surface *screen){
 	//return screen;
 }
 
-double **getFinal(char* path, int* taille) {
+double **getFinal(char* path, int* taille, int** l_back, int** l_space) {
 
 	// variable declarations
 	//SDL_Window *win = NULL;
@@ -109,10 +109,10 @@ double **getFinal(char* path, int* taille) {
   display(620, 310, img, screen);
   */
   int *img_cut = malloc(sizeof(int) * img->w * img->h);
-  //int *l_space = malloc(sizeof(int) * img->w * img->h);
-  int *l_back = malloc(sizeof(int) * img->h * img->w);
-  printf("%p / %p\n\n", img_cut, l_back);
-  //cut(img, img_cut, l_back/*, l_space*/);
+  *l_space = malloc(sizeof(int) * img->w * img->h);
+  *l_back = malloc(sizeof(int) * img->h * img->w);
+  //printf("%p / %p\n\n", img_cut, l_back);
+  cut(img, img_cut, *l_back, *l_space);
   SDL_Surface *imgs[img_cut[0]];
   array_of_img(img, imgs, img_cut);
   //for(int i = 0; i < img_cut[0]; i++)
