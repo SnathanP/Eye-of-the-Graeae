@@ -19,7 +19,7 @@ double *loadMatrix(int path, int alpha) {
   char str[80];
   strcpy(str,"Picture_Treatment/tmp");
   char alphac[2];
-  alphac[0] = '0'+alpha;
+  alphac[0] = '1'+alpha;
   alphac[1] = '\0';
   strcat(str, alphac);
   strcat(str, "/");

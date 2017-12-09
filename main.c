@@ -137,7 +137,17 @@ static void cb_load (GtkWidget * p_wid, gpointer p_data)
 
 int main(int argc, char **argv)
 {
+  if (argc > 1) {
 
+    if (argc > 2 && argv[1][0] == '1') {
+      apprentissage(250, 10000, (argv[2][0] - '0'));
+      return 0;
+    }
+    else {
+      printf("You must specify if you want to load a existing save of the neural network. \n./main 1 1 : Load network\n./main 1 0 : Use existing network\n");
+      return 1;
+    }
+  }
   /* Variables */
    GtkBuilder  *  p_builder   = NULL;
    GError      *  p_err       = NULL;

@@ -145,7 +145,7 @@ int apprentissage(int nbmid, int ite, int load)
             //input[1] = data[1] - '0';
             //answer = data[2] - '0';
             int r = rand() % 94;
-            int alpha = rand() % 2;
+            int alpha = rand() % 3;
             char path = r;
             //Faire un random 26 pour trouver une lettre, la mettre dans path, importer en matrice la lettre .bmp
             double *input = loadMatrix(path, alpha);
