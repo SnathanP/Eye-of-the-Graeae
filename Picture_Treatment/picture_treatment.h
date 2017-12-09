@@ -17,7 +17,7 @@ SDL_Surface *ScaleSurface(SDL_Surface *Surface, Uint16 Width, Uint16 Height);
 void new_detec(SDL_Surface *img);
 void Sobel_filter(SDL_Surface *img);
 void color_zone(SDL_Surface *img, int *l);
-int cut(SDL_Surface *img,int *l_c_w);
+int cut(SDL_Surface *img, int *l_c_w, int *l_back, int *l_space);
 void surf_to_array(SDL_Surface *img, int *l);
 void surf_to_double(SDL_Surface *img, double *l);
 void array_to_surf(int *l, SDL_Surface *img);

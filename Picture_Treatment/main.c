@@ -66,7 +66,9 @@ int main(int argc, char* argv[]){
   img = Sobel_filter(img);
   display(620, 310, img, screen);
   */int *img_cut = malloc(sizeof(int) * img->w * img->h);
-  cut(img, img_cut);
+  int *l_back = malloc(sizeof(int) * img->h * img->w); 
+  int *l_space = malloc(sizeof(int) * img->h * img->w);
+  cut(img, img_cut, l_back, l_space);
   SDL_Surface *imgs[img_cut[0]];
   array_of_img(img, imgs, img_cut);
   for(int i = 0; i < img_cut[0]; i++)
