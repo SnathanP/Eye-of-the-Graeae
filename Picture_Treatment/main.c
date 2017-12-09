@@ -69,6 +69,10 @@ int main(int argc, char* argv[]){
   int *l_back = malloc(sizeof(int) * img->h * img->w); 
   int *l_space = malloc(sizeof(int) * img->h * img->w);
   cut(img, img_cut, l_back, l_space);
+  for(int i = 1; i <= l_space[0]; i++)
+    printf("space %d = %d\n", i, l_space[i]);
+  for(int i = 1; i <= l_back[0]; i++)
+    printf("back %d = %d\n", i, l_back[i]);
   SDL_Surface *imgs[img_cut[0]];
   array_of_img(img, imgs, img_cut);
   for(int i = 0; i < img_cut[0]; i++)

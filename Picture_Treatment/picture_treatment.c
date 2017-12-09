@@ -328,7 +328,7 @@ void h_cut_2(SDL_Surface *img, int *l_c, int i){
 }
 
 void get_spaces(int *l_c, int *l_s, int begin_line){
-  int sum = -0, nb = 0;
+  int sum = 0, nb = 0;
   for(int i = begin_line; i < l_c[0] - 1; i++){
     int delta = l_c[i*4 + 3] - l_c[(i-1)*4 + 4];
     sum += delta;
@@ -339,11 +339,11 @@ void get_spaces(int *l_c, int *l_s, int begin_line){
     }
   }
   int moy = sum/nb;
-  int next_space = 1;
+  int next_space = l_s[0] + 1;
   for(int i = begin_line; i < l_c[0] - 1; i++){
     int space_bitw = l_c[i*4 + 3] - l_c[(i-1)*4 + 4];
     if(space_bitw > moy){
-      l_s[next_space] += i;
+      l_s[next_space] = i;
       l_s[0] += 1;
       next_space += 1;
     }
@@ -404,7 +404,7 @@ int cut(SDL_Surface *img,int *array_coords, int *l_back, int *l_space){
         index_lcw += 4;
       }
       get_spaces(array_coords, l_space, beg_space_det);
-            l_back[next_back] = array_coords[0];
+      l_back[next_back] = array_coords[0];
       l_back[0] += 1;
       next_back += 1;
       
