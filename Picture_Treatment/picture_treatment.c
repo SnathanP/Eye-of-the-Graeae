@@ -338,6 +338,8 @@ void get_spaces(int *l_c, int *l_s, int begin_line){
       nb += 2;
     }
   }
+  if(nb == 0)
+    return;
   int moy = sum/nb;
   int next_space = l_s[0] + 1;
   for(int i = begin_line; i < l_c[0] - 1; i++){
