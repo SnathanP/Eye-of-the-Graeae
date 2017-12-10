@@ -35,50 +35,74 @@ static void cb_about (GtkWidget * p_wid, gpointer p_data)
 
   about_dialog = gtk_about_dialog_new ();
 
-  /* Lists of authors/ documentators to be used later, they must be initialized
-   * in a null terminated array of strings.
-   */
   const gchar *authors[] = {"Thomas LUPIN, Louis HOLLEVILLE, Arthur BUSUTIL", NULL};
-  //const gchar *documenters[] = {"", NULL};
-
-  /* We fill in the information for the about dialog */
   gtk_about_dialog_set_program_name (GTK_ABOUT_DIALOG (about_dialog), "A propos de Eye of the Graeae");
   gtk_about_dialog_set_copyright (GTK_ABOUT_DIALOG (about_dialog), "Copyright \xc2\xa9 2017 Bible White Corp.");
   gtk_about_dialog_set_authors (GTK_ABOUT_DIALOG (about_dialog), authors);
-  //gtk_about_dialog_set_documenters (GTK_ABOUT_DIALOG (about_dialog), documenters);
   gtk_about_dialog_set_website_label (GTK_ABOUT_DIALOG (about_dialog), "Eye of the Graeae website");
   gtk_about_dialog_set_website (GTK_ABOUT_DIALOG (about_dialog), "https://eyeofthegraeae.tk");
   GdkPixbuf *img = gdk_pixbuf_new_from_file("icon.png", NULL);
   gtk_about_dialog_set_logo (GTK_ABOUT_DIALOG (about_dialog), img);
-  /* We do not wish to show the title, which in this case would be
-   * "AboutDialog Example". We have to reset the title of the messagedialog
-   * window after setting the program name.
-   */
   gtk_window_set_title (GTK_WINDOW (about_dialog), "A propos");
 
-  /* To close the aboutdialog when "close" is clicked we connect the response
-   * signal to on_close
-   */
   g_signal_connect (GTK_DIALOG (about_dialog), "response",
                     G_CALLBACK (cb_about_quit), NULL);
 
   /* Show the about dialog */
-  
+
   gtk_widget_show (about_dialog);
 }
 
 static void cb_save (GtkWidget * p_wid, gpointer p_data)
 {  
-   (void)p_wid;
-   GtkTextView *tmp = GTK_TEXT_VIEW(gtk_builder_get_object(GTK_BUILDER(p_data), "txt"));
-   GtkTextIter start, end;
-   GtkTextBuffer *buffer = gtk_text_view_get_buffer (tmp);
-   gchar *text;
-   gtk_text_buffer_get_bounds (buffer, &start, &end);
-   text = gtk_text_buffer_get_text (buffer, &start, &end, FALSE);
-   // SAVE ME - text
-   printf("%s\n",text);
-   g_free(text);
+  GtkWidget *dialog;
+  GtkFileChooser *chooser;
+  GtkFileChooserAction action = GTK_FILE_CHOOSER_ACTION_SAVE;
+  gint res;
+
+  dialog = gtk_file_chooser_dialog_new ("Enregistrer le texte",
+                                        GTK_WINDOW(gtk_widget_get_toplevel(p_wid)),
+                                        action,
+                                        "_Annuler",
+                                        GTK_RESPONSE_CANCEL,
+                                        "_Engegistrer",
+                                        GTK_RESPONSE_ACCEPT,
+                                        NULL);
+  chooser = GTK_FILE_CHOOSER (dialog);
+
+  gtk_file_chooser_set_do_overwrite_confirmation (chooser, TRUE);
+  gtk_file_chooser_set_current_name (chooser, "Save_EotG.txt");
+
+  res = gtk_dialog_run (GTK_DIALOG (dialog));
+  if (res == GTK_RESPONSE_ACCEPT)
+    {
+      char *filename;
+
+      filename = gtk_file_chooser_get_filename (chooser);
+
+      GtkTextView *tmp = GTK_TEXT_VIEW(gtk_builder_get_object(GTK_BUILDER(p_data), "txt"));
+      GtkTextIter start, end;
+      GtkTextBuffer *buffer = gtk_text_view_get_buffer (tmp);
+      gchar *text;
+      gtk_text_buffer_get_bounds (buffer, &start, &end);
+      text = gtk_text_buffer_get_text (buffer, &start, &end, FALSE);
+      // SAVE ME - text
+      FILE* fichier = NULL;
+
+      fichier = fopen(filename, "w");
+      if (fichier != NULL)
+      {
+          fputs(text, fichier);
+          fclose(fichier);
+      }
+      g_free(text);
+
+      g_free (filename);
+    }
+
+  gtk_widget_destroy (dialog);
+
+
 }
 
 static void cb_main (GtkWidget * p_wid, gpointer p_data)
@@ -183,7 +207,6 @@ g_signal_connect (
    "activate", G_CALLBACK (cb_main), p_builder
 );
  
-/* Signal du bouton Annuler */
 g_signal_connect (
    gtk_builder_get_object (p_builder, "save"),
    "clicked", G_CALLBACK (cb_save), p_builder
