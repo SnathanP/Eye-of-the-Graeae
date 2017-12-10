@@ -28,7 +28,7 @@ double *loadMatrix(int path, int alpha) {
   strcat(str, snum);
   strcat(str, ".bmp");
   SDL_Surface *surf = Load_Image(str);
-  printf("Location : %s \n", str);
+  //printf("Location : %s \n", str);
   int *arr = malloc(26*26*sizeof(int));
   surf_to_array(surf, arr);
   double *arr2 = malloc(26*26*sizeof(double));

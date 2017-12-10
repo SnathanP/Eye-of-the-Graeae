@@ -46,13 +46,12 @@ char* execOcr(char* filename) {
   for (int i = *len; i > 0; i--) {
     if (i == *(l_back+currentline) && currentline != 0) {
       //decalage++;
-      printf("%d\n", *(l_back+currentline
-      ));
+      //printf("%d\n", *(l_back+currentline));
       insertChar(newstr, '\n', *(l_back+currentline)+decalage);
       currentline--;
     }
     if (i == *(l_space+currentspace) && currentspace != 0) {
-      printf("%d\n", *(l_space+currentspace));
+      //printf("%d\n", *(l_space+currentspace));
       insertChar(newstr, ' ', *(l_space+currentspace)+decalage);
       currentspace--;
     }
@@ -156,6 +155,7 @@ int apprentissage(int nbmid, int ite, int load)
             //input[1] = data[1] - '0';
             //answer = data[2] - '0';
             int r = rand() % 94;
+            //int r = 91;
             int alpha = rand() % 3;
             char path = r;
             //Faire un random 26 pour trouver une lettre, la mettre dans path, importer en matrice la lettre .bmp
@@ -164,6 +164,7 @@ int apprentissage(int nbmid, int ite, int load)
             double *answer = malloc(94*sizeof(double));
             for(int i = 0; i < 94; i++)
               answer[i] = 0;
+            //answer[r] = 10;
             answer[r] = 1;
 
             // FRONT 2
@@ -183,19 +184,25 @@ int apprentissage(int nbmid, int ite, int load)
             }
 
             // AFFICHAGE
-            printf("Ité %d : target = %c\n", i,path+33);
-            char reponse = 33 + resultpos;
-            printf("%lf (Struct) = %c",result2, reponse);
 
-            if (answer[resultpos] == 1) {
-                printf(" : TRUE (Struct)\n");
+            char reponse = 33 + resultpos;
+
+
+            if (answer[resultpos] >= 1) {
+                //printf("Ité %d : target = %c\n", i,path+33);
+                //printf("%lf (Struct) = %c",result2, reponse);
+                //printf(" : TRUE (Struct)\n\n\n");
                 truecount2++;
             } else {
+                printf("Ité %d : target = %c\n", i,path+33);
+                printf("%lf (Struct) = %c",result2, reponse);
                 printf(" : FALSE (Struct)\n");
                 falsecount2++;
                 lastFalse2 = i;
+                printf("Debug - %c : %lf\n", path+33, layerOutput.result[(int)path]);
             }
             if (answer[resultpos] == 0 || result2 < 0.95)
+            //if (layerOutput.result[(int)path] < 0.000017)            
             {
 
                 //double tanswer[1] = {answer};
@@ -209,9 +216,7 @@ int apprentissage(int nbmid, int ite, int load)
                 applyChanges(&layerOutput, learning);
                 printf("Auto-correction\n\n");
             }
-            else{
-              printf("\n\n");
-            }
+
             free(input);
             free(answer);
           }
