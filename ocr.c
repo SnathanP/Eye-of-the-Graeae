@@ -36,11 +36,7 @@ char* execOcr(char* filename) {
   char* newstr = malloc(*len * sizeof(char));
   strcpy(newstr, string);
   int decalage = 0;
-  //for (int i = 1; i < *l_back +1; i++) {
-    //printf("%d\n", *(l_back+i));
-    //insertChar(newstr, '\n', *(l_back+i)+decalage);
-    //decalage++;
-  //}
+
   int currentline = *(l_back);
   int currentspace = *(l_space);
   for (int i = *len; i > 0; i--) {
@@ -70,7 +66,6 @@ char *justforward(double **input, int lenlist)
   Layer layerOutput;
 
   char *result = malloc (lenlist * sizeof(char));
-  //Ne pas oublier de free en dehors de la fonction
 
 
   LoadData(&layerHidden,&layerOutput);
@@ -134,16 +129,6 @@ int apprentissage(int nbmid, int ite, int load)
       learning = LoadData(&layerHidden,&layerOutput);
     }
 
-    //double *input = malloc(nbinput * sizeof(double));
-
-    //FILE* fichier = NULL;
-    //fichier = fopen(argv[argc-1], "r");
-
-    //initLayer(HIDDEN,HIDDEN2,&layerHidden2); (futur)
-
-    //////
-
-
     int truecount2 = 0;
     int falsecount2 = 0;
     int lastFalse2 = 0;
@@ -151,11 +136,7 @@ int apprentissage(int nbmid, int ite, int load)
 
         for(int i = 0; i < ite; i++) { // On lit le fichier
 
-            //input[0] = data[0] - '0'; // On récupère les tests dans le fichier
-            //input[1] = data[1] - '0';
-            //answer = data[2] - '0';
             int r = rand() % 94;
-            //int r = 91;
             int alpha = rand() % 3;
             char path = r;
             //Faire un random 26 pour trouver une lettre, la mettre dans path, importer en matrice la lettre .bmp
@@ -164,12 +145,11 @@ int apprentissage(int nbmid, int ite, int load)
             double *answer = malloc(94*sizeof(double));
             for(int i = 0; i < 94; i++)
               answer[i] = 0;
-            //answer[r] = 10;
+
             answer[r] = 1;
 
             // FRONT 2
             front2(input,&layerHidden);
-            //front2(layerHidden.result,&layerHidden2); (futur)
             front2(layerHidden.result,&layerOutput);
             //ENDFRONT
             double result2 = layerOutput.result[0];
@@ -209,10 +189,8 @@ int apprentissage(int nbmid, int ite, int load)
                 // back - propagation : Il faut commencer par l'output et
                 //                      remonter vers l'input.
                 outToHidden(answer, &layerOutput, &layerHidden);
-                //hiddenToHidden(&layerOutput, &layerHidden2, &layerHidden); (futur)
                 hiddenToInput(&layerOutput, &layerHidden, input);
                 applyChanges(&layerHidden, learning);
-                //applyChanges(&layerHidden2); (futur)
                 applyChanges(&layerOutput, learning);
                 printf("Auto-correction\n\n");
             }
@@ -224,11 +202,9 @@ int apprentissage(int nbmid, int ite, int load)
 
     printf("True2 : %d\nFalse2 : %d\n", truecount2, falsecount2);
     printf("Last False2 : %d\n", lastFalse2);
-    //fclose(fichier); // On ferme le fichier qui a été ouvert
 
     SaveData(&layerHidden,&layerOutput,learning);
     destroyLayer(&layerHidden);
-    //destroyLayer(&layerHidden2);
     destroyLayer(&layerOutput);
 
 

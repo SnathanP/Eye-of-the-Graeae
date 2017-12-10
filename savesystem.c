@@ -10,10 +10,6 @@
 # include "LayerStruct.h"
 # include "Picture_Treatment/picture_treatment.h"
 
-////////////////// COPY PASTE IS BAD
-
-
-/////////////////////
 
 double *loadMatrix(int path, int alpha) {
   char str[80];

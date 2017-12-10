@@ -91,11 +91,7 @@ double **getFinal(char* path, int* taille, int** l_back, int** l_space) {
   //display(0, 0, img, screen);
   //SDL_UpdateWindowSurface(win); // POUR ACTUALISER LA FENETRE
   Gray_scale(img);
-  SDL_Surface *copy = SDL_CreateRGBSurface(0, img->w, img->h, 32, 0, 0, 0, 0);
-  int *copy_l = malloc(sizeof(int) * img->h * img->w);
-  surf_to_array(img,copy_l);
-  array_to_surf(copy_l, copy);
-  free(copy_l);
+
   //img = new_detec(img);
   /*img = median(img);
   display(310, 0, img, screen);
@@ -130,7 +126,6 @@ double **getFinal(char* path, int* taille, int** l_back, int** l_space) {
     surf_to_double(imgs[i], *(res+i));
   }
   SDL_FreeSurface(img);
-  SDL_FreeSurface(copy);
   for(int i = 0; i < img_cut[0]; i++)
     SDL_FreeSurface(imgs[i]);
   *taille = img_cut[0];
